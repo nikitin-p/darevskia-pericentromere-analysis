@@ -26,12 +26,12 @@ reads = [
 //     ]
 // ]
 
-// Channel
-//     .from( reads )
-//     .map{ row -> [ row[0], [ file(row[1]) ] ] }
-//     .view()
-    // .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-    // .set{ ch_reads }
+Channel
+    .from( reads )
+    // .map{ row -> [ row[0], [ file(row[1]) ] ] }
+    //.view()
+    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+    .set{ ch_reads }
 
 // Channel
 //     .from( reads )
@@ -39,10 +39,6 @@ reads = [
 //     .set{ ch_reads }
 
 workflow DAREVSKIA {
-//     FASTQC( ch_reads )
-//     // READ_NAMES( ch_reads )
-Channel
-    .from( reads )
-    .map{ row -> [ row[0], [ file(row[1]) ] ] }
-    .view()
+    FASTQC( ch_reads )
+    // READ_NAMES( ch_reads )
 }
