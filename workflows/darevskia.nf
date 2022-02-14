@@ -6,8 +6,8 @@ reads = [
         id: "N_sample"
     ],
     [
-        file("/home/nikitinp/lizards/pipeline/subsample/N_sample_R1.fastq.gz"),
-        file("/home/nikitinp/lizards/pipeline/subsample/N_sample_R2.fastq.gz")
+        "/home/nikitinp/lizards/pipeline/subsample/N_sample_R1.fastq.gz",
+        "/home/nikitinp/lizards/pipeline/subsample/N_sample_R2.fastq.gz"
     ]
 ]
 
@@ -28,6 +28,7 @@ reads = [
 
 Channel
     .from( reads )
+    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
     .set{ ch_reads }
 
 // Channel
