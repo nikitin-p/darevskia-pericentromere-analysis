@@ -17,7 +17,7 @@ reads = [
 ]
 
 Channel
-    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db1/*', type: 'dir' )
+    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db/*', type: 'dir' )
     .set{ db_dir }
 
 Channel
