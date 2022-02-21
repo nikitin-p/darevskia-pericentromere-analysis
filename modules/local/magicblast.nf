@@ -15,7 +15,7 @@ process MAGICBLAST {
 
     output:
     path("*_output.txt"), emit: mb_results
-//    path "versions.yml"           , emit: versions
+    path "versions.yml"           , emit: versions
 
     script:
     def args = task.ext.args ?: ''
@@ -32,9 +32,10 @@ process MAGICBLAST {
         -db ${db}/${db.simpleName} \\
         -out ${prefix}_output.txt \\
 
-#    cat <<-END_VERSIONS > versions.yml
-#    "${task.process}":
-#        magicblast: \$(echo \$(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*\$//' ))
-#    END_VERSIONS
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        magicblast: 
+        \$(magicblast -version | head -1 | awk '{print \$2}')
+    END_VERSIONS
     """
 }
