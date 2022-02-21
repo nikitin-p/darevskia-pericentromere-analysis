@@ -16,10 +16,22 @@ reads = [
 ]
 
 Channel
+    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db1/*', type: 'dir' )
+    .set{ db_dir }
+
+Channel
     .from( reads )
     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
     .set{ ch_reads }
 
 workflow DAREVSKIA {
-    FASTQC( ch_reads )
+
+    FASTQC ( 
+        ch_reads 
+    )
+
+    MAGICBLAST (
+        ch_reads,
+        db_dir
+    )
 }
