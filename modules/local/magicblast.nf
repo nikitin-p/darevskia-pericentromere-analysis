@@ -34,8 +34,7 @@ process MAGICBLAST {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        magicblast: 
-        \$(magicblast -version | head -1 | awk '{print \$2}')
+        magicblast: \$(magicblast -version | head -1 | awk '{print \$2}')
     END_VERSIONS
     """
 }
