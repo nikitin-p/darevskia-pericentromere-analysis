@@ -1,3 +1,5 @@
+include { trimSuffix } from './custom_functions'
+
 process MAGICBLAST {
     tag "$meta.id"
     label 'process_long'
@@ -17,7 +19,7 @@ process MAGICBLAST {
 
     script:
     def args = task.ext.args ?: ''
-    def prefix   = "${reads[0].simpleName}_${db.simpleName}"
+    def prefix   = "${trimSuffix(reads[0].simpleName, '_R1')}_${db.simpleName}"
     
     """
     magicblast \\
