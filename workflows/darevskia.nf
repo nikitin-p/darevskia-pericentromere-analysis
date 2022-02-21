@@ -1,4 +1,5 @@
 include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+include { MAGICBLAST } from '../modules/local/magicblast.nf'
 
 // include { MAGICBLAST  } from '../modules/local/magicblast'
 // include { PARSE_MAGICBLAST  } from '../modules/local/parse_magicblast'
