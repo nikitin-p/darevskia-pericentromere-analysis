@@ -1,6 +1,6 @@
 include { trimSuffix } from './custom_functions'
 
-process PARSE_MAGICBLAST {
+process PARSEMAGICBLAST {
     tag "${trimSuffix(magicblast_output.simpleName, '_output')}"
     label 'process_low'
     
@@ -32,5 +32,10 @@ process PARSE_MAGICBLAST {
         head -5 |
         awk -F" " -v var="\${READCOUNT}" '{print (\$1 / var * 100) "% " \$2}' > \\
         ${input_name}_histogram.txt
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        parsemagicblast: 1.0
+    END_VERSIONS
     """
 }

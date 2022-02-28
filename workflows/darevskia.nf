@@ -1,6 +1,6 @@
 include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 include { MAGICBLAST } from '../modules/local/magicblast.nf'
-include { PARSE_MAGICBLAST } from '../modules/local/parsemagicblast.nf'
+include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 
 // include { TRIMMOMATIC  } from '../modules/local/trimmomatic'
 // include { INTERLACE_FASTA  } from '../modules/local/interlace_fasta'
@@ -35,7 +35,7 @@ workflow DAREVSKIA {
         db_dir
     )
 
-    PARSE_MAGICBLAST (
+    PARSEMAGICBLAST (
         MAGICBLAST.out.mb_results
     )
 }
