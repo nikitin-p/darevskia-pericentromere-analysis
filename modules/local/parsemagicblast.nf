@@ -1,6 +1,6 @@
 include { trimSuffix } from './custom_functions'
 
-process PARSEMAGICBLAST {
+process PARSE_MAGICBLAST {
     tag "${trimSuffix(magicblast_output.simpleName, '_output')}"
     label 'process_low'
     
