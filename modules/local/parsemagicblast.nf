@@ -36,7 +36,7 @@ process PARSEMAGICBLAST {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        parsemagicblast: 1.0
+        PARSEMAGICBLAST: 1.0
     END_VERSIONS
     """
 }
