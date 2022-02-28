@@ -35,7 +35,7 @@ workflow DAREVSKIA {
         db_dir
     )
 
-    // PARSEMAGICBLAST (
-    //     MAGICBLAST.out.mb_results
-    // )
+    PARSEMAGICBLAST (
+        MAGICBLAST.out.mb_results
+    )
 }
