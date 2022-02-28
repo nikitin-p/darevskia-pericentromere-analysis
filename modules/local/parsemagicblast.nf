@@ -23,6 +23,7 @@ process PARSEMAGICBLAST {
     READCOUNT=`<${magicblast_output} \\
         tail -n +4 | \\
         wc -l`
+    
     <${magicblast_output} \\
         tail -n +4 | \\
         awk '{print \$2}' | \\
@@ -31,7 +32,7 @@ process PARSEMAGICBLAST {
         sort -k1,1nr | \\
         head -5 |
         awk -F" " -v var="\${READCOUNT}" '{print (\$1 / var * 100) "% " \$2}' > \\
-        ${input_name}_histogram.txt
+        ${input_name}_histogram.txt \\
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
