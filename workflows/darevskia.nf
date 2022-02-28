@@ -1,9 +1,8 @@
 include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 include { MAGICBLAST } from '../modules/local/magicblast.nf'
 include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
-
-// include { TRIMMOMATIC  } from '../modules/local/trimmomatic'
-// include { INTERLACE_FASTA  } from '../modules/local/interlace_fasta'
+include { TRIMMOMATIC } from '../modules/local/trimmomatic'
+// include { INTERLACE_FASTA } from '../modules/local/interlace_fasta'
 
 reads = [
     [
@@ -24,6 +23,10 @@ Channel
     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
     .set{ ch_reads }
 
+Channel
+    .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
+    .set{ primer }
+
 workflow DAREVSKIA {
 
     FASTQC ( 
@@ -37,5 +40,10 @@ workflow DAREVSKIA {
 
     PARSEMAGICBLAST (
         MAGICBLAST.out.mb_results
+    )
+
+    TRIMMOMATIC (
+        ch_reads,
+        primer
     )
 }

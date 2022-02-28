@@ -17,6 +17,7 @@ process PARSEMAGICBLAST {
     path "versions.yml"           , emit: versions
 
     script:
+    def args = task.ext.args ?: ''
     def input_name  = "${trimSuffix(magicblast_output.simpleName, '_output')}"
 
     """
