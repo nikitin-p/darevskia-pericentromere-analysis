@@ -15,7 +15,7 @@ process INTERLACEFASTA {
     tuple val(meta), path(reverse_reads)
 
     output:
-    path("*.fasta"), emit: interlaced_reads
+    tuple val(meta), path("*.fasta"), emit: interlaced_reads
     path "versions.yml"           , emit: versions
 
     script:
@@ -23,7 +23,7 @@ process INTERLACEFASTA {
     def prefix   = "${trimSuffix(forward_reads.simpleName, '_f_p')}"
     def prefix_forward   = "${forward_reads.simpleName}"
     def prefix_reverse   = "${reverse_reads.simpleName}"
-    
+
     """
     gzip -d ${forward_reads}
     gzip -d ${reverse_reads}
