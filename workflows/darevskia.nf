@@ -1,8 +1,8 @@
 include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 include { MAGICBLAST } from '../modules/local/magicblast.nf'
 include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
-include { TRIMMOMATIC } from '../modules/local/trimmomatic'
-// include { INTERLACE_FASTA } from '../modules/local/interlace_fasta'
+include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
+include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 
 reads = [
     [
@@ -45,5 +45,10 @@ workflow DAREVSKIA {
     TRIMMOMATIC (
         ch_reads,
         primer
+    )
+
+    INTERLACEFASTA (
+        TRIMMOMATIC.out.trimmed_reads_f_p,
+        TRIMMOMATIC.out.trimmed_reads_r_p
     )
 }
