@@ -10,10 +10,20 @@ reads = [
     [
         id: "N_sample"
     ],
-    "/home/nikitinp/lizards/pipeline/subsample/N_sample_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/subsample/N_sample_R2.fastq.gz"
+    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
     ]
 ]
+
+// reads = [
+//     [
+//     [
+//         id: "N_sample"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/subsample/N_sample_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/subsample/N_sample_R2.fastq.gz"
+//     ]
+// ]
 
 Channel
     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db1/*', type: 'dir' )
