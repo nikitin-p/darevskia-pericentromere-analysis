@@ -32,9 +32,11 @@ process PREPROCESSTRF {
         sort -t '|' -k3,3nr > \\
         contigs_${meta.id}_headers_sorted.txt
         
-    bc <<< "1+2"
-
-    x=\$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
+    w=\$(wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1)
+    x=\$(awk -v var=\$w '{printf "%.0f", var / 10}' <(echo "1"))
+    
+    #bc <<< "1+2"
+    #x=\$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
 
     head -\${x} contigs_${meta.id}_headers_sorted.txt > contigs_${meta.id}_headers_sorted_top10pc.txt 
 
@@ -47,3 +49,6 @@ process PREPROCESSTRF {
     END_VERSIONS
     """
 }
+
+
+
