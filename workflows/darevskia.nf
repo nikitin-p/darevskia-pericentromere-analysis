@@ -12,7 +12,7 @@ contigs = [
         id: "N"
     ],
     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-    ]
+    ],
     [
     [
         id: "V"
