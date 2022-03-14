@@ -31,6 +31,8 @@ process PREPROCESSTRF {
         tr '.' '|' | \\
         sort -t '|' -k3,3nr > \\
         contigs_${meta.id}_headers_sorted.txt
+        
+    bc <<< "1+2"
 
     x=\$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
 
