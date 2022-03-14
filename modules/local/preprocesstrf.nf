@@ -32,7 +32,7 @@ process PREPROCESSTRF {
         sort -t '|' -k3,3nr > \\
         contigs_${meta.id}_headers_sorted.txt
 
-    x=$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
+    x=\$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
 
     head -\${x} contigs_${meta.id}_headers_sorted.txt > contigs_${meta.id}_headers_sorted_top10pc.txt 
 
