@@ -3,8 +3,8 @@ include { MAGICBLAST } from '../modules/local/magicblast.nf'
 include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
-// include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
+include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 
 // contigs = [
 //     [
@@ -91,12 +91,12 @@ workflow DAREVSKIA {
         TRIMMOMATIC.out.trimmed_reads_r_p
     )
 
-    // REPEATEXPLORER (
-    //     INTERLACEFASTA.out.interlaced_reads
-    // )
+    REPEATEXPLORER (
+        INTERLACEFASTA.out.interlaced_reads
+    )
 
-    // PREPROCESSTRF (
-    //     // ch_contigs
-    //     REPEATEXPLORER.out.repeat_contigs
-    // )
+    PREPROCESSTRF (
+        // ch_contigs
+        REPEATEXPLORER.out.repeat_contigs
+    )
 }

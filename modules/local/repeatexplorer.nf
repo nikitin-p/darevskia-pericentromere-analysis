@@ -4,9 +4,10 @@ process REPEATEXPLORER {
     tag "$meta.id"
     label 'process_high'
 
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'shub://repeatexplorer/repex_tarean:0.3.8.dbaa07f':
-        'kavonrtep/repeatexplorer:2.3.8' }"
+    container 'sviatsidorov/tarean:1.0'
+    // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+    //     'shub://repeatexplorer/repex_tarean:0.3.8.dbaa07f':
+    //     'kavonrtep/repeatexplorer:2.3.8' }"
     // conda (params.enable_conda ? "YOUR-TOOL-HERE" : null)
     // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
     //     'https://depot.galaxyproject.org/singularity/YOUR-TOOL-HERE':
