@@ -91,9 +91,9 @@ workflow DAREVSKIA {
         TRIMMOMATIC.out.trimmed_reads_r_p
     )
 
-    REPEATEXPLORER (
-        INTERLACEFASTA.out.interlaced_reads
-    )
+    // REPEATEXPLORER (
+    //     INTERLACEFASTA.out.interlaced_reads
+    // )
 
     // PREPROCESSTRF (
     //     // ch_contigs
