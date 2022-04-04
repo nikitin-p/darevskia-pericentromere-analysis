@@ -5,11 +5,11 @@ process INTERLACEFASTA {
     tag "${trimSuffix(forward_reads.simpleName, '_f_p')}"
     label 'process_low'
 
-    container 'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0'
-    // conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
-    // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-    //     'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
-    //     'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
+    // container 'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0'
+    conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
+    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+        'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
+        'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
     tuple val(meta), path(forward_reads)
