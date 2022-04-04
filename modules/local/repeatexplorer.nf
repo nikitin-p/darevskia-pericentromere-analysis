@@ -26,7 +26,7 @@ process REPEATEXPLORER {
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
     export PYTHONHASHSEED=0
-    seqclust \\
+    /repex_tarean/seqclust \\
         -p ${interlaced_fasta} \\
         -l log_${meta.id}.txt \\
         -c $task.cpus \\
