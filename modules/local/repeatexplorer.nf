@@ -17,10 +17,10 @@ process REPEATEXPLORER {
     tuple val(meta), path(interlaced_fasta)
 
     output:
-    // tuple val(meta), path("output_*"), emit: repeat_contigs
-    // path("log_*.txt"), emit: tarean_log
-    path "whoami.txt"
-    path "whichpython3.txt"
+    tuple val(meta), path("output_*"), emit: repeat_contigs
+    path("log_*.txt"), emit: tarean_log
+    // path "whoami.txt"
+    // path "whichpython3.txt"
     path "versions.yml", emit: versions
 
     script:
@@ -28,16 +28,16 @@ process REPEATEXPLORER {
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
     export PYTHONHASHSEED=0
-    whoami > whoami.txt
-    which python3 > whichpython3.txt
-    #/repex_tarean/seqclust \\
-    #    -p ${interlaced_fasta} \\
-    #    -l log_${meta.id}.txt \\
-    #    -c $task.cpus \\
-    #    -v output_${meta.id} \\
-    #    #-r 10000000 \\
-    #    -tax METAZOA3.0 \\
-    #    -opt ILLUMINA
+    #whoami > whoami.txt
+    #which python3 > whichpython3.txt
+    /repex_tarean/seqclust \\
+        -p ${interlaced_fasta} \\
+        -l log_${meta.id}.txt \\
+        -c $task.cpus \\
+        -v output_${meta.id} \\
+        #-r 10000000 \\
+        -tax METAZOA3.0 \\
+        -opt ILLUMINA
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

@@ -4,7 +4,7 @@ include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 
 // contigs = [
 //     [
@@ -68,18 +68,18 @@ Channel
 
 workflow DAREVSKIA {
 
-    // FASTQC ( 
-    //     ch_reads 
-    // )
+    FASTQC ( 
+        ch_reads 
+    )
 
-    // MAGICBLAST (
-    //     ch_reads,
-    //     db_dir
-    // )
+    MAGICBLAST (
+        ch_reads,
+        db_dir
+    )
 
-    // PARSEMAGICBLAST (
-    //     MAGICBLAST.out.mb_results
-    // )
+    PARSEMAGICBLAST (
+        MAGICBLAST.out.mb_results
+    )
 
     TRIMMOMATIC (
         ch_reads,
@@ -91,12 +91,12 @@ workflow DAREVSKIA {
         TRIMMOMATIC.out.trimmed_reads_r_p
     )
 
-    // REPEATEXPLORER (
-    //     INTERLACEFASTA.out.interlaced_reads
-    // )
+    REPEATEXPLORER (
+        INTERLACEFASTA.out.interlaced_reads
+    )
 
-    // PREPROCESSTRF (
-    //     // ch_contigs
-    //     REPEATEXPLORER.out.repeat_contigs
-    // )
+    PREPROCESSTRF (
+        // ch_contigs
+        REPEATEXPLORER.out.repeat_contigs
+    )
 }
