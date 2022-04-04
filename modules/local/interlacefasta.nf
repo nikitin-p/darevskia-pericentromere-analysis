@@ -5,10 +5,11 @@ process INTERLACEFASTA {
     tag "${trimSuffix(forward_reads.simpleName, '_f_p')}"
     label 'process_low'
 
-    conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
-        'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
+    container 'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0'
+    // conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
+    // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+    //     'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
+    //     'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
     tuple val(meta), path(forward_reads)
@@ -16,6 +17,8 @@ process INTERLACEFASTA {
 
     output:
     tuple val(meta), path("*.fasta"), emit: interlaced_reads
+    path "whoami.txt"
+    path "whichpython3.txt"
     path "versions.yml"           , emit: versions
 
     script:
@@ -44,6 +47,9 @@ process INTERLACEFASTA {
         sort -k1,1n | \\
         awk -F' ' '{print ">" \$1 \$2}' | \\
         tr '|' '\\n' > ${prefix}.fasta
+
+    whoami > whoami.txt
+    which python3 > whichpython3.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
