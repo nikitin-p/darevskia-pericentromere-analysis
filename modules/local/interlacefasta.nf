@@ -18,7 +18,7 @@ process INTERLACEFASTA {
     output:
     tuple val(meta), path("*.fasta"), emit: interlaced_reads
     path "whoami.txt"
-    path "python.txt"
+    path "magicblast.txt"
     path "versions.yml"           , emit: versions
 
     script:
@@ -49,7 +49,7 @@ process INTERLACEFASTA {
         tr '|' '\\n' > ${prefix}.fasta
 
     whoami > whoami.txt
-    python3 -c "print(3.0/2)" > python.txt
+    magicblast -version > magicblast.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
