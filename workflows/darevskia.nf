@@ -54,7 +54,7 @@ reads = [
 //     .set{ ch_contigs }
 
 Channel
-    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_backup/*', type: 'dir' )
+    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
     .set{ db_dir }
 
 Channel
