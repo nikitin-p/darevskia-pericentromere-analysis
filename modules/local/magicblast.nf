@@ -29,8 +29,8 @@ process MAGICBLAST {
         -outfmt tabular \\
         -query ${reads[0]} \\
         -query_mate ${reads[1]} \\
-        #-db ${db}/${db.simpleName} \\
-        -db ${db} \\
+        -db ${db}/${db.simpleName} \\
+        #-db ${db} \\
         -out ${prefix}_output.txt \\
 
     cat <<-END_VERSIONS > versions.yml
