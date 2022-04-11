@@ -4,8 +4,9 @@
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
-
+// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { QUAST } from '../modules/local/quast.nf'
+// include { TRF } from '../modules/local/trf.nf'
 
 contigs = [
     [
@@ -96,8 +97,17 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    PREPROCESSTRF (
+    // PREPROCESSTRF (
+    //     ch_contigs
+    //     REPEATEXPLORER.out.repeat_contigs
+    // )
+
+    QUAST (
         ch_contigs
         // REPEATEXPLORER.out.repeat_contigs
     )
+
+    // TRF (
+        // PREPROCESSTRF.out.top10pc_contigs
+    // )
 }
