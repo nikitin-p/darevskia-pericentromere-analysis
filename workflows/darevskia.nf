@@ -98,7 +98,7 @@ workflow DAREVSKIA {
     )
 
     PREPROCESSTRF (
-        ch_contigs
+        // ch_contigs
         REPEATEXPLORER.out.repeat_contigs
     )
 
