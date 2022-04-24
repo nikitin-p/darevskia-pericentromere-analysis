@@ -50,10 +50,10 @@ reads = [
 //     ]
 // ]
 
-Channel
-    .from( contigs )
-    .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_contigs }
+// Channel
+//     .from( contigs )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_contigs }
 
 Channel
     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
@@ -107,7 +107,7 @@ workflow DAREVSKIA {
         REPEATEXPLORER.out.repeat_contigs
     )
 
-    TRF (
-        PREPROCESSTRF.out.top10pc_contigs
-    )
+    // TRF (
+    //     PREPROCESSTRF.out.top10pc_contigs
+    // )
 }
