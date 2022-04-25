@@ -1,6 +1,6 @@
-include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
-include { MAGICBLAST } from '../modules/local/magicblast.nf'
-include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
+// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+// include { MAGICBLAST } from '../modules/local/magicblast.nf'
+// include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
@@ -70,18 +70,18 @@ Channel
 
 workflow DAREVSKIA {
 
-    FASTQC ( 
-        ch_reads 
-    )
+    // FASTQC ( 
+    //     ch_reads 
+    // )
 
-    MAGICBLAST (
-        ch_reads,
-        db_dir
-    )
+    // MAGICBLAST (
+    //     ch_reads,
+    //     db_dir
+    // )
 
-    PARSEMAGICBLAST (
-        MAGICBLAST.out.mb_results
-    )
+    // PARSEMAGICBLAST (
+    //     MAGICBLAST.out.mb_results
+    // )
 
     TRIMMOMATIC (
         ch_reads,

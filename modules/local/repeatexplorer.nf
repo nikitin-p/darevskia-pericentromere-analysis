@@ -30,7 +30,7 @@ process REPEATEXPLORER {
     export PYTHONHASHSEED=0
     #whoami > whoami.txt
     #which python3 > whichpython3.txt
-    /repex_tarean/seqclust \\
+    seqclust \\
         -p ${interlaced_fasta} \\
         -l log_${meta.id}.txt \\
         -c $task.cpus \\
