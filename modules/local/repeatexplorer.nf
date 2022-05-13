@@ -27,6 +27,7 @@ process REPEATEXPLORER {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
+    export PATH=/opt/conda/bin:/home/toor/repex_tarean:\$PATH
     export PYTHONHASHSEED=0
     #whoami > whoami.txt
     #which python3 > whichpython3.txt
@@ -41,7 +42,7 @@ process REPEATEXPLORER {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        REPEATEXPLORER: 0.3.8 (Singularity), 2.3.8 (Docker)
+        REPEATEXPLORER: 0.3.8
     END_VERSIONS
     """
 }
