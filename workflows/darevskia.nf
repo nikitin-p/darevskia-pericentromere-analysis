@@ -1,12 +1,15 @@
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
-include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
-include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
-include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
+// include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
+// include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
+// include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
 // include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
 // include { TRF } from '../modules/local/trf.nf'
+// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+// include { RSCRIPTS } from '../modules/local/rscipts.nf'
+// include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
 // contigs = [
 //     [
@@ -23,22 +26,32 @@ include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
 //     ]
 // ]
 
-reads = [
+rtables = [
     [
     [
-        id: "N"
+        id: "repeat_units"
     ],
-    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+    "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
+    "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
     ]
 ]
+
+// reads = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+//     ]
+// ]
 
 // reads = [
 //     [
@@ -56,17 +69,22 @@ reads = [
 //     .set{ ch_contigs }
 
 Channel
-    .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
-    .set{ db_dir }
-
-Channel
-    .from( reads )
+    .from( rtables )
     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-    .set{ ch_reads }
+    .set{ ch_rtables }
 
-Channel
-    .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
-    .set{ primer }
+// Channel
+//     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
+//     .set{ db_dir }
+
+// Channel
+//     .from( reads )
+//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+//     .set{ ch_reads }
+
+// Channel
+//     .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
+//     .set{ primer }
 
 workflow DAREVSKIA {
 
@@ -83,19 +101,19 @@ workflow DAREVSKIA {
     //     MAGICBLAST.out.mb_results
     // )
 
-    TRIMMOMATIC (
-        ch_reads,
-        primer
-    )
+    // TRIMMOMATIC (
+    //     ch_reads,
+    //     primer
+    // )
 
-    INTERLACEFASTA (
-        TRIMMOMATIC.out.trimmed_reads_f_p,
-        TRIMMOMATIC.out.trimmed_reads_r_p
-    )
+    // INTERLACEFASTA (
+    //     TRIMMOMATIC.out.trimmed_reads_f_p,
+    //     TRIMMOMATIC.out.trimmed_reads_r_p
+    // )
 
-    REPEATEXPLORER (
-        INTERLACEFASTA.out.interlaced_reads
-    )
+    // REPEATEXPLORER (
+    //     INTERLACEFASTA.out.interlaced_reads
+    // )
 
     // PREPROCESSTRF (
     //     // ch_contigs
@@ -109,5 +127,23 @@ workflow DAREVSKIA {
 
     // TRF (
     //     PREPROCESSTRF.out.top10pc_contigs
+        // !run trf two times (on 10pc of contigs and on all contigs) and add two out channels
     // )
+
+    // PREPROCESSR (
+    //     TRF.out.top10pc_repeats,
+    //     TRF.out.all_repeats
+    // )
+
+    RSCRIPTS (
+        // PREPROCESSR.out.top10pc_repeats_tab
+        ch_rtables
+    )
+
+    // PYSCRIPTS (
+    //     REPEATEXPLORER.out.repeat_contigs,
+    //     PREPROCESSR.out.all_repeats_tab
+            // !do not forget to add length plots to this
+    // )
+
 }
