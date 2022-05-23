@@ -42,7 +42,7 @@ process PREPROCESSTRF {
         tr '.' '|' > \\
         contigs_${meta.id}_headers_orig.txt
 
-    paste -d'\n' contigs_${meta.id}_headers_orig.txt contigs_${meta.id}_merged.fasta > contigs_${meta.id}_all_seq.fasta
+    paste -d'\\n' contigs_${meta.id}_headers_orig.txt contigs_${meta.id}_merged.fasta > contigs_${meta.id}_all_seq.fasta
 
     w=\$(wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1)
     x=\$(awk -v var=\$w '{printf "%.0f", var / 10}' <(echo "1"))
