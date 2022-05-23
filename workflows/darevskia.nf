@@ -4,37 +4,37 @@
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
-// include { TRF } from '../modules/local/trf.nf'
+include { TRF } from '../modules/local/trf.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
-// contigs = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-//     ]
-// ]
-
-rtables = [
+contigs = [
     [
     [
-        id: "repeat_units"
+        id: "N"
     ],
-    "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
-    "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
     ]
 ]
+
+// rtables = [
+//     [
+//     [
+//         id: "repeat_units"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
+//     "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
+//     ]
+// ]
 
 // reads = [
 //     [
@@ -63,15 +63,15 @@ rtables = [
 //     ]
 // ]
 
-// Channel
-//     .from( contigs )
-//     .map{ row -> [ row[0], file(row[1]) ] }
-//     .set{ ch_contigs }
-
 Channel
-    .from( rtables )
-    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-    .set{ ch_rtables }
+    .from( contigs )
+    .map{ row -> [ row[0], file(row[1]) ] }
+    .set{ ch_contigs }
+
+// Channel
+//     .from( rtables )
+//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+//     .set{ ch_rtables }
 
 // Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
@@ -115,30 +115,30 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    // PREPROCESSTRF (
-    //     // ch_contigs
-    //     REPEATEXPLORER.out.repeat_contigs
-    // )
+    PREPROCESSTRF (
+        ch_contigs
+        // REPEATEXPLORER.out.repeat_contigs
+    )
 
     // QUAST (
     //     // ch_contigs
     //     REPEATEXPLORER.out.repeat_contigs
     // )
 
-    // TRF (
-    //     PREPROCESSTRF.out.top10pc_contigs
-        // !run trf two times (on 10pc of contigs and on all contigs) and add two out channels
-    // )
+    TRF (
+        PREPROCESSTRF.out.ch_meta,
+        PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
+    )
 
     // PREPROCESSR (
     //     TRF.out.top10pc_repeats,
     //     TRF.out.all_repeats
     // )
 
-    RSCRIPTS (
-        // PREPROCESSR.out.top10pc_repeats_tab
-        ch_rtables
-    )
+    // RSCRIPTS (
+    //     // PREPROCESSR.out.top10pc_repeats_tab
+    //     ch_rtables
+    // )
 
     // PYSCRIPTS (
     //     REPEATEXPLORER.out.repeat_contigs,

@@ -19,7 +19,7 @@ process RSCRIPTS {
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        RSCIPTS: 1.0
+        RSCRIPTS: 1.0
     END_VERSIONS
     """
 }

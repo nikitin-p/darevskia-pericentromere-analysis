@@ -11,7 +11,9 @@ process PREPROCESSTRF {
     tuple val(meta), path(contigs_dir)
 
     output:
-    tuple val(meta), path("contigs_*_top10pc_seq.fasta"), emit: top10pc_contigs
+    tuple val(meta), emit: ch_meta
+    path("contigs_*_top10pc_seq.fasta"), emit: top10pc_contigs
+    path "contigs_*_all_seq.fasta", emit: all_contigs
     path "versions.yml", emit: versions
 
     script:
@@ -31,12 +33,19 @@ process PREPROCESSTRF {
         tr '.' '|' | \\
         sort -t '|' -k3,3nr > \\
         contigs_${meta.id}_headers_sorted.txt
-        
+
+    cat contigs_${meta.id}_headers.txt | \\
+        tr '(' '|' | \\
+        tr -d ')' | \\
+        tr '-' '|' | \\
+        tr -d ' ' | \\
+        tr '.' '|' > \\
+        contigs_${meta.id}_headers_orig.txt
+
+    paste -d'\n' contigs_${meta.id}_headers_orig.txt contigs_${meta.id}_merged.fasta > contigs_${meta.id}_all_seq.fasta
+
     w=\$(wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1)
     x=\$(awk -v var=\$w '{printf "%.0f", var / 10}' <(echo "1"))
-    
-    #bc <<< "1+2"
-    #x=\$(bc <<< "`wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1` / 10 + 1")
 
     head -\${x} contigs_${meta.id}_headers_sorted.txt > contigs_${meta.id}_headers_sorted_top10pc.txt 
 
@@ -49,6 +58,3 @@ process PREPROCESSTRF {
     END_VERSIONS
     """
 }
-
-
-
