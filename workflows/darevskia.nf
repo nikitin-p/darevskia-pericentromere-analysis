@@ -7,7 +7,7 @@
 include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
 include { TRF } from '../modules/local/trf.nf'
-// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
@@ -130,10 +130,12 @@ workflow DAREVSKIA {
         PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
     )
 
-    // PREPROCESSR (
-    //     TRF.out.top10pc_repeats,
-    //     TRF.out.all_repeats
-    // )
+    PREPROCESSR (
+        TRF.out.ch_meta,
+        TRF.out.trf_dat.filter( ~/.*top10pc.*/ )
+        // TRF.out.top10pc_repeats,
+        // TRF.out.all_repeats
+    )
 
     // RSCRIPTS (
     //     // PREPROCESSR.out.top10pc_repeats_tab
