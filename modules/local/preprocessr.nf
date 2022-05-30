@@ -20,11 +20,15 @@ process PREPROCESSR {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    #The code below is supposed to work with web-version. We should change it according to CLI version of TRF.
-    #awk '{if ($0 ~ /^CL/) {printf $0 "\t"} else {print $0}}' N_6.txt > N_top10pc_tab.tsv
-    #awk '{if ($0 ~ /^CL/) {printf $0 "\t"} else {print $0}}' V_6.txt > V_top10pc_tab.tsv
-    #cat N_top10pc_tab.tsv | tr '(' '\t' | tr -d ')' | tr '-' '\t' | tr -d ' ' > N_top10pc_tab_bycol.tsv
-    #cat V_top10pc_tab.tsv | tr '(' '\t' | tr -d ')' | tr '-' '\t' | tr -d ' ' > V_top10pc_tab_bycol.tsv
+    grep -v 'Parameters' ${trf_dat} | \\
+        sed '/^\$/d' | \\
+        tail -n+6 | \\
+        awk 'BEGIN { prevstr="" } { if ( prevstr ~ /Sequence/ && \$0 !~ /Sequence/ ) { print prevstr "\\t" \$0 } prevstr=\$0 }' | \\
+        awk '{print \$2 "\\t" \$3 "\\t" \$17}' | \\
+        tr -d '(' | \\
+        tr -d ')' | \\
+        tr '-' '\\t' > \\
+        ${meta.id}_top10pc_tab_bycol.tsv
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
