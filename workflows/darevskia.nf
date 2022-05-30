@@ -27,8 +27,12 @@ include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // ]
 
 trf = [
-    "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
-    "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    [
+        "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    ],
+    [
+        "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    ]
 ]
 
 trf_meta = [
@@ -84,6 +88,7 @@ trf_meta = [
 
 Channel
     .from( trf )
+    .map{ row -> file(row[0]) }
     .set{ ch_trf }
 
 Channel
