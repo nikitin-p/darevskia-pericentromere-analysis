@@ -4,9 +4,9 @@
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
-include { TRF } from '../modules/local/trf.nf'
+// include { TRF } from '../modules/local/trf.nf'
 include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
@@ -26,23 +26,23 @@ contigs = [
     ]
 ]
 
-// trf = [
-//     [
-//         "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-//     ],
-//     [
-//         "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-//     ]
-// ]
+trf = [
+    [
+        "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    ],
+    [
+        "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    ]
+]
 
-// trf_meta = [
-//     [
-//         id: "N"
-//     ],
-//     [
-//         id: "V"
-//     ]
-// ]
+trf_meta = [
+    [
+        id: "N"
+    ],
+    [
+        id: "V"
+    ]
+]
 
 // rtables = [
 //     [
@@ -86,14 +86,14 @@ Channel
     .map{ row -> [ row[0], file(row[1]) ] }
     .set{ ch_contigs }
 
-// Channel
-//     .from( trf )
-//     .map{ row -> file(row[0]) }
-//     .set{ ch_trf }
+Channel
+    .from( trf )
+    .map{ row -> file(row[0]) }
+    .set{ ch_trf }
 
-// Channel
-//     .from( trf_meta )
-//     .set{ ch_trf_meta }
+Channel
+    .from( trf_meta )
+    .set{ ch_trf_meta }
 
 // Channel
 //     .from( rtables )
@@ -142,28 +142,28 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    PREPROCESSTRF (
-        ch_contigs
-        // REPEATEXPLORER.out.repeat_contigs
-    )
+    // PREPROCESSTRF (
+    //     ch_contigs
+    //     // REPEATEXPLORER.out.repeat_contigs
+    // )
 
     // QUAST (
     //     // ch_contigs
     //     REPEATEXPLORER.out.repeat_contigs
     // )
 
-    TRF (
-        PREPROCESSTRF.out.ch_meta,
-        PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
-    )
+    // TRF (
+    //     PREPROCESSTRF.out.ch_meta,
+    //     PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
+    // )
 
     PREPROCESSR (
-        TRF.out.ch_meta,
-        TRF.out.trf_dat
+        // TRF.out.ch_meta,
+        // TRF.out.trf_dat
         // // TRF.out.top10pc_repeats,
         // // TRF.out.all_repeats
-        // ch_trf_meta,
-        // ch_trf.filter( ~/.*top10pc.*/ )
+        ch_trf_meta,
+        ch_trf.filter( ~/.*top10pc.*/ )
     )
 
     // RSCRIPTS (
