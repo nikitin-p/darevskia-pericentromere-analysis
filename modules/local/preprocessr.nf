@@ -23,7 +23,14 @@ process PREPROCESSR {
     grep -v 'Parameters' ${trf_dat} | \\
         sed '/^\$/d' | \\
         tail -n+6 | \\
-        awk 'BEGIN { prevstr="" } { if ( prevstr ~ /Sequence/ && \$0 !~ /Sequence/ ) { print prevstr "\\t" \$0 } prevstr=\$0 }' | \\
+        awk 'BEGIN { prevseq="" } \\
+            { \\
+                if ( \$0 ~ /Sequence/ ) { \\
+                    prevseq=\$0 \\
+                } else { \\
+                    print prevseq "\\t" \$0 \\
+                } \\
+            }' | \\
         awk '{print \$2 "\\t" \$3 "\\t" \$17}' | \\
         tr -d '(' | \\
         tr -d ')' | \\
