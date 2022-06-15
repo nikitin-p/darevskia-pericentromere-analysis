@@ -8,10 +8,6 @@ process REPEATEXPLORER {
     // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
     //     'shub://repeatexplorer/repex_tarean:0.3.8.dbaa07f':
     //     'kavonrtep/repeatexplorer:2.3.8' }"
-    // conda (params.enable_conda ? "YOUR-TOOL-HERE" : null)
-    // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-    //     'https://depot.galaxyproject.org/singularity/YOUR-TOOL-HERE':
-    //     'quay.io/biocontainers/YOUR-TOOL-HERE' }"
 
     input:
     tuple val(meta), path(interlaced_fasta)
@@ -19,8 +15,6 @@ process REPEATEXPLORER {
     output:
     tuple val(meta), path("output_*"), emit: repeat_contigs
     path("log_*.txt"), emit: tarean_log
-    // path "whoami.txt"
-    // path "whichpython3.txt"
     path "versions.yml", emit: versions
 
     script:
@@ -29,14 +23,11 @@ process REPEATEXPLORER {
     """
     export PATH=/opt/conda/bin:/home/toor/repex_tarean:\$PATH
     export PYTHONHASHSEED=0
-    #whoami > whoami.txt
-    #which python3 > whichpython3.txt
     /home/toor/repex_tarean/seqclust \\
         -p ${interlaced_fasta} \\
         -l log_${meta.id}.txt \\
         -c $task.cpus \\
         -v output_${meta.id} \\
-        #-r 10000000 \\
         -tax METAZOA3.0 \\
         -opt ILLUMINA
 
