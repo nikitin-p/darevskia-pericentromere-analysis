@@ -11,18 +11,33 @@ include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
+// contigs = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+//     ]
+// ]
+
 contigs = [
     [
     [
         id: "N"
     ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+    "/home/nikitinp/lizards/pipeline/results/repex_test/output_N",
     ],
     [
     [
         id: "V"
     ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+    "/home/nikitinp/lizards/pipeline/results/repex_test/output_V"
     ]
 ]
 
