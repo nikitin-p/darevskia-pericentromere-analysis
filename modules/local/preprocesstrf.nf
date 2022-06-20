@@ -12,8 +12,8 @@ process PREPROCESSTRF {
 
     output:
     // tuple val(meta), path("*_seq.fasta"), emit: fixed_contigs
-    tuple val(meta), path("contigs_*_top10pc_seq.fasta"), emit: top10pc_contigs
-    tuple val(meta), path("contigs_*_all_seq.fasta"), emit: all_contigs
+    tuple val(meta), path("contigs_*_top10pc.fasta"), emit: top10pc_contigs
+    tuple val(meta), path("contigs_*_merged_all.fasta"), emit: all_contigs
     path "versions.yml", emit: versions
 
     script:
@@ -21,7 +21,7 @@ process PREPROCESSTRF {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged.fasta
+    awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged_all.fasta
 
     grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
 
@@ -34,26 +34,13 @@ process PREPROCESSTRF {
         sort -t '|' -k3,3nr > \\
         contigs_${meta.id}_headers_sorted.txt
 
-    cat contigs_${meta.id}_headers.txt | \\
-        tr '(' '|' | \\
-        tr -d ')' | \\
-        tr '-' '|' | \\
-        tr -d ' ' | \\
-        tr '.' '|' > \\
-        contigs_${meta.id}_headers_orig.txt
-
-    paste -d'\\n' \\
-        contigs_${meta.id}_headers_orig.txt \\
-        <(grep -v '>' contigs_${meta.id}_merged.fasta) > \\
-        contigs_${meta.id}_all_seq.fasta
-
     w=\$(wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1)
     x=\$(awk -v var=\$w '{printf "%.0f", var / 10}' <(echo "1"))
 
     head -\${x} contigs_${meta.id}_headers_sorted.txt > contigs_${meta.id}_headers_sorted_top10pc.txt 
 
     for contig in `awk -F"|" '{print \$1}' contigs_${meta.id}_headers_sorted_top10pc.txt`; do \\
-        grep -w -A 1 "^\$contig" contigs_${meta.id}_merged.fasta >> contigs_${meta.id}_top10pc_seq.fasta; done
+        grep -w -A 1 "^\$contig" contigs_${meta.id}_merged_all.fasta >> contigs_${meta.id}_top10pc.fasta; done
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
