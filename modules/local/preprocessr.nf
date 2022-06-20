@@ -18,6 +18,7 @@ process PREPROCESSR {
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
+    def infix = (trf_dat =~ /.*_all.fasta.*/) ? 'all' : 'top10pc'
 
     """
     grep -v 'Parameters' ${trf_dat} | \\
@@ -35,7 +36,7 @@ process PREPROCESSR {
         tr -d '(' | \\
         tr -d ')' | \\
         tr '-' '\\t' > \\
-        ${meta.id}_top10pc_tab_bycol.tsv
+        ${meta.id}_${infix}_tab_bycol.tsv
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
@@ -43,3 +44,7 @@ process PREPROCESSR {
     END_VERSIONS
     """
 }
+
+
+contigs_V_merged_all.fasta.2.5.7.80.10.50.2000.dat
+contigs_N_top10pc.fasta.2.5.7.80.10.50.2000.dat
