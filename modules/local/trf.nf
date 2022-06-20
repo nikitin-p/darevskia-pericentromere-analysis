@@ -26,7 +26,7 @@ process TRF {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        TRF: trf -v | head -2 | tail -1 | cut -d' ' -f5
+        TRF: \$(trf -v | head -2 | tail -1 | cut -d' ' -f5)
     END_VERSIONS
     """
 }
