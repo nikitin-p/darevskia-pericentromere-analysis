@@ -4,27 +4,27 @@
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
-// include { TRF } from '../modules/local/trf.nf'
+include { TRF } from '../modules/local/trf.nf'
 include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
-// contigs = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-//     ]
-// ]
+contigs = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+    ]
+]
 
 // trf = [
 //     [
@@ -44,20 +44,20 @@ include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 //     ]
 // ]
 
-trf = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-    ]
-]
+// trf = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+//     ]
+// ]
 
 // rtables = [
 //     [
@@ -96,15 +96,15 @@ trf = [
 //     ]
 // ]
 
-// Channel
-//     .from( contigs )
-//     .map{ row -> [ row[0], file(row[1]) ] }
-//     .set{ ch_contigs }
-
 Channel
-    .from( trf )
+    .from( contigs )
     .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_trf }
+    .set{ ch_contigs }
+
+// Channel
+//     .from( trf )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_trf }
 
 // Channel
 //     .from( trf )
@@ -162,10 +162,10 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    // PREPROCESSTRF (
-    //     ch_contigs
-    //     // REPEATEXPLORER.out.repeat_contigs
-    // )
+    PREPROCESSTRF (
+        ch_contigs
+        // REPEATEXPLORER.out.repeat_contigs
+    )
 
     // QUAST (
     //     // ch_contigs
