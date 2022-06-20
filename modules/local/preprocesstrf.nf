@@ -21,7 +21,7 @@ process PREPROCESSTRF {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    awk '{if (\$0 ~ /^>/) {print "\\n" \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged.fasta
+    awk '{if (\$0 ~ /^>/) {if (NR == 1) print $0 else print "\\n" \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged.fasta
 
     grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
 
@@ -42,7 +42,10 @@ process PREPROCESSTRF {
         tr '.' '|' > \\
         contigs_${meta.id}_headers_orig.txt
 
-    paste -d'\\n' contigs_${meta.id}_headers_orig.txt contigs_${meta.id}_merged.fasta > contigs_${meta.id}_all_seq.fasta
+    paste -d'\\n' \\
+        contigs_${meta.id}_headers_orig.txt \\
+        <(grep -v '>' contigs_${meta.id}_merged.fasta) > \\
+        contigs_${meta.id}_all_seq.fasta
 
     w=\$(wc -l contigs_${meta.id}_headers_sorted.txt | cut -d " " -f1)
     x=\$(awk -v var=\$w '{printf "%.0f", var / 10}' <(echo "1"))
