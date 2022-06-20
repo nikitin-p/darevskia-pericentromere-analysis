@@ -21,7 +21,7 @@ process PREPROCESSTRF {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    awk '{if (\$0 ~ /^>/) {if (NR != 1) {print "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged.fasta
+    awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged.fasta
 
     grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
 
