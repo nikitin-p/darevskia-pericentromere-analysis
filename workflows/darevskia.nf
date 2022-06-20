@@ -11,36 +11,51 @@ include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
-contigs = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-    ]
-]
+// contigs = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+//     ]
+// ]
+
+// trf = [
+//     [
+//         "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+//     ],
+//     [
+//         "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+//     ]
+// ]
+
+// trf_meta = [
+//     [
+//         id: "N"
+//     ],
+//     [
+//         id: "V"
+//     ]
+// ]
 
 trf = [
     [
-        "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-    ],
-    [
-        "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-    ]
-]
-
-trf_meta = [
     [
         id: "N"
     ],
+    "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
+    ],
+    [
     [
         id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
     ]
 ]
 
@@ -81,19 +96,24 @@ trf_meta = [
 //     ]
 // ]
 
-Channel
-    .from( contigs )
-    .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_contigs }
+// Channel
+//     .from( contigs )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_contigs }
 
 Channel
     .from( trf )
-    .map{ row -> file(row[0]) }
+    .map{ row -> [ row[0], file(row[1]) ] }
     .set{ ch_trf }
 
-Channel
-    .from( trf_meta )
-    .set{ ch_trf_meta }
+// Channel
+//     .from( trf )
+//     .map{ row -> file(row[0]) }
+//     .set{ ch_trf }
+
+// Channel
+//     .from( trf_meta )
+//     .set{ ch_trf_meta }
 
 // Channel
 //     .from( rtables )
@@ -162,7 +182,7 @@ workflow DAREVSKIA {
         // TRF.out.trf_dat
         // // TRF.out.top10pc_repeats,
         // // TRF.out.all_repeats
-        ch_trf_meta,
+        // ch_trf_meta,
         ch_trf.filter( ~/.*top10pc.*/ )
     )
 

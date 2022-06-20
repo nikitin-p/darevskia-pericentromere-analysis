@@ -8,8 +8,8 @@ process PREPROCESSR {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
-    val meta
-    each path(trf_dat)
+    tuple val(meta), path(trf_dat)
+    // each path(trf_dat)
 
     output:
     tuple val(meta), path("*.tsv"), emit: repeats_tsv
