@@ -13,7 +13,7 @@ process PREPROCESSTRF {
     output:
     // tuple val(meta), path("*_seq.fasta"), emit: fixed_contigs
     tuple val(meta), path("contigs_*_top10pc_seq.fasta"), emit: top10pc_contigs
-    tuple val(meta), path "contigs_*_all_seq.fasta", emit: all_contigs
+    tuple val(meta), path("contigs_*_all_seq.fasta"), emit: all_contigs
     path "versions.yml", emit: versions
 
     script:
