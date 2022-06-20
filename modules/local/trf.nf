@@ -15,7 +15,7 @@ process TRF {
     tuple val(meta), path("*.dat"), emit: trf_dat
     // val meta, emit: ch_meta
     // path "*.dat",        emit: trf_dat
-    path "versions.yml", emit: versions
+    // path "versions.yml", emit: versions
 
     script:
     def args = task.ext.args ?: ''
@@ -28,5 +28,7 @@ process TRF {
 
     """
     trf ${contigs_fasta} 2 5 7 80 10 50 2000 -d || echo "0"
+
+
     """
 }
