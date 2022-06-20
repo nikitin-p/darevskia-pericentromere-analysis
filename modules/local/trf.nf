@@ -8,12 +8,13 @@ process TRF {
         'quay.io/biocontainers/trf:4.09.1--hec16e2b_2' }"
 
     input:
-    val meta
-    each path(contigs_fasta)
+    tuple val(meta), path(contigs_fasta)
+    // each path(contigs_fasta)
 
     output:
-    val meta, emit: ch_meta
-    path "*.dat",        emit: trf_dat
+    tuple val(meta), path("*.dat"), emit: trf_dat
+    // val meta, emit: ch_meta
+    // path "*.dat",        emit: trf_dat
     path "versions.yml", emit: versions
 
     script:

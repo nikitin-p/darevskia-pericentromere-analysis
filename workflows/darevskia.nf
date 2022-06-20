@@ -172,18 +172,20 @@ workflow DAREVSKIA {
     //     REPEATEXPLORER.out.repeat_contigs
     // )
 
-    // TRF (
-    //     PREPROCESSTRF.out.ch_meta,
-    //     PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
-    // )
+    TRF (
+        // PREPROCESSTRF.out.fixed_contigs
+        // PREPROCESSTRF.out.ch_meta,
+        PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
+    )
 
     PREPROCESSR (
         // TRF.out.ch_meta,
-        // TRF.out.trf_dat
+        TRF.out.trf_dat
         // // TRF.out.top10pc_repeats,
         // // TRF.out.all_repeats
         // ch_trf_meta,
-        ch_trf.filter( ~/.*top10pc.*/ )
+        // ch_trf.filter( ~/.*top10pc.*/ )
+        // ch_trf
     )
 
     // RSCRIPTS (
