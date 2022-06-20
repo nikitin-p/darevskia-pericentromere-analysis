@@ -21,12 +21,12 @@ process TRF {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
 
-    // cat <<-END_VERSIONS > versions.yml
-    // "${task.process}":
-    //     TRF: trf -v | head -2 | tail -1 | awk '{print \$5}'
-    // END_VERSIONS
-
     """
-    trf ${contigs_fasta} 2 5 7 80 10 50 2000 -d
+    trf ${contigs_fasta} 2 5 7 80 10 50 2000 -d || echo "0"
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        TRF: trf -v | head -2 | tail -1 | awk '{print \$5}'
+    END_VERSIONS
     """
 }
