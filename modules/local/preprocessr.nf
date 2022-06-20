@@ -44,7 +44,3 @@ process PREPROCESSR {
     END_VERSIONS
     """
 }
-
-
-contigs_V_merged_all.fasta.2.5.7.80.10.50.2000.dat
-contigs_N_top10pc.fasta.2.5.7.80.10.50.2000.dat
