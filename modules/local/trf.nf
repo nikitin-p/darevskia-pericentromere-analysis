@@ -22,7 +22,7 @@ process TRF {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    trf ${contigs_fasta} 2 5 7 80 10 50 2000 -d || echo;
+    trf ${contigs_fasta} 2 7 7 80 10 50 500 -d || echo;
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

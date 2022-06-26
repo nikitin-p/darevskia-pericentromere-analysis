@@ -205,7 +205,8 @@ workflow DAREVSKIA {
 
     // RSCRIPTS (
     //     // PREPROCESSR.out.top10pc_repeats_tab
-    //     ch_rtables
+    //     PREPROCESSR.out.filter( ~/.*top10pc.*/ )
+    //     // ch_rtables
     // )
 
     // PYSCRIPTS (
