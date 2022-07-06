@@ -8,7 +8,7 @@
 // include { QUAST } from '../modules/local/quast.nf'
 // include { TRF } from '../modules/local/trf.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
-include { RSCRIPTS } from '../modules/local/rscipts.nf'
+include { RSCRIPTS } from '../modules/local/rscripts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
 // contigs = [
