@@ -64,13 +64,13 @@ trf = [
     [
         id: "N"
     ],
-    "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
+    "/home/nikitinp/lizards/pipeline/results/trf/contigs_N_top10pc.fasta.2.7.7.80.10.50.500.dat",
     ],
     [
     [
         id: "V"
     ],
-    "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    "/home/nikitinp/lizards/pipeline/results/trf/contigs_V_top10pc.fasta.2.7.7.80.10.50.500.dat"
     ]
 ]
 
@@ -84,20 +84,20 @@ trf = [
 //     ]
 // ]
 
-rtables = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
-    ]
-]
+// rtables = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
+//     ]
+// ]
 
 // reads = [
 //     [
