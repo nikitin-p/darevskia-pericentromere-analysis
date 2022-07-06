@@ -15,7 +15,7 @@ process RSCRIPTS {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    generate_probes.R
+    generate_probes.R N V
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
