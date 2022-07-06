@@ -12,7 +12,7 @@ process PREPROCESSR {
     // each path(trf_dat)
 
     output:
-    tuple val(meta), path("*.tsv"), emit: repeats_tsv
+    path "*.tsv", emit: repeats_tsv
     path "versions.yml"           , emit: versions
 
     script:

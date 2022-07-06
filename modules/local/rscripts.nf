@@ -1,21 +1,28 @@
 process RSCRIPTS {
-    tag "$meta.id"
+    tag "probes"
     label 'process_high'
     
     container 'rocker/tidyverse:3.6.3'
 
     input:
-    tuple val(meta), path(repeat_units)
+    val repeat_units
 
     output:
-    tuple val(meta), path("*_tr_probes_by_distance_geq10.tsv"), emit: probes
+    path "*_tr_probes_by_distance_geq10.tsv", emit: probes
     path "versions.yml", emit: versions
 
     script:
-    def args = task.ext.args ?: ''
-    def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    generate_probes.R N_1.tsv V_1.tsv
+    arg1=`echo ${repeat_units} | \\
+        tr -d ',[]' | \\
+        cut -f1`
+    arg2=`echo ${repeat_units} | \\
+        tr -d ',[]' | \\
+        cut -f2`
+    echo \$arg1
+    echo \$arg2
+
+    #generate_probes.R \$arg1 \$arg2
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

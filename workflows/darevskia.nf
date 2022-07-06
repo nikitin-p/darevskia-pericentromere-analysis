@@ -7,7 +7,7 @@
 // include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
 // include { TRF } from '../modules/local/trf.nf'
-// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 include { RSCRIPTS } from '../modules/local/rscripts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
@@ -59,20 +59,20 @@ include { RSCRIPTS } from '../modules/local/rscripts.nf'
 //     ]
 // ]
 
-// trf = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
-//     ]
-// ]
+trf = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/trf/N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat",
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/trf/V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat"
+    ]
+]
 
 // rtables = [
 //     [
@@ -131,15 +131,15 @@ rtables = [
 //     .map{ row -> [ row[0], file(row[1]) ] }
 //     .set{ ch_contigs }
 
-Channel
-    .from( rtables )
-    .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_rtables }
-
 // Channel
-//     .from( trf )
+//     .from( rtables )
 //     .map{ row -> [ row[0], file(row[1]) ] }
-//     .set{ ch_trf }
+//     .set{ ch_rtables }
+
+Channel
+    .from( trf )
+    .map{ row -> [ row[0], file(row[1]) ] }
+    .set{ ch_trf }
 
 // Channel
 //     .from( trf )
@@ -213,20 +213,20 @@ workflow DAREVSKIA {
     //     PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
     // )
 
-    // PREPROCESSR (
-    //     // TRF.out.ch_meta,
-    //     TRF.out.trf_dat
-    //     // // TRF.out.top10pc_repeats,
-    //     // // TRF.out.all_repeats
-    //     // ch_trf_meta,
-    //     // ch_trf.filter( ~/.*top10pc.*/ )
-    //     // ch_trf
-    // )
+    PREPROCESSR (
+        // TRF.out.ch_meta,
+        TRF.out.trf_dat
+        // // TRF.out.top10pc_repeats,
+        // // TRF.out.all_repeats
+        // ch_trf_meta,
+        // ch_trf.filter( ~/.*top10pc.*/ )
+        // ch_trf
+    )
 
     RSCRIPTS (
         // PREPROCESSR.out.top10pc_repeats_tab
-        // PREPROCESSR.out.filter( ~/.*top10pc.*/ )
-        ch_rtables
+        PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
+        // ch_rtables
     )
 
     // PYSCRIPTS (
