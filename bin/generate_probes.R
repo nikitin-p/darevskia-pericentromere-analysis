@@ -8,9 +8,19 @@ stringsAsFactors = F
 # Parse input file names
 
 args = commandArgs()
-print(args)
-# input.name = args[9]
-# output.name = paste0(sub('\\.tsv', '', input.name), "_processed.tsv")
+arg1 = args[8]
+arg2 = args[9]
+
+if (stringr::str_detect(arg1, fixed("N_"))) {
+  n.name = arg1
+  v.name = arg2
+} else {
+  n.name = arg2
+  v.name = arg1
+}
+
+print(n.name)
+print(v.name)
 
 # # Read in the tables with the tandem repeat units:
 
