@@ -4,27 +4,27 @@
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
-include { TRF } from '../modules/local/trf.nf'
-include { PREPROCESSR } from '../modules/local/preprocessr.nf'
-// include { RSCRIPTS } from '../modules/local/rscipts.nf'
+// include { TRF } from '../modules/local/trf.nf'
+// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+include { RSCRIPTS } from '../modules/local/rscipts.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
-contigs = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-    ]
-]
+// contigs = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+//     ]
+// ]
 
 // contigs = [
 //     [
@@ -84,6 +84,21 @@ contigs = [
 //     ]
 // ]
 
+rtables = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/preprocessr/N_top10pc_tab_bycol.tsv",
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/preprocessr/V_top10pc_tab_bycol.tsv"
+    ]
+]
+
 // reads = [
 //     [
 //     [
@@ -111,10 +126,15 @@ contigs = [
 //     ]
 // ]
 
+// Channel
+//     .from( contigs )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_contigs }
+
 Channel
-    .from( contigs )
+    .from( rtables )
     .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_contigs }
+    .set{ ch_rtables }
 
 // Channel
 //     .from( trf )
@@ -177,37 +197,37 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    PREPROCESSTRF (
-        ch_contigs
-        // REPEATEXPLORER.out.repeat_contigs
-    )
+    // PREPROCESSTRF (
+    //     ch_contigs
+    //     // REPEATEXPLORER.out.repeat_contigs
+    // )
 
     // QUAST (
     //     // ch_contigs
     //     REPEATEXPLORER.out.repeat_contigs
     // )
 
-    TRF (
-        // PREPROCESSTRF.out.fixed_contigs
-        // PREPROCESSTRF.out.ch_meta,
-        PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
-    )
-
-    PREPROCESSR (
-        // TRF.out.ch_meta,
-        TRF.out.trf_dat
-        // // TRF.out.top10pc_repeats,
-        // // TRF.out.all_repeats
-        // ch_trf_meta,
-        // ch_trf.filter( ~/.*top10pc.*/ )
-        // ch_trf
-    )
-
-    // RSCRIPTS (
-    //     // PREPROCESSR.out.top10pc_repeats_tab
-    //     PREPROCESSR.out.filter( ~/.*top10pc.*/ )
-    //     // ch_rtables
+    // TRF (
+    //     // PREPROCESSTRF.out.fixed_contigs
+    //     // PREPROCESSTRF.out.ch_meta,
+    //     PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
     // )
+
+    // PREPROCESSR (
+    //     // TRF.out.ch_meta,
+    //     TRF.out.trf_dat
+    //     // // TRF.out.top10pc_repeats,
+    //     // // TRF.out.all_repeats
+    //     // ch_trf_meta,
+    //     // ch_trf.filter( ~/.*top10pc.*/ )
+    //     // ch_trf
+    // )
+
+    RSCRIPTS (
+        // PREPROCESSR.out.top10pc_repeats_tab
+        PREPROCESSR.out.filter( ~/.*top10pc.*/ )
+        // ch_rtables
+    )
 
     // PYSCRIPTS (
     //     REPEATEXPLORER.out.repeat_contigs,
