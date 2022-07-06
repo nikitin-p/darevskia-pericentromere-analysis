@@ -215,12 +215,12 @@ workflow DAREVSKIA {
 
     PREPROCESSR (
         // TRF.out.ch_meta,
-        TRF.out.trf_dat
+        // TRF.out.trf_dat
         // // TRF.out.top10pc_repeats,
         // // TRF.out.all_repeats
         // ch_trf_meta,
         // ch_trf.filter( ~/.*top10pc.*/ )
-        // ch_trf
+        ch_trf
     )
 
     RSCRIPTS (
