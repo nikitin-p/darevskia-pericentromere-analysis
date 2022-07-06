@@ -15,10 +15,10 @@ process RSCRIPTS {
     """
     arg1=`echo ${repeat_units} | \\
         tr -d ',[]' | \\
-        cut -f1`
+        cut -d' ' -f1`
     arg2=`echo ${repeat_units} | \\
         tr -d ',[]' | \\
-        cut -f2`
+        cut -d' ' -f2`
     echo \$arg1
     echo \$arg2
 
