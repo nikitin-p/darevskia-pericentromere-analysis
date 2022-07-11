@@ -8,7 +8,7 @@ process MONOMERPROBE {
     val repeat_units
 
     output:
-    path "*_tr_probes_by_distance_geq10.tsv", emit: probes
+    path "*_tr_units_by_distance.tsv", emit: units
     path "versions.yml", emit: versions
 
     script:
