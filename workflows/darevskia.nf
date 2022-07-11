@@ -9,7 +9,7 @@
 // include { TRF } from '../modules/local/trf.nf'
 include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
-// include { RSCRIPTS } from '../modules/local/rscripts.nf'
+include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 
 // contigs = [
@@ -230,11 +230,11 @@ workflow DAREVSKIA {
         // ch_rtables
     )
 
-    // RSCRIPTS (
-    //     // PREPROCESSR.out.top10pc_repeats_tab
-    //     PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
-    //     // ch_rtables
-    // )
+    KMERPROBE (
+        // PREPROCESSR.out.top10pc_repeats_tab
+        PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
+        // ch_rtables
+    )
 
     // PYSCRIPTS (
     //     REPEATEXPLORER.out.repeat_contigs,

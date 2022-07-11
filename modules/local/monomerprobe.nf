@@ -1,5 +1,5 @@
 process MONOMERPROBE {
-    tag "probes"
+    tag "monomer_probes"
     label 'process_high'
     
     container 'rocker/tidyverse:3.6.3'

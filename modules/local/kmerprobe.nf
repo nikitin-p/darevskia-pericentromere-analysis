@@ -1,5 +1,5 @@
-process RSCRIPTS {
-    tag "probes"
+process KMERPROBE {
+    tag "kmer_probes"
     label 'process_high'
     
     container 'rocker/tidyverse:3.6.3'
@@ -24,7 +24,7 @@ process RSCRIPTS {
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        RSCRIPTS: 1.0
+        KMERPROBE: 1.0
     END_VERSIONS
     """
 }
