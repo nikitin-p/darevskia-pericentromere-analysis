@@ -20,7 +20,7 @@ process KMERPROBE {
         tr -d ',[]' | \\
         cut -d' ' -f2`
 
-    generate_probes.R \$arg1 \$arg2
+    generate_probes_from_kmers.R \$arg1 \$arg2
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

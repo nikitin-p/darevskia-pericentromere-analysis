@@ -82,7 +82,7 @@ tr.units.n.arranged = tr.units.all %>%
   distinct() 
 
 write.table(tr.units.n.arranged,
-            "N_tr_units_by_distance.tsv",
+            "N_tr_units_by_distance_geq10.tsv",
             quote = F,
             sep = "\t",
             row.names = F)
@@ -97,7 +97,7 @@ tr.units.v.arranged = tr.units.all %>%
   distinct()
 
 write.table(tr.units.v.arranged,
-            "V_tr_units_by_distance.tsv",
+            "V_tr_units_by_distance_geq10.tsv",
             quote = F,
             sep = "\t",
             row.names = F)
