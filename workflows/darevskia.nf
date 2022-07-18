@@ -7,25 +7,28 @@
 // include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
 // include { TRF } from '../modules/local/trf.nf'
-include { PREPROCESSR } from '../modules/local/preprocessr.nf'
-include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
-include { KMERPROBE } from '../modules/local/kmerprobe.nf'
+// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+// include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
+// include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
+include { BOWTIE2BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
+// include { BOWTIE2ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
 
-// contigs = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-//     ]
-// ]
+
+contigs = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+    ]
+]
 
 // contigs = [
 //     [
@@ -60,20 +63,20 @@ include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 //     ]
 // ]
 
-trf = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/trf/contigs_N_top10pc.fasta.2.7.7.80.10.50.500.dat",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/trf/contigs_V_top10pc.fasta.2.7.7.80.10.50.500.dat"
-    ]
-]
+// trf = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/trf/contigs_N_top10pc.fasta.2.7.7.80.10.50.500.dat",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/trf/contigs_V_top10pc.fasta.2.7.7.80.10.50.500.dat"
+//     ]
+// ]
 
 // rtables = [
 //     [
@@ -127,20 +130,20 @@ trf = [
 //     ]
 // ]
 
-// Channel
-//     .from( contigs )
-//     .map{ row -> [ row[0], file(row[1]) ] }
-//     .set{ ch_contigs }
+Channel
+    .from( contigs )
+    .map{ row -> [ row[0], file(row[1]) ] }
+    .set{ ch_contigs }
 
 // Channel
 //     .from( rtables )
 //     .map{ row -> [ row[0], file(row[1]) ] }
 //     .set{ ch_rtables }
 
-Channel
-    .from( trf )
-    .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_trf }
+// Channel
+//     .from( trf )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_trf }
 
 // Channel
 //     .from( trf )
@@ -164,6 +167,12 @@ Channel
 //     .from( reads )
 //     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
 //     .set{ ch_reads }
+
+Channel
+    .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
+    .set{ selected_probes }
+
+// Reminder: move primer.fasta into repo
 
 // Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
@@ -214,32 +223,54 @@ workflow DAREVSKIA {
     //     PREPROCESSTRF.out.top10pc_contigs.concat(PREPROCESSTRF.out.all_contigs)
     // )
 
-    PREPROCESSR (
-        // TRF.out.ch_meta,
-        // TRF.out.trf_dat
-        // // TRF.out.top10pc_repeats,
-        // // TRF.out.all_repeats
-        // ch_trf_meta,
-        // ch_trf.filter( ~/.*top10pc.*/ )
-        ch_trf
-    )
+    // PREPROCESSR (
+    //     // TRF.out.ch_meta,
+    //     // TRF.out.trf_dat
+    //     // // TRF.out.top10pc_repeats,
+    //     // // TRF.out.all_repeats
+    //     // ch_trf_meta,
+    //     // ch_trf.filter( ~/.*top10pc.*/ )
+    //     ch_trf
+    // )
 
-    MONOMERPROBE (
-        // PREPROCESSR.out.top10pc_repeats_tab
-        PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
-        // ch_rtables
-    )
+    // MONOMERPROBE (
+    //     // PREPROCESSR.out.top10pc_repeats_tab
+    //     PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
+    //     // ch_rtables
+    // )
 
-    KMERPROBE (
-        // PREPROCESSR.out.top10pc_repeats_tab
-        PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
-        // ch_rtables
-    )
+    // KMERPROBE (
+    //     // PREPROCESSR.out.top10pc_repeats_tab
+    //     PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
+    //     // ch_rtables
+    // )
 
     // PYSCRIPTS (
     //     REPEATEXPLORER.out.repeat_contigs,
     //     PREPROCESSR.out.all_repeats_tab
             // !do not forget to add length plots to this
+    // )
+
+    BOWTIE2BUILD (
+        ch_contigs
+        // PREPROCESSTRF.out.all_contigs
+    )
+
+    // contigs_*_merged_all.fasta
+    // PREPROCESSTRF.out.all_contigs
+
+    // BOWTIE2BUILD.out.contigs_index
+    // .map {it -> [extract_species(it), it]}
+
+    // def contigs_name = "contigs_N_merged_all.fasta";
+    // def m = contigs_name =~ /contigs_([NV])/;
+    // print m[0][1]​
+
+    // BOWTIE2ALIGN (
+    //     // ch_contigs
+    //     // REPEATEXPLORER.out.repeat_contigs
+    //     BOWTIE2BUILD.out.contigs_index
+    //     selected_probes
     // )
 
 }

@@ -4,7 +4,7 @@ process REPEATEXPLORER {
     tag "$meta.id"
     label 'process_high'
 
-    container 'sviatsidorov/tarean:1.0'
+    container 'sviatsidorov/tarean:1.1'
     // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
     //     'shub://repeatexplorer/repex_tarean:0.3.8.dbaa07f':
     //     'kavonrtep/repeatexplorer:2.3.8' }"
@@ -33,7 +33,7 @@ process REPEATEXPLORER {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        REPEATEXPLORER: 0.3.8
+        REPEATEXPLORER: 0.3.7
     END_VERSIONS
     """
 }
