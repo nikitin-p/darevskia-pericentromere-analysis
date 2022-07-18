@@ -6,6 +6,6 @@ def trimSuffix(String original, String suffix) {
 }
 
 def extract_species(contigs_name) {
-    def m = contigs_name =~ /contigs_([NV])/;
-    return m[0][1]​
+    def m = contigs_name =~ /contigs_([NV])/
+    return m[0][1]
 }
