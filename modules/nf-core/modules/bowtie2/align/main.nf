@@ -15,7 +15,7 @@ process BOWTIE2_ALIGN {
     val   sort_bam
 
     output:
-    tuple val(meta), path("*.bam")    , emit: bam
+    tuple val(meta), path("*.sam")    , emit: sam
     tuple val(meta), path("*.log")    , emit: log
     tuple val(meta), path("*fastq.gz"), emit: fastq, optional:true
     path  "versions.yml"              , emit: versions
