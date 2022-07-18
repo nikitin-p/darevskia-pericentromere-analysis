@@ -13,20 +13,20 @@ include { extract_species } from '../modules/local/custom_functions.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
-// include { BOWTIE2ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
+// include { BOWTIE2_ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
 
 contigs = [
     [
     [
         id: "N"
     ],
-    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_N_merged_all.fasta",
+    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_N_top10pc_bt2.fasta",
     ],
     [
     [
         id: "V"
     ],
-    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_V_merged_all.fasta"
+    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_V_top10pc_bt2.fasta"
     ]
 ]
 
@@ -281,7 +281,7 @@ workflow DAREVSKIA {
     // def m = contigs_name =~ /contigs_([NV])/;
     // print m[0][1]​
 
-    // BOWTIE2ALIGN (
+    // BOWTIE2_ALIGN (
     //     // ch_contigs
     //     // REPEATEXPLORER.out.repeat_contigs
     //     BOWTIE2BUILD.out.contigs_index
