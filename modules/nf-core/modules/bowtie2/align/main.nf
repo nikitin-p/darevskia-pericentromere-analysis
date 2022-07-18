@@ -46,27 +46,16 @@ process BOWTIE2_ALIGN {
     [ -z "\$INDEX" ] && echo "Bowtie2 index files not found" 1>&2 && exit 1
 
     bowtie2 \\
+        -f \\
         -x \$INDEX \\
         $reads_args \\
         --threads $task.cpus \\
         $unaligned \\
-        $args \\
-        2> ${prefix}.bowtie2.log \\
-        | samtools $samtools_command $args2 --threads $task.cpus -o ${prefix}.bam -
-
-    if [ -f ${prefix}.unmapped.fastq.1.gz ]; then
-        mv ${prefix}.unmapped.fastq.1.gz ${prefix}.unmapped_1.fastq.gz
-    fi
-
-    if [ -f ${prefix}.unmapped.fastq.2.gz ]; then
-        mv ${prefix}.unmapped.fastq.2.gz ${prefix}.unmapped_2.fastq.gz
-    fi
+        -S probes_mapped_on_${meta.id}.sam
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bowtie2: \$(echo \$(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*\$//')
-        samtools: \$(echo \$(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*\$//')
-        pigz: \$( pigz --version 2>&1 | sed 's/pigz //g' )
     END_VERSIONS
     """
 }
