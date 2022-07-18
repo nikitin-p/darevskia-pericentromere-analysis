@@ -11,7 +11,7 @@ process BOWTIE2_BUILD {
     path fasta
 
     output:
-    path "*_bowtie2"    , emit: index
+    path "*_bowtie2"    , emit: contigs_index
     path "versions.yml" , emit: versions
 
     when:

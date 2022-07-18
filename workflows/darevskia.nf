@@ -274,12 +274,9 @@ workflow DAREVSKIA {
     // contigs_*_merged_all.fasta
     // PREPROCESSTRF.out.all_contigs
 
-    // BOWTIE2BUILD.out.contigs_index
-    // .map {it -> [extract_species(it), it]}
-
-    // def contigs_name = "contigs_N_merged_all.fasta";
-    // def m = contigs_name =~ /contigs_([NV])/;
-    // print m[0][1]​
+    BOWTIE2_BUILD.out.contigs_index
+    .map {it -> [extract_species(it), it]}
+    .view()
 
     // BOWTIE2_ALIGN (
     //     // ch_contigs
