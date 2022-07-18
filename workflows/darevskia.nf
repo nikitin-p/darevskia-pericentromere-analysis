@@ -280,12 +280,16 @@ workflow DAREVSKIA {
         .map { it -> [extract_reverse_species(it), it] }
         .set{ ch_selected_probes }
 
+    ch_contigs_index.join(ch_selected_probes)
+        .map { it -> [ [id: it[0], single_end: true] , it[1], it[2] ] }
+        .set{ ch_index_probes }
+
     BOWTIE2_ALIGN (
         // ch_contigs
         // REPEATEXPLORER.out.repeat_contigs
         // BOWTIE2BUILD.out.contigs_index
         // selected_probes
-        ch_contigs_index.join(ch_selected_probes),
+        ch_index_probes,
         false,
         false
     )
