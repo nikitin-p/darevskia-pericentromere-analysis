@@ -15,21 +15,35 @@ include { extract_species } from '../modules/local/custom_functions.nf'
 include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
 
-
 contigs = [
     [
     [
         id: "N"
     ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_N_merged_all.fasta",
     ],
     [
     [
         id: "V"
     ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+    "/home/nikitinp/lizards/pipeline/results/preprocesstrf/contigs_V_merged_all.fasta"
     ]
 ]
+
+// contigs = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+//     ]
+// ]
 
 // contigs = [
 //     [
