@@ -13,7 +13,7 @@ include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
-// include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
+include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
 
 contigs = [
@@ -263,17 +263,17 @@ workflow DAREVSKIA {
             // !do not forget to add length plots to this
     // )
 
-    // BOWTIE2_BUILD (
-    //     ch_contigs.map {it -> it[1]}
-    //     // PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
-    // )
+    BOWTIE2_BUILD (
+        ch_contigs.map {it -> it[1]}
+        // PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
+    )
 
-    // // contigs_*_merged_all.fasta
-    // // PREPROCESSTRF.out.all_contigs
+    // contigs_*_merged_all.fasta
+    // PREPROCESSTRF.out.all_contigs
 
-    // BOWTIE2_BUILD.out.contigs_index
-    //     .map {it -> [extract_species(it), it]}
-    //     .set{ ch_contigs_index }
+    BOWTIE2_BUILD.out.contigs_index
+        .map {it -> [extract_species(it), it]}
+        .set{ ch_contigs_index }
 
     Channel
         .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
