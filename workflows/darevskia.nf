@@ -277,7 +277,7 @@ workflow DAREVSKIA {
 
     Channel
         .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
-        .map { it -> [extract_reverse_species(it), it] }
+        // .map { it -> [extract_reverse_species(it), it] }
         .view()
         // .set{ selected_probes }
 
