@@ -1,5 +1,5 @@
 process BOWTIE2_ALIGN {
-    tag "$meta.id"
+    tag "$meta"
     label "process_high"
 
     conda (params.enable_conda ? "bioconda::bowtie2=2.4.4 bioconda::samtools=1.15.1 conda-forge::pigz=2.6" : null)
@@ -26,7 +26,7 @@ process BOWTIE2_ALIGN {
     script:
     def args = task.ext.args ?: ""
     def args2 = task.ext.args2 ?: ""
-    def prefix = task.ext.prefix ?: "${meta.id}"
+    def prefix = task.ext.prefix ?: "${meta}"
 
     def unaligned = ""
     def reads_args = ""
