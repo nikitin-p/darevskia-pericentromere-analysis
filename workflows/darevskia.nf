@@ -1,3 +1,4 @@
+include { extract_species } from '../modules/local/custom_functions.nf'
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
@@ -11,7 +12,7 @@
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
-include { BOWTIE2BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
+include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
 
 
@@ -251,7 +252,7 @@ workflow DAREVSKIA {
             // !do not forget to add length plots to this
     // )
 
-    BOWTIE2BUILD (
+    BOWTIE2_BUILD (
         ch_contigs
         // PREPROCESSTRF.out.all_contigs
     )
