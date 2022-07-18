@@ -183,10 +183,6 @@ Channel
 //     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
 //     .set{ ch_reads }
 
-Channel
-    .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
-    .set{ selected_probes }
-
 // Reminder: move primer.fasta into repo
 
 // Channel
@@ -275,8 +271,14 @@ workflow DAREVSKIA {
     // PREPROCESSTRF.out.all_contigs
 
     BOWTIE2_BUILD.out.contigs_index
-    .map {it -> [extract_species(it), it]}
-    .view()
+        .map {it -> [extract_species(it), it]}
+        .set{ ch_contigs_index }
+
+    Channel
+        .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
+        .map { it -> [if (extract_species(contigs_name) == 'N') {print 'V'} else {print 'N'}, it] }
+        .view()
+        // .set{ selected_probes }
 
     // BOWTIE2_ALIGN (
     //     // ch_contigs
