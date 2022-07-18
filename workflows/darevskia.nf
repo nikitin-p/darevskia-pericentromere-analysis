@@ -276,7 +276,7 @@ workflow DAREVSKIA {
 
     Channel
         .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
-        .map { it -> [if (extract_species(contigs_name) == 'N') {print 'V'} else {print 'N'}, it] }
+        .map { it -> [ (extract_species(contigs_name) == 'N') ? 'V' : 'N', it] }
         .view()
         // .set{ selected_probes }
 
