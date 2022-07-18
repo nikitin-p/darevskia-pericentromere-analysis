@@ -9,3 +9,11 @@ def extract_species(contigs_name) {
     def m = contigs_name =~ /contigs_([NV])/
     return m[0][1]
 }
+
+def extract_reverse_species(contigs_name) {
+    if (extract_species(contigs_name) == 'N') {
+        return 'V'
+    } else {
+        return 'N'
+    }
+}

@@ -1,4 +1,5 @@
 include { extract_species } from '../modules/local/custom_functions.nf'
+include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
@@ -276,7 +277,7 @@ workflow DAREVSKIA {
 
     Channel
         .fromPath('./darevskia-pericentromere-analysis/probes/*_probes.fasta')
-        .map { it -> [ extract_species(it) == 'N' ? 'V' : 'N', it] }
+        .map { it -> [extract_reverse_species(it), it] }
         .view()
         // .set{ selected_probes }
 
