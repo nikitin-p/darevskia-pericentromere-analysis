@@ -15,6 +15,7 @@ include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
 include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 include { BOWTIE2_ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
+include { PARSESAM } from '../modules/local/parsesam.nf'
 
 contigs = [
     [
@@ -292,6 +293,10 @@ workflow DAREVSKIA {
         ch_index_probes,
         false,
         false
+    )
+
+    PARSESAM (
+        BOWTIE2_ALIGN.out.sam
     )
 
 }
