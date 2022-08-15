@@ -190,9 +190,9 @@ Channel
 
 // Reminder: move primer.fasta into repo
 
-// Channel
-//     .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
-//     .set{ primer }
+Channel
+    .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
+    .set{ primer }
 
 workflow DAREVSKIA {
 
