@@ -1,6 +1,5 @@
-include { extract_species } from '../custom_functions.nf'
-
-process BOWTIE2_ALIGN {
+process BOWTIE2_CROSS_ALIGN {
+    tag "$meta.id"
     label "process_high"
 
     conda (params.enable_conda ? "bioconda::bowtie2=2.4.4 bioconda::samtools=1.15.1 conda-forge::pigz=2.6" : null)
@@ -9,15 +8,16 @@ process BOWTIE2_ALIGN {
         "quay.io/biocontainers/mulled-v2-ac74a7f02cebcfcc07d8e8d1d750af9c83b4d45a:1744f68fe955578c63054b55309e05b41c37a80d-0" }"
 
     input:
-    each  path(reads)
-    path  index
+    // tuple val(meta), path(reads)
+    // path  index
+    tuple val(meta), path(index), path(reads)
     val   save_unaligned
     val   sort_bam
 
     output:
-    path "*.sam"    , emit: sam
-    // path "*.log"    , emit: log
-    // path "*fastq.gz", emit: fastq, optional:true
+    tuple val(meta), path("*.sam")    , emit: sam
+    // tuple val(meta), path("*.log")    , emit: log, optional:true
+    // tuple val(meta), path("*fastq.gz"), emit: fastq, optional:true
     path  "versions.yml"              , emit: versions
 
     when:
@@ -28,10 +28,17 @@ process BOWTIE2_ALIGN {
     def args2 = task.ext.args2 ?: ""
     def prefix = task.ext.prefix ?: "${meta.id}"
 
-    def unaligned = save_unaligned ? "--un-gz ${prefix}.unmapped.fastq.gz" : ""
-    def reads_args = "-U ${reads}"
+    def unaligned = ""
+    def reads_args = ""
+    if (meta.single_end) {
+        unaligned = save_unaligned ? "--un-gz ${prefix}.unmapped.fastq.gz" : ""
+        reads_args = "-U ${reads}"
+    } else {
+        unaligned = save_unaligned ? "--un-conc-gz ${prefix}.unmapped.fastq.gz" : ""
+        reads_args = "-1 ${reads[0]} -2 ${reads[1]}"
+    }
+
     def samtools_command = sort_bam ? 'sort' : 'view'
-    def species_name = extract_species(index)
 
     """
     INDEX=`find -L ./ -name "*.rev.1.bt2" | sed "s/.rev.1.bt2//"`
@@ -44,7 +51,7 @@ process BOWTIE2_ALIGN {
         $reads_args \\
         --threads $task.cpus \\
         $unaligned \\
-        -S clsat36_mapped_on_${species_name}.sam
+        -S probes_mapped_on_${meta.id}.sam
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
