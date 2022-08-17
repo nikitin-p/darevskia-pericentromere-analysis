@@ -272,8 +272,8 @@ workflow DAREVSKIA {
     // )
 
     BOWTIE2_BUILD (
-        ch_contigs.map {it -> it[1]}
-        // PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
+        // ch_contigs.map {it -> it[1]}
+        PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
     )
 
     // contigs_*_merged_all.fasta
