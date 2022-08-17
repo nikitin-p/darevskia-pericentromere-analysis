@@ -1,7 +1,5 @@
-include { extract_species } from '../custom_functions.nf'
-
-process BOWTIE2_ALIGN {
-    label "process_high"
+process BOWTIE2_CLSAT_ALIGN {
+    label "process_low"
 
     conda (params.enable_conda ? "bioconda::bowtie2=2.4.4 bioconda::samtools=1.15.1 conda-forge::pigz=2.6" : null)
     container "${ workflow.containerEngine == "singularity" && !task.ext.singularity_pull_docker_container ?
@@ -9,29 +7,15 @@ process BOWTIE2_ALIGN {
         "quay.io/biocontainers/mulled-v2-ac74a7f02cebcfcc07d8e8d1d750af9c83b4d45a:1744f68fe955578c63054b55309e05b41c37a80d-0" }"
 
     input:
-    each  path(reads)
-    path  index
-    val   save_unaligned
-    val   sort_bam
-
+    tuple val(species_name), path(index)
+    each path(clsat36)
+    
     output:
-    path "*.sam"    , emit: sam
-    // path "*.log"    , emit: log
-    // path "*fastq.gz", emit: fastq, optional:true
-    path  "versions.yml"              , emit: versions
-
-    when:
-    task.ext.when == null || task.ext.when
+    path "*.sam", emit: sam
+    path  "versions.yml", emit: versions
 
     script:
-    def args = task.ext.args ?: ""
-    def args2 = task.ext.args2 ?: ""
-    def prefix = task.ext.prefix ?: "${meta.id}"
-
-    def unaligned = save_unaligned ? "--un-gz ${prefix}.unmapped.fastq.gz" : ""
-    def reads_args = "-U ${reads}"
-    def samtools_command = sort_bam ? 'sort' : 'view'
-    def species_name = extract_species(index)
+    def reads_args = "-U ${clsat36}"
 
     """
     INDEX=`find -L ./ -name "*.rev.1.bt2" | sed "s/.rev.1.bt2//"`
@@ -43,7 +27,6 @@ process BOWTIE2_ALIGN {
         -x \$INDEX \\
         $reads_args \\
         --threads $task.cpus \\
-        $unaligned \\
         -S clsat36_mapped_on_${species_name}.sam
 
     cat <<-END_VERSIONS > versions.yml

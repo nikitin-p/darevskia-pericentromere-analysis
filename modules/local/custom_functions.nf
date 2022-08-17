@@ -6,7 +6,8 @@ def trimSuffix(String original, String suffix) {
 }
 
 def extract_species(contigs_name) {
-    def m = contigs_name =~ /_([NV])/
+    def contigs_simple_name = contigs_name.tokenize('/')[-1]
+    def m = contigs_simple_name =~ /_([NV])/
     return m[0][1]
 }
 

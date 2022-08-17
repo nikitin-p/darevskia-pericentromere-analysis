@@ -3,9 +3,6 @@
     "homePage": "https://github.com/marc-jones/nextflow-example",
     "repos": {
         "nf-core/modules": {
-            "bowtie2/align": {
-                "git_sha": "848ee9a215d02d80be033bfa60881700f2bd914c"
-            },
             "bowtie2/build": {
                 "git_sha": "e745e167c1020928ef20ea1397b6b4d230681b4d"
             },
