@@ -16,7 +16,7 @@ include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
-include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
+// include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
 
@@ -282,6 +282,8 @@ workflow DAREVSKIA {
     BOWTIE2_BUILD.out.contigs_index
         .map {it -> [extract_species(it), it]}
         .set{ ch_contigs_index }
+        
+    ch_contigs_index.view()
 
     // Channel
     //     .fromPath('./darevskia-pericentromere-analysis/probes/probes_*.fasta')
@@ -306,11 +308,11 @@ workflow DAREVSKIA {
     //     BOWTIE2_ALIGN.out.sam
     // )
 
-    BOWTIE2_CLSAT_ALIGN (
-        // BOWTIE2_BUILD.out.contigs_index
-        ch_contigs_index
-        clsat36
-    )
+    // BOWTIE2_CLSAT_ALIGN (
+    //     // BOWTIE2_BUILD.out.contigs_index
+    //     ch_contigs_index
+    //     clsat36
+    // )
 
     // EXTRACTCONTIG (
     //     PREPROCESSTRF.out.all_contigs
