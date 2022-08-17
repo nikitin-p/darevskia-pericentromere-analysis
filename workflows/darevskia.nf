@@ -16,7 +16,7 @@ include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
-include { BOWTIE2_ALIGN } from '../modules/nf-core/modules/bowtie2/align/main.nf'
+include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
 
