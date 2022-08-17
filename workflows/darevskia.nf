@@ -278,10 +278,6 @@ workflow DAREVSKIA {
 
     // contigs_*_merged_all.fasta
     // PREPROCESSTRF.out.all_contigs
-
-    BOWTIE2_BUILD.out.contigs_index
-        .map {it -> [extract_species(it), it]}
-        .set{ ch_contigs_index }
         
     // Channel
     //     .fromPath('./darevskia-pericentromere-analysis/probes/probes_*.fasta')
@@ -308,7 +304,8 @@ workflow DAREVSKIA {
 
     BOWTIE2_CLSAT_ALIGN (
         // BOWTIE2_BUILD.out.contigs_index
-        ch_contigs_index
+        BOWTIE2_BUILD.out.contigs_index
+            .map {it -> [extract_species(it), it]}
         clsat36
     )
 
