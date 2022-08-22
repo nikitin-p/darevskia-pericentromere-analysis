@@ -305,7 +305,7 @@ workflow DAREVSKIA {
     BOWTIE2_CLSAT_ALIGN (
         // BOWTIE2_BUILD.out.contigs_index
         BOWTIE2_BUILD.out.contigs_index
-            .map {it -> [extract_species(it), it]}
+            .map {it -> [extract_species(it), it]},
         clsat36
     )
 
