@@ -309,8 +309,18 @@ workflow DAREVSKIA {
         clsat36
     )
 
+    BOWTIE2_CLSAT_ALIGN.out.sam
+        .map {it -> [extract_species(it), it]}
+            .join(PREPROCESSTRF.out.all_contigs
+                .map {it -> [extract_species(it[1]), it[1]]}
+            )
+    .view()
     // EXTRACTCONTIG (
-    //     PREPROCESSTRF.out.all_contigs
+    //     BOWTIE2_CLSAT_ALIGN.out.sam
+    //         .map {it -> [extract_species(it), it]}
+    //         .join(PREPROCESSTRF.out.all_contigs
+    //             .map {it -> [extract_species(it[1]), it[1]]}
+    //         )
     // )
     
 
