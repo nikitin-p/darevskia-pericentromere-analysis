@@ -1,5 +1,5 @@
 process EXTRACTCONTIG {
-    tag "$meta.id"
+    tag "$species_name"
     label 'process_low'
     
     conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
@@ -8,8 +8,7 @@ process EXTRACTCONTIG {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
-    path sam
-    tuple val(meta), path(contigs)
+    tuple val(species_name), path(sam), path(contigs)
 
     output:
     path "*.fasta", emit: fasta
@@ -18,7 +17,11 @@ process EXTRACTCONTIG {
     script:
 
     """
-    grep -A1 $(tail -1 clsat36_mapped_on_${meta.id}.sam | cut -f3) ../preprocesstrf/contigs_N_merged_all.fasta > 
+    grep -A1 $(tail -1 ${sam} | cut -f3) ${contigs} > ${species_name}.tmp
+
+    contig_name=\$(grep '^>' ${species_name}.tmp | cut -d" " -f1 | tr -d ">")
+    
+    mv ${species_name}.tmp \${contig_name}.fasta
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
