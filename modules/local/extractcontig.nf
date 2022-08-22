@@ -17,10 +17,10 @@ process EXTRACTCONTIG {
     script:
 
     """
-    grep -A1 $(tail -1 ${sam} | cut -f3) ${contigs} > ${species_name}.tmp
+    grep -A1 \$(tail -1 ${sam} | cut -f3) ${contigs} > ${species_name}.tmp
 
     contig_name=\$(grep '^>' ${species_name}.tmp | cut -d" " -f1 | tr -d ">")
-    
+
     mv ${species_name}.tmp \${contig_name}.fasta
 
     cat <<-END_VERSIONS > versions.yml
