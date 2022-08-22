@@ -17,9 +17,9 @@ process EMBOSSNEEDLE {
     script:
     
     """
-    revseq ${cl107contig1} CL107Contig1_revcomp.fasta
+    revseq ${cl107contig1} CL107Contig1_V_revcomp.fasta
 
-    needle ${cl1contig21} CL107Contig1_revcomp.fasta -outfile alignment_for_probes.needle -gapopen 10 -gapextend 0.5
+    needle ${cl1contig21} CL107Contig1_V_revcomp.fasta -outfile alignment_for_probes.needle -gapopen 10 -gapextend 0.5
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

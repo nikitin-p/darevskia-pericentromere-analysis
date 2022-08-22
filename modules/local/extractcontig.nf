@@ -21,11 +21,9 @@ process EXTRACTCONTIG {
 
     grep -A1 \${contig_name} ${contigs} > ${species_name}.tmp
 
-    #contig_name=\$(grep '^>' ${species_name}.tmp | cut -d" " -f1 | tr -d ">")
-
     sed -i "s/\${contig_name}/\${contig_name}_${species_name}/" ${species_name}.tmp
 
-    mv ${species_name}.tmp \${contig_name}.fasta
+    mv ${species_name}.tmp \${contig_name}_${species_name}.fasta
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
