@@ -17,9 +17,13 @@ process EXTRACTCONTIG {
     script:
 
     """
-    grep -A1 \$(tail -1 ${sam} | cut -f3) ${contigs} > ${species_name}.tmp
+    contig_name=\$(tail -1 ${sam} | cut -f3)
 
-    contig_name=\$(grep '^>' ${species_name}.tmp | cut -d" " -f1 | tr -d ">")
+    grep -A1 \${contig_name} ${contigs} > ${species_name}.tmp
+
+    #contig_name=\$(grep '^>' ${species_name}.tmp | cut -d" " -f1 | tr -d ">")
+
+    sed -i "s/\${contig_name}/\${contig_name}_${species_name}/" ${species_name}.tmp
 
     mv ${species_name}.tmp \${contig_name}.fasta
 
