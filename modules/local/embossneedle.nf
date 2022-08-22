@@ -1,5 +1,4 @@
 process EMBOSSNEEDLE {
-    tag '$bam'
     label 'process_low'
     
     conda (params.enable_conda ? "bioconda::emboss=6.6.0" : null)
@@ -8,31 +7,23 @@ process EMBOSSNEEDLE {
         'quay.io/biocontainers/emboss:6.6.0--h440b012_4' }"
 
     input:
-    path bam
+    tuple path(cl1contig21), path(cl107contig1)
 
     output:
-    path "*.bam", emit: bam
-    path "versions.yml"           , emit: versions
+    path "*revcomp.fasta", emit: revcomp_fasta
+    path "*.needle", emit: needle
+    path "versions.yml", emit: versions
 
     script:
-    def args = task.ext.args ?: ''
     
     """
-    revseq cl107contig1_V.fasta cl107contig1_revcomp_V.fasta
+    revseq ${cl107contig1} CL107Contig1_revcomp.fasta
 
-    needle cl107contig1_revcomp_V.fasta cl1contig21_N.fasta -outfile alignment_for_probes.needle -gapopen 10 -gapextend 0.5
-
-    needle cl118contig1_V.fasta cl1contig21_N.fasta -outfile alignment_for_probes.needle -gapopen 10 -gapextend 0.5
-    
-    samtools \\
-        sort \\
-        $args \\
-        -@ $task.cpus \\
-        $bam
+    needle ${cl1contig21} CL107Contig1_revcomp.fasta -outfile alignment_for_probes.needle -gapopen 10 -gapextend 0.5
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        embossneedle: \$(echo \$(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*\$//' ))
+        EMBOSS: \$(needle --version 2>&1 | cut -d":" -f2)
     END_VERSIONS
     """
 }
