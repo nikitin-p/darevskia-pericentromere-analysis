@@ -317,8 +317,9 @@ workflow DAREVSKIA {
             )
     )
     
-
+    EXTRACTCONTIG.out.fasta.toSortedList()
+    .view()
     // EMBOSSNEEDLE (
-
+    //     EXTRACTCONTIG.out.fasta.toSortedList()
     // )
 }
