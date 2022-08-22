@@ -317,7 +317,7 @@ workflow DAREVSKIA {
             )
     )
     
-    EXTRACTCONTIG.out.fasta.toSortedList( { a, b -> a.simpleName <=> b.simpleName} )
+    EXTRACTCONTIG.out.fasta.toSortedList( { a, b -> a.baseName <=> b.baseName} )
     .view()
     
     // EMBOSSNEEDLE (
