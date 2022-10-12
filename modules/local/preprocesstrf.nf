@@ -31,7 +31,7 @@ process PREPROCESSTRF {
         tr -d ' ' | \\
         awk 'BEGIN{RS=">"}{print \$1"\t"\$2;}' | \\
         tr '|' '\t' | \\
-        sed '1{/^$/d}' > \\
+        sed '1{/^\$/d}' > \\
         contigs_${meta.id}_tab.tsv
 
     grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
