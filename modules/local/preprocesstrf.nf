@@ -14,6 +14,7 @@ process PREPROCESSTRF {
     // tuple val(meta), path("*_seq.fasta"), emit: fixed_contigs
     tuple val(meta), path("contigs_*_top10pc.fasta"), emit: top10pc_contigs
     tuple val(meta), path("contigs_*_merged_all.fasta"), emit: all_contigs
+    tuple val(meta), path("contigs_*_tab.tsv"), emit: all_contigs_tab
     path "versions.yml", emit: versions
 
     script:
@@ -22,6 +23,15 @@ process PREPROCESSTRF {
 
     """
     awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged_all.fasta
+
+    cat contigs_${meta.id}_merged_all.fasta | \\
+        tr '(' '|' | \\
+        tr -d ')' | \\
+        tr '-' '|' | \\
+        tr -d ' ' | \\
+        awk 'BEGIN{RS=">"}{print $1"\t"$2;}' | \\
+        tr '|' '\t' > \\
+        contigs_${meta.id}_tab.tsv
 
     grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
 

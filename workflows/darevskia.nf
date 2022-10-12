@@ -1,5 +1,5 @@
-include { extract_species } from '../modules/local/custom_functions.nf'
-include { extract_reverse_species } from '../modules/local/custom_functions.nf'
+// include { extract_species } from '../modules/local/custom_functions.nf'
+// include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
@@ -13,12 +13,12 @@ include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
 // include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
-include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
+// include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
-include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
-include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
-include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
+// include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
+// include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
+// include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
 
 // contigs = [
 //     [
@@ -194,9 +194,9 @@ Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
 //     .set{ primer }
 
-Channel
-    .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
-    .set{ clsat36 }
+// Channel
+//     .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
+//     .set{ clsat36 }
 
 workflow DAREVSKIA {
 
@@ -271,10 +271,10 @@ workflow DAREVSKIA {
             // !do not forget to add length plots to this
     // )
 
-    BOWTIE2_BUILD (
-        // ch_contigs.map {it -> it[1]}
-        PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
-    )
+    // BOWTIE2_BUILD (
+    //     // ch_contigs.map {it -> it[1]}
+    //     PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
+    // )
 
     // contigs_*_merged_all.fasta
     // PREPROCESSTRF.out.all_contigs
@@ -302,22 +302,22 @@ workflow DAREVSKIA {
     //     BOWTIE2_ALIGN.out.sam
     // )
 
-    BOWTIE2_CLSAT_ALIGN (
-        // BOWTIE2_BUILD.out.contigs_index
-        BOWTIE2_BUILD.out.contigs_index
-            .map {it -> [extract_species(it), it]},
-        clsat36
-    )
+    // BOWTIE2_CLSAT_ALIGN (
+    //     // BOWTIE2_BUILD.out.contigs_index
+    //     BOWTIE2_BUILD.out.contigs_index
+    //         .map {it -> [extract_species(it), it]},
+    //     clsat36
+    // )
 
-    EXTRACTCONTIG (
-        BOWTIE2_CLSAT_ALIGN.out.sam
-            .map {it -> [extract_species(it), it]}
-            .join(PREPROCESSTRF.out.all_contigs
-                .map {it -> [extract_species(it[1]), it[1]]}
-            )
-    )
+    // EXTRACTCONTIG (
+    //     BOWTIE2_CLSAT_ALIGN.out.sam
+    //         .map {it -> [extract_species(it), it]}
+    //         .join(PREPROCESSTRF.out.all_contigs
+    //             .map {it -> [extract_species(it[1]), it[1]]}
+    //         )
+    // )
     
-    EMBOSSNEEDLE (
-        EXTRACTCONTIG.out.fasta.toSortedList( { a, b -> b.baseName <=> a.baseName} )
-    )
+    // EMBOSSNEEDLE (
+    //     EXTRACTCONTIG.out.fasta.toSortedList( { a, b -> b.baseName <=> a.baseName} )
+    // )
 }
