@@ -29,7 +29,7 @@ process PREPROCESSTRF {
         tr -d ')' | \\
         tr '-' '|' | \\
         tr -d ' ' | \\
-        awk 'BEGIN{RS=">"}{print $1"\t"$2;}' | \\
+        awk 'BEGIN{RS=">"}{print \$1"\t"\$2;}' | \\
         tr '|' '\t' > \\
         contigs_${meta.id}_tab.tsv
 
