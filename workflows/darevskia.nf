@@ -3,10 +3,12 @@
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
+include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
+include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 // include { QUAST } from '../modules/local/quast.nf'
 // include { TRF } from '../modules/local/trf.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
@@ -35,20 +37,20 @@ include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
 //     ]
 // ]
 
-contigs = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
-    ]
-]
+// contigs = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_N",
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/results/repeatexplorer/output_V"
+//     ]
+// ]
 
 // contigs = [
 //     [
@@ -123,22 +125,22 @@ contigs = [
 //     ]
 // ]
 
-// reads = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
-//     "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
-//     "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
-//     ]
-// ]
+reads = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
+    "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+    ]
+]
 
 // reads = [
 //     [
@@ -150,10 +152,19 @@ contigs = [
 //     ]
 // ]
 
-Channel
-    .from( contigs )
-    .map{ row -> [ row[0], file(row[1]) ] }
-    .set{ ch_contigs }
+genome_valentini = [
+    [
+    [
+        id: "V"
+    ], 
+    "/home/nikitinp/lizards/valentini/fasta/ncbi_dataset/data/GCA_024498535.1/GCA_024498535.1_Dval_245_genomic.fna"
+    ]
+]
+
+// Channel
+//     .from( contigs )
+//     .map{ row -> [ row[0], file(row[1]) ] }
+//     .set{ ch_contigs }
 
 // Channel
 //     .from( rtables )
@@ -183,10 +194,15 @@ Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
 //     .set{ db_dir }
 
-// Channel
-//     .from( reads )
-//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-//     .set{ ch_reads }
+Channel
+    .from( reads )
+    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+    .set{ ch_reads }
+
+Channel
+    .from( genome_valentini )
+    .map{ row -> [ row[0], [ file(row[1]) ] ] }
+    .set{ ch_genome_valentini }
 
 // Reminder: move primer.fasta into repo
 
@@ -213,6 +229,16 @@ workflow DAREVSKIA {
     //     MAGICBLAST.out.mb_results
     // )
 
+    BWA_INDEX (
+        ch_genome_valentini
+    )
+
+    BWA_MEM (
+        ch_reads,
+        BWA_INDEX.out.index,
+        true
+    )
+
     // TRIMMOMATIC (
     //     ch_reads,
     //     primer
@@ -227,10 +253,10 @@ workflow DAREVSKIA {
     //     INTERLACEFASTA.out.interlaced_reads
     // )
 
-    PREPROCESSTRF (
-        ch_contigs
-        // REPEATEXPLORER.out.repeat_contigs
-    )
+    // PREPROCESSTRF (
+    //     ch_contigs
+    //     // REPEATEXPLORER.out.repeat_contigs
+    // )
 
     // QUAST (
     //     // ch_contigs

@@ -8,6 +8,12 @@
             },
             "fastqc": {
                 "git_sha": "9d0cad583b9a71a6509b754fdf589cbfbed08961"
+            },
+            "nf-core/bwa/index": {
+                "git_sha": "9518fa4f65f3fb8cde24fde7d40333b39ec8fd65"
+            },
+            "nf-core/bwa/mem": {
+                "git_sha": "277f4d693a00471690b66598d167bbca78bbe232"
             }
         }
     }
