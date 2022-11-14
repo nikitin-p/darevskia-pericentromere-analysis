@@ -229,15 +229,17 @@ workflow DAREVSKIA {
     //     MAGICBLAST.out.mb_results
     // )
 
-    BWA_INDEX (
-        ch_genome_valentini
-    )
+    // BWA_INDEX (
+    //     ch_genome_valentini
+    // )
 
-    BWA_MEM (
-        ch_reads,
-        BWA_INDEX.out.index,
-        true
-    )
+    // BWA_MEM (
+    //     ch_reads.filter{it[0].id == "V" },
+    //     BWA_INDEX.out.index,
+    //     true
+    // )
+
+    ch_reads.filter{it[0].id == "V" }.view()
 
     // TRIMMOMATIC (
     //     ch_reads,
