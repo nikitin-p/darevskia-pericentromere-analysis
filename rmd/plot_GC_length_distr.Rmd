@@ -29,18 +29,18 @@ units.V.path = args[12]
 Upload tables of contigs and repeat units:
 
 ```{r}
-contigs.n <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_N_tab.tsv', header = F,  sep="\t", stringsAsFactors = F)
+contigs.n <- read.delim(contigs.N.path, header = F,  sep="\t", stringsAsFactors = F)
 names(contigs.n) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 contigs.n <- contigs.n %>% drop_na()
 
-contigs.v <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_V_tab.tsv', header = F,  sep="\t", stringsAsFactors = F) 
+contigs.v <- read.delim(contigs.V.path, header = F,  sep="\t", stringsAsFactors = F) 
 names(contigs.v) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 contigs.v <- contigs.v %>% drop_na()
 
-all.repeats.n <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/N_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F) 
+all.repeats.n <- read.delim(units.N.path, header = F,  sep="\t", stringsAsFactors = F) 
 names(all.repeats.n) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 
-all.repeats.v <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/V_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F)
+all.repeats.v <- read.delim(units.V.path, header = F,  sep="\t", stringsAsFactors = F)
 names(all.repeats.v) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 ```
 
@@ -141,7 +141,7 @@ plot.contigs.gc = ggplot() +
         legend.justification = c("right", "top"),
         text = element_text(size = 13))
 
-ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contig_gc_content.pdf",
+ggsave("contig_gc_content.pdf",
        plot = plot.contigs.gc,
        width = 15,
        height = 10,
@@ -177,7 +177,7 @@ plot.repeats.gc = ggplot() +
         legend.justification = c("right", "top"),
         text = element_text(size = 15))
 
-ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/units_gc_content.pdf",
+ggsave("units_gc_content.pdf",
        plot = plot.repeats.gc,
        width = 15,
        height = 10,
@@ -206,7 +206,7 @@ plot.contigs.length = ggplot(data = contigs.extended,
   theme(legend.position = 'none',
         text = element_text(size = 15))
 
-ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_length.pdf",
+ggsave("contigs_length.pdf",
        plot = plot.contigs.length,
        width = 15,
        height = 10,
@@ -242,7 +242,7 @@ plot.repeats.length = ggplot() +
         legend.justification = c("right", "top"),
         text = element_text(size = 13))
 
-ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/units_length.pdf",
+ggsave("units_length.pdf",
        plot = plot.repeats.length,
        width = 15,
        height = 10,
