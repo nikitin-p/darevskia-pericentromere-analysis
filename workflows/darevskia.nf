@@ -3,8 +3,8 @@
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
-include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
-include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
+// include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
+// include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
@@ -14,7 +14,7 @@ include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
-// include { PYSCRIPTS } from '../modules/local/pyscripts.nf'
+include { RPLOTS } from '../modules/local/rplots.nf'
 // include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
@@ -214,6 +214,13 @@ Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
 //     .set{ clsat36 }
 
+rmd_handler = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/process_bowtie2_log.Rmd" )
+
+contigs_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_N_tab.tsv" )
+contigs_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_V_tab.tsv" )
+units_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/N_all_tab_bycol.tsv" )
+units_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/V_all_tab_bycol.tsv" )
+
 workflow DAREVSKIA {
 
     // FASTQC ( 
@@ -229,15 +236,15 @@ workflow DAREVSKIA {
     //     MAGICBLAST.out.mb_results
     // )
 
-    BWA_INDEX (
-        ch_genome_valentini
-    )
+    // BWA_INDEX (
+    //     ch_genome_valentini
+    // )
 
-    BWA_MEM (
-        ch_reads.filter{ it[0].id == "V" },
-        BWA_INDEX.out.index,
-        true
-    )
+    // BWA_MEM (
+    //     ch_reads.filter{ it[0].id == "V" },
+    //     BWA_INDEX.out.index,
+    //     true
+    // )
 
     // TRIMMOMATIC (
     //     ch_reads,
@@ -291,11 +298,16 @@ workflow DAREVSKIA {
     //     // ch_rtables
     // )
 
-    // PYSCRIPTS (
-    //     REPEATEXPLORER.out.repeat_contigs,
-    //     PREPROCESSR.out.all_repeats_tab
-            // !do not forget to add length plots to this
-    // )
+    RPLOTS (
+        rmd_handler,
+        contigs_n_tab,
+        contigs_v_tab,
+        units_n_tab,
+        units_v_tab
+        // REPEATEXPLORER.out.repeat_contigs,
+        // PREPROCESSR.out.all_repeats_tab
+        //     !do not forget to add length plots to this
+    )
 
     // BOWTIE2_BUILD (
     //     // ch_contigs.map {it -> it[1]}
