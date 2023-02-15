@@ -1,6 +1,6 @@
 // include { extract_species } from '../modules/local/custom_functions.nf'
 // include { extract_reverse_species } from '../modules/local/custom_functions.nf'
-// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 // include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
@@ -125,22 +125,22 @@ include { RPLOTS } from '../modules/local/rplots.nf'
 //     ]
 // ]
 
-// reads = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
-//     "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
-//     "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
-//     ]
-// ]
+reads = [
+    [
+    [
+        id: "N"
+    ],
+    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
+    "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+    ]
+]
 
 // reads = [
 //     [
@@ -194,10 +194,10 @@ include { RPLOTS } from '../modules/local/rplots.nf'
 //     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
 //     .set{ db_dir }
 
-// Channel
-//     .from( reads )
-//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-//     .set{ ch_reads }
+Channel
+    .from( reads )
+    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+    .set{ ch_reads }
 
 // Channel
 //     .from( genome_valentini )
@@ -223,9 +223,9 @@ units_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-an
 
 workflow DAREVSKIA {
 
-    // FASTQC ( 
-    //     ch_reads 
-    // )
+    FASTQC ( 
+        ch_reads 
+    )
 
     // MAGICBLAST (
     //     ch_reads,
