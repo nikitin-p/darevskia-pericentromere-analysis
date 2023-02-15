@@ -1,5 +1,4 @@
 process RPLOTS {
-    tag "$meta.id"
     label 'process_low'
     stageInMode 'copy'
 
