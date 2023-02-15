@@ -125,22 +125,22 @@ include { RPLOTS } from '../modules/local/rplots.nf'
 //     ]
 // ]
 
-reads = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
-    ]
-]
+// reads = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+//     ]
+// ]
 
 // reads = [
 //     [
@@ -152,14 +152,14 @@ reads = [
 //     ]
 // ]
 
-genome_valentini = [
-    [
-    [
-        id: "V"
-    ], 
-    "/home/nikitinp/lizards/valentini/fasta/ncbi_dataset/data/GCA_024498535.1/GCA_024498535.1_Dval_245_genomic.fna"
-    ]
-]
+// genome_valentini = [
+//     [
+//     [
+//         id: "V"
+//     ], 
+//     "/home/nikitinp/lizards/valentini/fasta/ncbi_dataset/data/GCA_024498535.1/GCA_024498535.1_Dval_245_genomic.fna"
+//     ]
+// ]
 
 // Channel
 //     .from( contigs )
@@ -194,15 +194,15 @@ genome_valentini = [
 //     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
 //     .set{ db_dir }
 
-Channel
-    .from( reads )
-    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-    .set{ ch_reads }
+// Channel
+//     .from( reads )
+//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+//     .set{ ch_reads }
 
-Channel
-    .from( genome_valentini )
-    .map{ row -> [ row[0], [ file(row[1]) ] ] }
-    .set{ ch_genome_valentini }
+// Channel
+//     .from( genome_valentini )
+//     .map{ row -> [ row[0], [ file(row[1]) ] ] }
+//     .set{ ch_genome_valentini }
 
 // Reminder: move primer.fasta into repo
 
@@ -214,7 +214,7 @@ Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
 //     .set{ clsat36 }
 
-rmd_handler = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/process_bowtie2_log.Rmd" )
+rmd_handler = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/plot_GC_length_distr.Rmd" )
 
 contigs_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_N_tab.tsv" )
 contigs_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_V_tab.tsv" )
