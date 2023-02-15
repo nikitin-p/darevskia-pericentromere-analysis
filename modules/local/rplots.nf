@@ -2,7 +2,7 @@ process RPLOTS {
     label 'process_low'
     stageInMode 'copy'
 
-    container 'sviatsidorov/r_machine:1.0'
+    container 'sviatsidorov/r_machine:1.1'
 
     input:
     path rmd
