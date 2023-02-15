@@ -1,36 +1,63 @@
-#!/usr/bin/env Rscript
+---
+title: "Tandem repeats analysis"
+author: "Pavel Nikitin, Sviatoslav Sidorov"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
 
-library(tidyverse)
-require(scales)
+Load libraries:
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(stringr)
 stringsAsFactors = F
+```
 
-# Upload tables of contigs and repeat units:
+Parse arguments:
 
-contigs.n <- read.delim('GC_R/contigs_N_tab.tsv', header = F,  sep="\t", stringsAsFactors = F)
+```{r}
+args = commandArgs()
+contigs.N.path = args[9]
+contigs.V.path = args[10]
+units.N.path = args[11]
+units.V.path = args[12]
+```
+
+Upload tables of contigs and repeat units:
+
+```{r}
+contigs.n <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_N_tab.tsv', header = F,  sep="\t", stringsAsFactors = F)
 names(contigs.n) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 contigs.n <- contigs.n %>% drop_na()
 
-contigs.v <- read.delim('GC_R/contigs_V_tab.tsv', header = F,  sep="\t", stringsAsFactors = F) 
+contigs.v <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_V_tab.tsv', header = F,  sep="\t", stringsAsFactors = F) 
 names(contigs.v) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 contigs.v <- contigs.v %>% drop_na()
 
-all.repeats.n <- read.delim('GC_R/N_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F) 
+all.repeats.n <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/N_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F) 
 names(all.repeats.n) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
 
-all.repeats.v <- read.delim('GC_R/V_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F)
+all.repeats.v <- read.delim('/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/V_all_tab_bycol.tsv', header = F,  sep="\t", stringsAsFactors = F)
 names(all.repeats.v) = c("contig", "length", "mean.coverage", "repr", "unit.seq")
- 
-# Define a function to calcualte GC-content:
+```
 
+Define a function to calcualte GC-content:
+
+```{r}
 get_GC_content <- function(unit_seq) {
   num_g <- str_count(unit_seq, "G")
   num_c <- str_count(unit_seq, "C")
   gc_content <- (num_g + num_c) / str_length(unit_seq) * 100 
   return(as.numeric(gc_content))
 }
+```
 
-# Calculate the GC-content and length of contigs and repeat units:
+Calculate the GC-content and length of contigs and repeat units:
 
+```{r}
 contigs.n <- contigs.n %>%
   mutate(GC = get_GC_content(unit.seq)) %>%
   mutate(unit.length = nchar(unit.seq)) 
@@ -44,9 +71,11 @@ all.repeats.n <- all.repeats.n %>%
 all.repeats.v <- all.repeats.v %>%
   mutate(GC = get_GC_content(unit.seq)) %>%
   mutate(unit.length = nchar(unit.seq))
+```
 
-# Create an extended table for contigs to normalize on the read coverage:
+Create an extended table for contigs to normalize on the read coverage:
 
+```{r}
 contigs.n.subset = contigs.n %>%
   dplyr::select(mean.coverage, GC, unit.length) 
 
@@ -61,9 +90,11 @@ contigs.v.extended = as.data.frame(lapply(contigs.v.subset, rep, contigs.v.subse
 
 contigs.extended = dplyr::bind_rows(contigs.n.extended, contigs.v.extended) %>% 
   mutate(species = factor(species, levels = c("D. raddei nairensis", "D. valentini")))
+```
 
-# Create an extended table for repeat units to normalize on the read coverage:
+Create an extended table for repeat units to normalize on the read coverage:
 
+```{r}
 all.repeats.n.subset = all.repeats.n %>%
   dplyr::select(mean.coverage, GC, unit.length) 
 
@@ -78,9 +109,11 @@ all.repeats.v.extended = as.data.frame(lapply(all.repeats.v.subset, rep, all.rep
 
 all.repeats.extended = dplyr::bind_rows(all.repeats.n.extended, all.repeats.v.extended) %>% 
   mutate(species = factor(species, levels = c("D. raddei nairensis", "D. valentini")))
+```
 
-# Plot GC-content distribution of contigs:
+Plot GC-content distribution of contigs:
 
+```{r}
 plot.contigs.gc = ggplot() +
   geom_histogram(data = contigs.n.extended,
                  alpha = 1,
@@ -106,18 +139,20 @@ plot.contigs.gc = ggplot() +
   theme_classic() +
   theme(legend.position = c(.95, .70),
         legend.justification = c("right", "top"),
-        text = element_text(size = 15))
+        text = element_text(size = 13))
 
-ggsave("GC_R/contig_gc_content.pdf",
+ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contig_gc_content.pdf",
        plot = plot.contigs.gc,
        width = 15,
        height = 10,
        scale = 1, 
        units = c("cm"),
        limitsize = FALSE)
+```
 
-# Plot GC-content distribution of repeat units:
+Plot GC-content distribution of repeat units:
 
+```{r}
 plot.repeats.gc = ggplot() +
   geom_histogram(data = all.repeats.n.extended,
                  alpha = 1,
@@ -142,45 +177,47 @@ plot.repeats.gc = ggplot() +
         legend.justification = c("right", "top"),
         text = element_text(size = 15))
 
-ggsave("GC_R/units_gc_content.pdf",
+ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/units_gc_content.pdf",
        plot = plot.repeats.gc,
        width = 15,
        height = 10,
        scale = 1,
        units = c("cm"),
        limitsize = FALSE)
+```
 
-# Plot sequence length distribution of contigs:
+Plot sequence length distribution of contigs:
 
+```{r}
+contigs.extended %<>% 
+  group_by(species) %>%
+  mutate(median.length = median(as.numeric(unit.length)))
 plot.contigs.length = ggplot(data = contigs.extended,
-                             aes(x = species,
-                                 y = unit.length,
+                             aes(x = unit.length,
                                  fill = species)) +
-  geom_violin() +
-  stat_summary(fun = median,
-               geom = "point",
-               size = 2,
-               color = "black") + 
+  geom_histogram(binwidth = 10) +
+  geom_vline(aes(xintercept= median.length), colour='black') +
+  facet_wrap(~species, ncol = 1) +
   scale_fill_manual(values = c("#da2c38",
                              alpha("#00d103", 0.7))) +
-  ylab("Contig length") +
-  scale_y_continuous(breaks = seq(0, 1100, 100),
-                     limits = c(0, 1100)) +
+  xlab("Contig length") +
+  ylab("Count") +
   theme_classic() +
   theme(legend.position = 'none',
-        text = element_text(size = 15),
-        axis.title.x = element_blank())
+        text = element_text(size = 15))
 
-ggsave("GC_R/contigs_length.pdf",
+ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/contigs_length.pdf",
        plot = plot.contigs.length,
        width = 15,
        height = 10,
        scale = 1,
        units = c("cm"),
        limitsize = FALSE)
+```
 
-# Plot sequence length distribution of repeat units:
+Plot sequence length distribution of repeat units:
 
+```{r}
 plot.repeats.length = ggplot() +
   geom_histogram(data = all.repeats.n.extended,
                  alpha = 1,
@@ -203,13 +240,13 @@ plot.repeats.length = ggplot() +
   theme_classic() +
   theme(legend.position = c(.95, .70),
         legend.justification = c("right", "top"),
-        text = element_text(size = 15))
+        text = element_text(size = 13))
 
-ggsave("GC_R/units_length.pdf",
+ggsave("/Users/pavel/Desktop/PROJECTS/after_long_break/GC_R/units_length.pdf",
        plot = plot.repeats.length,
-       width = 20,
+       width = 15,
        height = 10,
        scale = 1,
        units = c("cm"),
        limitsize = FALSE)
-
+```
