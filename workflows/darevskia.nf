@@ -23,15 +23,9 @@ include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf'
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
 
-srr_n_meta = [id: "SRR4240381", single_end: true]
+srr_n_meta = [id: "N", srr: "SRR3900953", single_end: false]
 
-srr_v_meta = [id: "SRR10720412", single_end: false]
-
-Channel
-    .from( [srr_n_meta, srr_v_meta] )
-    .set{ ch_srr_meta }
-
-ch_srr_meta.view()
+srr_v_meta = [id: "V", srr: "SRR10720412", single_end: false]
 
 // contigs = [
 //     [
@@ -172,6 +166,10 @@ ch_srr_meta.view()
 //     ]
 // ]
 
+Channel
+    .from( [srr_n_meta, srr_v_meta] )
+    .set{ ch_srr_meta }
+
 // Channel
 //     .from( contigs )
 //     .map{ row -> [ row[0], file(row[1]) ] }
@@ -234,9 +232,9 @@ ch_srr_meta.view()
 
 workflow DAREVSKIA {
 
-    // SRATOOLS_FASTERQDUMP (
-        
-    // )
+    SRATOOLS_FASTERQDUMP (
+        ch_srr_meta
+    )
 
     // FASTQC ( 
     //     ch_reads 

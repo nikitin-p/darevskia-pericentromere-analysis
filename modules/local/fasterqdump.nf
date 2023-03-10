@@ -8,37 +8,31 @@ process SRATOOLS_FASTERQDUMP {
         'quay.io/biocontainers/mulled-v2-5f89fe0cd045cb1d615630b9261a1d17943a9b6a:6a9ff0e76ec016c3d0d27e0c0d362339f2d787e6-0' }"
 
     input:
-    tuple val(meta), path(sra)
-    path ncbi_settings
+    val meta
 
     output:
     tuple val(meta), path(fastq), emit: reads
     path "versions.yml"         , emit: versions
 
-    when:
-    task.ext.when == null || task.ext.when
-
     script:
-    def args = task.ext.args ?: ''
-    def args2 = task.ext.args2 ?: ''
-    def prefix = task.ext.prefix ?: "${meta.id}"
 
     // WARNING: Paired-end data extracted by fasterq-dump (--split-3 the default)
     // always creates *_1.fastq *_2.fastq files but sometimes also
     // an additional *.fastq file for unpaired reads which we ignore here.
-    fastq = meta.single_end ? '*.fastq.gz' : '*_{1,2}.fastq.gz'
-    def outfile = meta.single_end ? "${prefix}.fastq" : prefix
-    """
-    export NCBI_SETTINGS="\$PWD/${ncbi_settings}"
+    fastq = meta.single_end ? '*.fastq.gz' : '*_R{1,2}.fastq.gz'
+    def outfile = meta.single_end ? "${meta.id}.fastq" : "${meta.id}"
 
+    """
     fasterq-dump \\
-        $args \\
         --threads $task.cpus \\
         --outfile $outfile \\
-        ${sra.name}
+        ${meta.srr}
+
+    mv ${outfile}_1.fastq ${outfile}_R1.fastq
+    
+    mv ${outfile}_2.fastq ${outfile}_R2.fastq
 
     pigz \\
-        $args2 \\
         --no-name \\
         --processes $task.cpus \\
         *.fastq
