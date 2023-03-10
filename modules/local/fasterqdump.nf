@@ -24,6 +24,8 @@ process SRATOOLS_FASTERQDUMP {
     def outfile = meta.single_end ? "${meta.id}.fastq" : "${meta.id}"
 
     """
+    vdb-config --interactive
+    
     fasterq-dump \\
         --threads $task.cpus \\
         --outfile $outfile \\
