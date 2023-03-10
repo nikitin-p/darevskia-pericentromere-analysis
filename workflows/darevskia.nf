@@ -23,9 +23,9 @@ include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf'
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
 
-srr_n_meta = [id: "N", srr: "SRR3900953", single_end: false]
+srr_n_meta = [id: "N", srr: "SRR20851170", single_end: false]
 
-srr_v_meta = [id: "V", srr: "SRR10720412", single_end: false]
+srr_v_meta = [id: "V", srr: "SRR20851171", single_end: false]
 
 // contigs = [
 //     [
