@@ -1,6 +1,7 @@
 // include { extract_species } from '../modules/local/custom_functions.nf'
 // include { extract_reverse_species } from '../modules/local/custom_functions.nf'
-include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf' 
+// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 // include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
@@ -14,13 +15,23 @@ include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
-include { RPLOTS } from '../modules/local/rplots.nf'
+// include { RPLOTS } from '../modules/local/rplots.nf'
 // include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
 // include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
+
+srr_n_meta = [id: "SRR4240381", single_end: true]
+
+srr_v_meta = [id: "SRR10720412", single_end: false]
+
+Channel
+    .from( [srr_n_meta, srr_v_meta] )
+    .set{ ch_srr_meta }
+
+ch_srr_meta.view()
 
 // contigs = [
 //     [
@@ -125,22 +136,22 @@ include { RPLOTS } from '../modules/local/rplots.nf'
 //     ]
 // ]
 
-reads = [
-    [
-    [
-        id: "N"
-    ],
-    "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
-    "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
-    ]
-]
+// reads = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/N_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/N_R2.fastq.gz"
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "/home/nikitinp/lizards/pipeline/reads/V_R1.fastq.gz",
+//     "/home/nikitinp/lizards/pipeline/reads/V_R2.fastq.gz"
+//     ]
+// ]
 
 // reads = [
 //     [
@@ -194,10 +205,10 @@ reads = [
 //     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
 //     .set{ db_dir }
 
-Channel
-    .from( reads )
-    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
-    .set{ ch_reads }
+// Channel
+//     .from( reads )
+//     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+//     .set{ ch_reads }
 
 // Channel
 //     .from( genome_valentini )
@@ -214,18 +225,22 @@ Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
 //     .set{ clsat36 }
 
-rmd_handler = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/plot_GC_length_distr.Rmd" )
+// rmd_handler = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/plot_GC_length_distr.Rmd" )
 
-contigs_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_N_tab.tsv" )
-contigs_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_V_tab.tsv" )
-units_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/N_all_tab_bycol.tsv" )
-units_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/V_all_tab_bycol.tsv" )
+// contigs_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_N_tab.tsv" )
+// contigs_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/contigs_V_tab.tsv" )
+// units_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/N_all_tab_bycol.tsv" )
+// units_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/V_all_tab_bycol.tsv" )
 
 workflow DAREVSKIA {
 
-    FASTQC ( 
-        ch_reads 
-    )
+    // SRATOOLS_FASTERQDUMP (
+        
+    // )
+
+    // FASTQC ( 
+    //     ch_reads 
+    // )
 
     // MAGICBLAST (
     //     ch_reads,
@@ -298,16 +313,16 @@ workflow DAREVSKIA {
     //     // ch_rtables
     // )
 
-    RPLOTS (
-        rmd_handler,
-        contigs_n_tab,
-        contigs_v_tab,
-        units_n_tab,
-        units_v_tab
-        // REPEATEXPLORER.out.repeat_contigs,
-        // PREPROCESSR.out.all_repeats_tab
-        //     !do not forget to add length plots to this
-    )
+    // RPLOTS (
+    //     rmd_handler,
+    //     contigs_n_tab,
+    //     contigs_v_tab,
+    //     units_n_tab,
+    //     units_v_tab
+    //     // REPEATEXPLORER.out.repeat_contigs,
+    //     // PREPROCESSR.out.all_repeats_tab
+    //     //     !do not forget to add length plots to this
+    // )
 
     // BOWTIE2_BUILD (
     //     // ch_contigs.map {it -> it[1]}

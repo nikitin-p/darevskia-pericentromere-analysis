@@ -14,6 +14,9 @@
             },
             "nf-core/bwa/mem": {
                 "git_sha": "277f4d693a00471690b66598d167bbca78bbe232"
+            },
+            "nf-core/sratools/fasterqdump": {
+                "git_sha": "c8e35eb2055c099720a75538d1b8adb3fb5a464c"
             }
         }
     }
