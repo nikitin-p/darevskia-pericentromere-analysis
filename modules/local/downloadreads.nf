@@ -11,7 +11,7 @@ process DOWNLOADREADS {
     tuple val(meta), val(srrs)
 
     output:
-    tuple val(meta), tuple path("*_1.fastq.gz"), path("*_2.fastq.gz"), emit: fastq
+    tuple val(meta), val(tuple path("*_1.fastq.gz"), path("*_2.fastq.gz")), emit: fastq
     path "versions.yml"           , emit: versions
 
     script:
