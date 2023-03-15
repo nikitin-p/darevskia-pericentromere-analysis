@@ -9,6 +9,7 @@ process DOWNLOADREADS {
 
     input:
     tuple val(meta), val(srrs)
+    // We need to download two files separately, then combine each one of them with meta in output channel, then apply .groupTuple() to the output channel. Check sorting and .groupTuple() (_1 should be before _2).
 
     output:
     tuple val(meta), val(tuple path("*_1.fastq.gz"), path("*_2.fastq.gz")), emit: fastq
