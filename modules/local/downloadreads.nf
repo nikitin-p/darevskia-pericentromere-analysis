@@ -24,7 +24,7 @@ process DOWNLOADREADS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        wget: \$(wget -V | head -1| cut -d" " -f3)
+        wget: \$(wget 2>&1 | head -1 | cut -d" " -f1,2)
     END_VERSIONS
     """
 }
