@@ -1,4 +1,4 @@
-process DOWNLOADDBS {
+process DOWNLOADREADS {
     tag "$meta.id"
     label 'process_low'
     
@@ -8,19 +8,25 @@ process DOWNLOADDBS {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
-    tuple val(meta), val(srrs)
+    val(db)
 
     output:
-    tuple val(meta), tuple path("*_1.fastq.gz"), path("*_2.fastq.gz"), emit: fastq
+    tuple val(db), emit: db_gz
+    tuple, emit: json
+    tuple, emit: md5
     path "versions.yml"           , emit: versions
 
     script:
     """
-    wget -O ${meta.id}.fastq.gz
+    wget ${srrs[0]} -O ${meta.id}_1.fastq.gz
+    wget ${srrs[1]} -O ${meta.id}_2.fastq.gz
+
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*"
+    md5sum -c ref_viroids_rep_genomes.tar.gz.md5
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        wget: \$(wget -V | head -1| cut -d" " -f3)
+        wget: \$(wget 2>&1 | head -1 | cut -d" " -f1,2)
     END_VERSIONS
     """
 }

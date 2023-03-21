@@ -1,9 +1,9 @@
 // include { extract_species } from '../modules/local/custom_functions.nf'
 // include { extract_reverse_species } from '../modules/local/custom_functions.nf'
-include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
-// include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
+// include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
+include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 // include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf' 
-include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 // include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
@@ -28,22 +28,34 @@ include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // srr_n_meta = [id: "N", srr: "SRR20851170", single_end: false]
 // srr_v_meta = [id: "V", srr: "SRR20851171", single_end: false]
 
-srr = [
-    [
-    [
-        id: "N"
-    ],
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
-    ]
-]
+// Use this to specify SRRs
+
+// srr = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
+//     ]
+// ]
+
+// Don't forget to add them in full pipeline!
+
+// ref_prok_rep_genomes
+// ref_euk_rep_genomes
+// 16S_ribosomal_RNA
+
+Channel
+    .of( "ref_viroids_rep_genomes", "ref_viruses_rep_genomes" )
+    .set{ ch_magicblast_dbs }
 
 // contigs = [
 //     [
@@ -226,10 +238,12 @@ srr = [
 //     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
 //     .set{ ch_reads }
 
-Channel
-    .from( srr )
-    .map{ row -> [ row[0], [ row[1], row[2] ] ] }
-    .set{ ch_srr }
+// Use this to specify SRRs
+
+// Channel
+//     .from( srr )
+//     .map{ row -> [ row[0], [ row[1], row[2] ] ] }
+//     .set{ ch_srr }
 
 // Channel
 //     .from( genome_valentini )
@@ -255,23 +269,25 @@ Channel
 
 workflow DAREVSKIA {
 
-    DOWNLOADREADS(
-        ch_srr
+    // DOWNLOADREADS(
+    //     ch_srr
+    // )
+
+    // DOWNLOADREADS.out.fastq
+    //     .map { it -> [it[0], [it[1], it[2]]]}
+    //     .set{ ch_reads }
+
+    DOWNLOADDBS(
+        ch_magicblast_dbs
     )
-
-    DOWNLOADREADS.out.fastq
-        .map { it -> [it[0], [it[1], it[2]]]}
-        .set{ ch_reads }
-
-    // DOWNLOADDBS()
 
     // SRATOOLS_FASTERQDUMP (
     //     ch_srr_meta
     // )
 
-    FASTQC ( 
-        ch_reads 
-    )
+    // FASTQC ( 
+    //     ch_reads 
+    // )
 
     // MAGICBLAST (
     //     ch_reads,
