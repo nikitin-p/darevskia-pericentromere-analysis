@@ -228,7 +228,7 @@ srr = [
 
 Channel
     .from( srr )
-    .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
+    .map{ row -> [ row[0], [ row[1], row[2] ] ] }
     .set{ ch_srr }
 
 ch_srr.view()
