@@ -231,8 +231,6 @@ Channel
     .map{ row -> [ row[0], [ row[1], row[2] ] ] }
     .set{ ch_srr }
 
-ch_srr.view()
-
 // Channel
 //     .from( genome_valentini )
 //     .map{ row -> [ row[0], [ file(row[1]) ] ] }
@@ -261,11 +259,11 @@ workflow DAREVSKIA {
         ch_srr
     )
 
-    // DOWNLOADREADS.out.fastq
-    //     .map { it -> [it[0], [it[1], it[2]]]}
-    //     .set{ ch_reads }
+    DOWNLOADREADS.out.fastq
+        .map { it -> [it[0], [it[1], it[2]]]}
+        .set{ ch_reads }
 
-    // ch_reads.view()
+    ch_reads.view()
 
     // DOWNLOADDBS()
 
