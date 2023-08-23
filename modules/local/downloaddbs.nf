@@ -8,9 +8,7 @@ process DOWNLOADDBS {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     output:
-    tuple val(db), emit: db_gz
-    tuple, emit: json
-    tuple, emit: md5
+    path "ref_*", emit: db
     path "versions.yml", emit: versions
 
     script:
@@ -26,7 +24,7 @@ process DOWNLOADDBS {
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
     #md5sum -c ref_viruses_rep_genomes/ref_viruses_rep_genomes.tar.gz.md5
 
-    #mkdir 16S_ribosomal_RNA
+    #mkdir ref_16S_ribosomal_RNA
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
     #md5sum -c 16S_ribosomal_RNA.tar.gz.md5
 
