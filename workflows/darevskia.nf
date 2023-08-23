@@ -2,7 +2,7 @@ include { extract_species } from '../modules/local/custom_functions.nf'
 include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 
 // decide which to turn on
-include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
+// include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
 //
 
 // include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
@@ -51,22 +51,22 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 
 // Use this to specify SRRs
 
-srr = [
-    [
-    [
-        id: "N"
-    ],
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
-    ],
-    [
-    [
-        id: "V"
-    ],
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
-    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
-    ]
-]
+// srr = [
+//     [
+//     [
+//         id: "N"
+//     ],
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
+//     ],
+//     [
+//     [
+//         id: "V"
+//     ],
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
+//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
+//     ]
+// ]
 
 // Don't forget to add them in full pipeline!
 
@@ -290,9 +290,9 @@ Channel
 
 workflow DAREVSKIA {
 
-    DOWNLOADREADS(
-        ch_srr
-    )
+    // DOWNLOADREADS(
+    //     ch_srr
+    // )
 
     // DOWNLOADREADS.out.fastq
     //     .map { it -> [it[0], [it[1], it[2]]]}
