@@ -7,7 +7,8 @@ process DOWNLOADDBS {
     //     'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
     
     // container "mwendler/wget:latest"
-    container "ubuntu:23.04"
+    // container "ubuntu:23.04"
+    container "sviatsidorov/tarean:1.1"
 
     output:
     path "ref_*", emit: db
