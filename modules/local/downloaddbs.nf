@@ -1,5 +1,4 @@
 process DOWNLOADDBS {
-    tag "$meta.id"
     label 'process_low'
     
     conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
