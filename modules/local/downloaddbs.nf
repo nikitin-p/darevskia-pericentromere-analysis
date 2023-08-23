@@ -1,10 +1,12 @@
 process DOWNLOADDBS {
     label 'process_low'
     
-    conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
-        'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
+    // conda (params.enable_conda ? "bioconda::magicblast=1.6.0" : null)
+    // container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+    //     'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
+    //     'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
+    
+    container "mwendler/wget:latest"
 
     output:
     path "ref_*", emit: db
@@ -13,11 +15,12 @@ process DOWNLOADDBS {
     script:
     """
     #mkdir ref_viroids_rep_genomes
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
     cd ref_viroids_rep_genomes/
     md5sum -c ref_viroids_rep_genomes.tar.gz.md5
     tar -xzvf *.tar.gz
     cd ../
+    
 
     #mkdir ref_viruses_rep_genomes
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
