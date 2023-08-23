@@ -1,51 +1,73 @@
-// include { extract_species } from '../modules/local/custom_functions.nf'
-// include { extract_reverse_species } from '../modules/local/custom_functions.nf'
-// include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
+include { extract_species } from '../modules/local/custom_functions.nf'
+include { extract_reverse_species } from '../modules/local/custom_functions.nf'
+
+// decide which to turn on
+include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
+include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf'
+//
+
+include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+// make it optional
 include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
-// include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf' 
-// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
-// include { MAGICBLAST } from '../modules/local/magicblast.nf'
-// include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
+include { MAGICBLAST } from '../modules/local/magicblast.nf'
+include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
+//
+
+// remove below
 // include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
 // include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
-// include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
-// include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
+//
+
+include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
+include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
+
+// turn off below, but not remove, make it optional
 // include { REPEATEXPLORER } from '../modules/local/repeatexplorer.nf'
-// include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
-// include { QUAST } from '../modules/local/quast.nf'
-// include { TRF } from '../modules/local/trf.nf'
-// include { PREPROCESSR } from '../modules/local/preprocessr.nf'
-// include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
+//
+
+// by default begin from here (--from_fastq)
+include { PREPROCESSTRF } from '../modules/local/preprocesstrf.nf'
+include { QUAST } from '../modules/local/quast.nf'
+include { TRF } from '../modules/local/trf.nf'
+include { PREPROCESSR } from '../modules/local/preprocessr.nf'
+include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
+
+// remove from pipeline but dont forget about it!
 // include { KMERPROBE } from '../modules/local/kmerprobe.nf'
-// include { RPLOTS } from '../modules/local/rplots.nf'
-// include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
-// include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
-// include { PARSESAM } from '../modules/local/parsesam.nf'
-// include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
+//
+
+include { RPLOTS } from '../modules/local/rplots.nf'
+include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
+include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
+include { PARSESAM } from '../modules/local/parsesam.nf'
+include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
+
+// remove below
 // include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 // include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
+//
 
 // srr_n_meta = [id: "N", srr: "SRR20851170", single_end: false]
 // srr_v_meta = [id: "V", srr: "SRR20851171", single_end: false]
 
 // Use this to specify SRRs
 
-// srr = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
-//     ]
-// ]
+srr = [
+    [
+    [
+        id: "N"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
+    ]
+]
 
 // Don't forget to add them in full pipeline!
 
@@ -240,10 +262,10 @@ Channel
 
 // Use this to specify SRRs
 
-// Channel
-//     .from( srr )
-//     .map{ row -> [ row[0], [ row[1], row[2] ] ] }
-//     .set{ ch_srr }
+Channel
+    .from( srr )
+    .map{ row -> [ row[0], [ row[1], row[2] ] ] }
+    .set{ ch_srr }
 
 // Channel
 //     .from( genome_valentini )
@@ -269,17 +291,13 @@ Channel
 
 workflow DAREVSKIA {
 
-    // DOWNLOADREADS(
-    //     ch_srr
-    // )
+    DOWNLOADREADS(
+        ch_srr
+    )
 
     // DOWNLOADREADS.out.fastq
     //     .map { it -> [it[0], [it[1], it[2]]]}
     //     .set{ ch_reads }
-
-    DOWNLOADDBS(
-        ch_magicblast_dbs
-    )
 
     // SRATOOLS_FASTERQDUMP (
     //     ch_srr_meta
@@ -287,6 +305,10 @@ workflow DAREVSKIA {
 
     // FASTQC ( 
     //     ch_reads 
+    // )
+
+    // DOWNLOADDBS(
+    //     ch_magicblast_dbs
     // )
 
     // MAGICBLAST (

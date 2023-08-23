@@ -24,6 +24,18 @@ process DOWNLOADREADS {
     wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*"
     md5sum -c ref_viroids_rep_genomes.tar.gz.md5
 
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*"
+    md5sum -c ref_viruses_rep_genomes.tar.gz.md5
+
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
+    md5sum -c 16S_ribosomal_RNA.tar.gz.md5
+
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*"
+    md5sum -c ref_prok_rep_genomes.*.tar.gz.md5
+
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_euk_rep_genomes*"
+    md5sum -c ref_euk_rep_genomes.*.tar.gz.md5
+
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         wget: \$(wget 2>&1 | head -1 | cut -d" " -f1,2)
