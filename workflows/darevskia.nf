@@ -3,10 +3,9 @@ include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 
 // decide which to turn on
 include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
-// include { SRATOOLS_FASTERQDUMP } from '../modules/local/fasterqdump.nf'
 //
 
-// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
 // // make it optional
 // include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
@@ -295,17 +294,13 @@ workflow DAREVSKIA {
         ch_srr
     )
 
-    // DOWNLOADREADS.out.fastq
-    //     .map { it -> [it[0], [it[1], it[2]]]}
-    //     .set{ ch_reads }
+    DOWNLOADREADS.out.fastq
+        .map { it -> [it[0], [it[1], it[2]]]}
+        .set{ ch_reads }
 
-    // SRATOOLS_FASTERQDUMP (
-    //     ch_srr_meta
-    // )
-
-    // FASTQC ( 
-    //     ch_reads 
-    // )
+    FASTQC ( 
+        ch_reads 
+    )
 
     // DOWNLOADDBS(
     //     ch_magicblast_dbs
