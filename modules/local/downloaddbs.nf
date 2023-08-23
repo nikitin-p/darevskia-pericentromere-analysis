@@ -16,11 +16,11 @@ process DOWNLOADDBS {
 
     script:
     """
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/ && \
-    cd ref_viroids_rep_genomes/ && \
-    md5sum -c ref_viroids_rep_genomes.tar.gz.md5 && \
-    tar -xzvf *.tar.gz && \
-    cd ../ && \
+    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/ && \
+    #cd ref_viroids_rep_genomes/ && \
+    #md5sum -c ref_viroids_rep_genomes.tar.gz.md5 && \
+    #tar -xzvf *.tar.gz && \
+    #cd ../ && \
 
     wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/ && \
     cd ref_viruses_rep_genomes/ && \
