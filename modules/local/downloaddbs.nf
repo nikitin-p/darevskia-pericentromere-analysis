@@ -7,9 +7,6 @@ process DOWNLOADDBS {
         'https://depot.galaxyproject.org/singularity/magicblast:1.6.0--h95f258a_0':
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
-    input:
-    val(db)
-
     output:
     tuple val(db), emit: db_gz
     tuple, emit: json
@@ -18,23 +15,28 @@ process DOWNLOADDBS {
 
     script:
     """
-    wget ${srrs[0]} -O ${meta.id}_1.fastq.gz
-    wget ${srrs[1]} -O ${meta.id}_2.fastq.gz
-
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*"
+    #mkdir ref_viroids_rep_genomes
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
+    cd ref_viroids_rep_genomes/
     md5sum -c ref_viroids_rep_genomes.tar.gz.md5
+    tar -xzvf *.tar.gz
+    cd ../
 
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*"
-    md5sum -c ref_viruses_rep_genomes.tar.gz.md5
+    #mkdir ref_viruses_rep_genomes
+    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
+    #md5sum -c ref_viruses_rep_genomes/ref_viruses_rep_genomes.tar.gz.md5
 
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
-    md5sum -c 16S_ribosomal_RNA.tar.gz.md5
+    #mkdir 16S_ribosomal_RNA
+    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
+    #md5sum -c 16S_ribosomal_RNA.tar.gz.md5
 
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*"
-    md5sum -c ref_prok_rep_genomes.*.tar.gz.md5
+    #mkdir ref_prok_rep_genomes
+    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*"
+    #md5sum -c ref_prok_rep_genomes.*.tar.gz.md5
 
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_euk_rep_genomes*"
-    md5sum -c ref_euk_rep_genomes.*.tar.gz.md5
+    #mkdir ref_euk_rep_genomes
+    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_euk_rep_genomes*"
+    #md5sum -c ref_euk_rep_genomes.*.tar.gz.md5
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
