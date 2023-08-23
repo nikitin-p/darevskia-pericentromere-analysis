@@ -14,7 +14,7 @@ process DOWNLOADDBS {
     tuple val(db), emit: db_gz
     tuple, emit: json
     tuple, emit: md5
-    path "versions.yml"           , emit: versions
+    path "versions.yml", emit: versions
 
     script:
     """
