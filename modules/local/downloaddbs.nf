@@ -16,16 +16,16 @@ process DOWNLOADDBS {
 
     script:
     """
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
-    cd ref_viroids_rep_genomes/
-    md5sum -c ref_viroids_rep_genomes.tar.gz.md5
-    tar -xzvf *.tar.gz
-    cd ../
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/ && \
+    cd ref_viroids_rep_genomes/ && \
+    md5sum -c ref_viroids_rep_genomes.tar.gz.md5 && \
+    tar -xzvf *.tar.gz && \
+    cd ../ && \
 
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
-    cd ref_viruses_rep_genomes/
-    md5sum -c ref_viruses_rep_genomes.tar.gz.md5
-    tar -xzvf *.tar.gz
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/ && \
+    cd ref_viruses_rep_genomes/ && \
+    md5sum -c ref_viruses_rep_genomes.tar.gz.md5 && \
+    tar -xzvf *.tar.gz && \
     cd ../
 
     #mkdir ref_16S_ribosomal_RNA
@@ -36,7 +36,7 @@ process DOWNLOADDBS {
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*"
     #md5sum -c ref_prok_rep_genomes.*.tar.gz.md5
 
-    #mkdir ref_euk_rep_genomes
+    #mkdir ref_eukc_rep_genomes
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_euk_rep_genomes*"
     #md5sum -c ref_euk_rep_genomes.*.tar.gz.md5
 
