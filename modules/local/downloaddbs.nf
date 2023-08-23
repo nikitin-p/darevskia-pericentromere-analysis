@@ -13,7 +13,7 @@ process DOWNLOADDBS {
     script:
     """
     #mkdir ref_viroids_rep_genomes
-    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
     cd ref_viroids_rep_genomes/
     md5sum -c ref_viroids_rep_genomes.tar.gz.md5
     tar -xzvf *.tar.gz
