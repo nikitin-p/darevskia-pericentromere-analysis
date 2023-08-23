@@ -16,16 +16,17 @@ process DOWNLOADDBS {
 
     script:
     """
-    #mkdir ref_viroids_rep_genomes
     wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viroids_rep_genomes*" -P ref_viroids_rep_genomes/
     cd ref_viroids_rep_genomes/
     md5sum -c ref_viroids_rep_genomes.tar.gz.md5
     tar -xzvf *.tar.gz
     cd ../
 
-    #mkdir ref_viruses_rep_genomes
-    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
-    #md5sum -c ref_viruses_rep_genomes/ref_viruses_rep_genomes.tar.gz.md5
+    wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_viruses_rep_genomes*" -P ref_viruses_rep_genomes/
+    cd ref_viruses_rep_genomes/
+    md5sum -c ref_viruses_rep_genomes.tar.gz.md5
+    tar -xzvf *.tar.gz
+    cd ../
 
     #mkdir ref_16S_ribosomal_RNA
     #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
@@ -41,7 +42,7 @@ process DOWNLOADDBS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        wget: \$(wget 2>&1 | head -1 | cut -d" " -f1,2)
+        wget: \$(wget -V | head -1 | cut -d" " -f3)
     END_VERSIONS
     """
 }
