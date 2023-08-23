@@ -261,10 +261,10 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 
 // Use this to specify SRRs
 
-Channel
-    .from( srr )
-    .map{ row -> [ row[0], [ row[1], row[2] ] ] }
-    .set{ ch_srr }
+// Channel
+//     .from( srr )
+//     .map{ row -> [ row[0], [ row[1], row[2] ] ] }
+//     .set{ ch_srr }
 
 // Channel
 //     .from( genome_valentini )
