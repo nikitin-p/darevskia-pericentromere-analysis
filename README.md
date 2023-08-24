@@ -4,6 +4,5 @@ Darevskia lizards.
 
 To run pipeline use the following:
 ```
-nextflow run darevskia-pericentromere-analysis/main.nf -profile 
-singularity
+nextflow run darevskia-pericentromere-analysis/main.nf -profile singularity
 ```
