@@ -28,17 +28,23 @@ process DOWNLOADDBS {
     tar -xzvf *.tar.gz && \
     cd ../
 
-    #mkdir ref_16S_ribosomal_RNA
-    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*"
-    #md5sum -c 16S_ribosomal_RNA.tar.gz.md5
+    # wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "16S_ribosomal_RNA*" -P ref_16S_ribosomal_RNA/ && \
+    # cd ref_16S_ribosomal_RNA/ && \
+    # md5sum -c 16S_ribosomal_RNA.tar.gz.md5 && \
+    # tar -xzvf *.tar.gz && \
+    # cd ../
 
-    #mkdir ref_prok_rep_genomes
-    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*"
-    #md5sum -c ref_prok_rep_genomes.*.tar.gz.md5
+    # wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_prok_rep_genomes*" -P ref_prok_rep_genomes/ && \
+    # cd ref_prok_rep_genomes/ && \
+    # md5sum -c ref_prok_rep_genomes.tar.gz.md5 && \
+    # tar -xzvf *.tar.gz && \
+    # cd ../
 
-    #mkdir ref_eukc_rep_genomes
-    #wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_euk_rep_genomes*"
-    #md5sum -c ref_euk_rep_genomes.*.tar.gz.md5
+    # wget "ftp://ftp.ncbi.nlm.nih.gov/blast/db/v5/*" -A "ref_eukc_rep_genomes*" -P ref_eukc_rep_genomes/ && \
+    # cd ref_eukc_rep_genomes/ && \
+    # md5sum -c ref_eukc_rep_genomes.tar.gz.md5 && \
+    # tar -xzvf *.tar.gz && \
+    # cd ../
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

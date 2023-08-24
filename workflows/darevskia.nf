@@ -12,11 +12,6 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 //
 
-// remove below
-// include { BWA_INDEX } from '../modules/nf-core/modules/bwa/index/main.nf'
-// include { BWA_MEM } from '../modules/nf-core/modules/bwa/mem/main.nf'
-//
-
 // include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 
@@ -31,20 +26,11 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 // include { PREPROCESSR } from '../modules/local/preprocessr.nf'
 // include { MONOMERPROBE } from '../modules/local/monomerprobe.nf'
 
-// remove from pipeline but dont forget about it!
-// include { KMERPROBE } from '../modules/local/kmerprobe.nf'
-//
-
 // include { RPLOTS } from '../modules/local/rplots.nf'
 // include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf'
 // include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 // include { PARSESAM } from '../modules/local/parsesam.nf'
 // include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
-
-// remove below
-// include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
-// include { EMBOSSNEEDLE } from '../modules/local/embossneedle.nf'
-//
 
 // srr_n_meta = [id: "N", srr: "SRR20851170", single_end: false]
 // srr_v_meta = [id: "V", srr: "SRR20851171", single_end: false]
@@ -288,7 +274,53 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 // units_n_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/N_all_tab_bycol.tsv" )
 // units_v_tab = file( "/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/rmd/V_all_tab_bycol.tsv" )
 
+// This should allow to skip everything before if --from_contigs is given
+params.from_contigs = false
+// This should allow to enable tarean if --enable_tarean is given
+params.enable_tarean = false 
+// This should allow to enable magicblast if --enable_magicblast is given
+params.enable_magicblast = false 
+
 workflow DAREVSKIA {
+
+    // The idea:
+    // no flags:
+    //     run from contigs to end
+    // --from_fastq:
+    //     downloads fastq automatically from SRA
+    // --enable_tarean:
+    //     requires --from_fastq, almost the same as no flags but enables tarean
+    // --enable_magicblast:
+    //     requires --from_fastq, almost the same as no flags but enables magicblast
+
+    if ( params.from_fastq ) {
+        bar()
+        omega_ch = bar.out
+        if ( params.enable_magicblast ) {
+            bar()
+            omega_ch = bar.out
+        }
+        else {
+            foo()
+            omega_ch = foo.out
+        }
+        bar()
+        omega_ch = bar.out
+        if ( params.enable_tarean ) {
+            bar()
+            omega_ch = bar.out
+        }
+        else {
+            foo()
+            omega_ch = foo.out
+        }
+        bar()
+        omega_ch = bar.out
+    }
+    else {
+        foo()
+        omega_ch = foo.out
+    }
 
     // DOWNLOADREADS(
     //     ch_srr
@@ -311,16 +343,6 @@ workflow DAREVSKIA {
 
     // PARSEMAGICBLAST (
     //     MAGICBLAST.out.mb_results
-    // )
-
-    // BWA_INDEX (
-    //     ch_genome_valentini
-    // )
-
-    // BWA_MEM (
-    //     ch_reads.filter{ it[0].id == "V" },
-    //     BWA_INDEX.out.index,
-    //     true
     // )
 
     // TRIMMOMATIC (
@@ -364,12 +386,6 @@ workflow DAREVSKIA {
     // )
 
     // MONOMERPROBE (
-    //     // PREPROCESSR.out.top10pc_repeats_tab
-    //     PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
-    //     // ch_rtables
-    // )
-
-    // KMERPROBE (
     //     // PREPROCESSR.out.top10pc_repeats_tab
     //     PREPROCESSR.out.repeats_tsv.filter( ~/.*top10pc.*/ ).collect()
     //     // ch_rtables
@@ -424,15 +440,4 @@ workflow DAREVSKIA {
     //     clsat36
     // )
 
-    // EXTRACTCONTIG (
-    //     BOWTIE2_CLSAT_ALIGN.out.sam
-    //         .map {it -> [extract_species(it), it]}
-    //         .join(PREPROCESSTRF.out.all_contigs
-    //             .map {it -> [extract_species(it[1]), it[1]]}
-    //         )
-    // )
-    
-    // EMBOSSNEEDLE (
-    //     EXTRACTCONTIG.out.fasta.toSortedList( { a, b -> b.baseName <=> a.baseName} )
-    // )
 }
