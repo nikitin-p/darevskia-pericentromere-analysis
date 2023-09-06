@@ -2,17 +2,16 @@ include { extract_species } from '../modules/local/custom_functions.nf'
 include { extract_reverse_species } from '../modules/local/custom_functions.nf'
 
 // decide which to turn on
-// include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
-//
+include { DOWNLOADREADS } from '../modules/local/downloadreads.nf'
 
-// include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
-// // make it optional
-include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
+
+include { FASTQC } from '../modules/nf-core/modules/fastqc/main.nf'
+// make it optional
 // include { MAGICBLAST } from '../modules/local/magicblast.nf'
 // include { PARSEMAGICBLAST } from '../modules/local/parsemagicblast.nf'
 //
 
-// include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
+include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { INTERLACEFASTA } from '../modules/local/interlacefasta.nf'
 
 // turn off below, but not remove, make it optional
@@ -37,22 +36,22 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 
 // Use this to specify SRRs
 
-// srr = [
-//     [
-//     [
-//         id: "N"
-//     ],
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
-//     ],
-//     [
-//     [
-//         id: "V"
-//     ],
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
-//     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
-//     ]
-// ]
+srr = [
+    [
+    [
+        id: "N"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/070/SRR20851170/SRR20851170_2.fastq.gz"
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
+    ]
+]
 
 // Don't forget to add them in full pipeline!
 
@@ -247,10 +246,10 @@ include { DOWNLOADDBS } from '../modules/local/downloaddbs.nf'
 
 // Use this to specify SRRs
 
-// Channel
-//     .from( srr )
-//     .map{ row -> [ row[0], [ row[1], row[2] ] ] }
-//     .set{ ch_srr }
+Channel
+    .from( srr )
+    .map{ row -> [ row[0], [ row[1], row[2] ] ] }
+    .set{ ch_srr }
 
 // Channel
 //     .from( genome_valentini )
@@ -294,70 +293,57 @@ workflow DAREVSKIA {
     //     requires --from_fastq, almost the same as no flags but enables magicblast
 
     if ( params.from_fastq ) {
-        bar()
-        omega_ch = bar.out
-        if ( params.enable_magicblast ) {
-            bar()
-            omega_ch = bar.out
-        }
-        else {
-            foo()
-            omega_ch = foo.out
-        }
-        bar()
-        omega_ch = bar.out
-        if ( params.enable_tarean ) {
-            bar()
-            omega_ch = bar.out
-        }
-        else {
-            foo()
-            omega_ch = foo.out
-        }
-        bar()
-        omega_ch = bar.out
+        DOWNLOADREADS(
+            ch_srr
+        )
+
+        DOWNLOADREADS.out.fastq
+            .map { it -> [it[0], [it[1], it[2]]]}
+            .set{ ch_reads }
+
+        FASTQC ( 
+            ch_reads 
+        )
+
+        TRIMMOMATIC (
+            ch_reads,
+            primer
+        )
+
+        // if ( params.enable_magicblast ) {
+        //     MAGICBLAST (
+        //         ch_reads,
+        //         db_dir
+        //     )
+
+        //     PARSEMAGICBLAST (
+        //         MAGICBLAST.out.mb_results
+        //     )
+        // }
+        // else {
+            
+        // }
+        
+        // if ( params.enable_tarean ) {
+        //     INTERLACEFASTA (
+        //         TRIMMOMATIC.out.trimmed_reads_f_p,
+        //         TRIMMOMATIC.out.trimmed_reads_r_p
+        //     )
+
+        //     REPEATEXPLORER (
+        //         INTERLACEFASTA.out.interlaced_reads
+        //     )
+        // }
+        // else {
+            
+        // }
+        
     }
     else {
-        foo()
-        omega_ch = foo.out
+        
     }
 
-    // DOWNLOADREADS(
-    //     ch_srr
-    // )
 
-    // DOWNLOADREADS.out.fastq
-    //     .map { it -> [it[0], [it[1], it[2]]]}
-    //     .set{ ch_reads }
-
-    // FASTQC ( 
-    //     ch_reads 
-    // )
-
-    DOWNLOADDBS()
-
-    // MAGICBLAST (
-    //     ch_reads,
-    //     db_dir
-    // )
-
-    // PARSEMAGICBLAST (
-    //     MAGICBLAST.out.mb_results
-    // )
-
-    // TRIMMOMATIC (
-    //     ch_reads,
-    //     primer
-    // )
-
-    // INTERLACEFASTA (
-    //     TRIMMOMATIC.out.trimmed_reads_f_p,
-    //     TRIMMOMATIC.out.trimmed_reads_r_p
-    // )
-
-    // REPEATEXPLORER (
-    //     INTERLACEFASTA.out.interlaced_reads
-    // )
 
     // PREPROCESSTRF (
     //     ch_contigs
