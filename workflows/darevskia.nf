@@ -236,10 +236,6 @@ srr = [
 //     .set{ ch_rtables }
 
 // Channel
-//     .fromPath('/home/nikitinp/lizards/pipeline/magicblast_db_test/*', type: 'dir' )
-//     .set{ db_dir }
-
-// Channel
 //     .from( reads )
 //     .map{ row -> [ row[0], [ file(row[1]), file(row[2]) ] ] }
 //     .set{ ch_reads }
@@ -256,11 +252,9 @@ Channel
 //     .map{ row -> [ row[0], [ file(row[1]) ] ] }
 //     .set{ ch_genome_valentini }
 
-// Reminder: move primer.fasta into repo
-
-// Channel
-//     .fromPath('/home/nikitinp/lizards/pipeline/primers/primer.fasta')
-//     .set{ primer }
+Channel
+    .fromPath('/primer/primer.fasta')
+    .set{ primer }
 
 // Channel
 //     .fromPath('/home/nikitinp/lizards/pipeline/darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
@@ -291,6 +285,8 @@ workflow DAREVSKIA {
     //     requires --from_fastq, almost the same as no flags but enables tarean
     // --enable_magicblast:
     //     requires --from_fastq, almost the same as no flags but enables magicblast
+    // --dbdir 
+
 
     if ( params.from_fastq ) {
         DOWNLOADREADS(
@@ -311,17 +307,23 @@ workflow DAREVSKIA {
         )
 
         // if ( params.enable_magicblast ) {
-        //     MAGICBLAST (
-        //         ch_reads,
-        //         db_dir
-        //     )
+        //     if (params.db_dir) {
+        //         Channel
+        //             // path example: '/home/nikitinp/lizards/pipeline/magicblast_db_test/*'
+        //             .fromPath(params.db_dir, type: 'dir' )
+        //             .set{ db_dir }
 
-        //     PARSEMAGICBLAST (
-        //         MAGICBLAST.out.mb_results
-        //     )
-        // }
-        // else {
-            
+        //         MAGICBLAST (
+        //             ch_reads,
+        //             db_dir
+        //         )
+
+        //         PARSEMAGICBLAST (
+        //             MAGICBLAST.out.mb_results
+        //         )
+        //     } else {
+        //         exit 1, "Path to MAGIC-Blast databases is not specified!"
+        //     }
         // }
         
         // if ( params.enable_tarean ) {
@@ -339,11 +341,6 @@ workflow DAREVSKIA {
         // }
         
     }
-    else {
-        
-    }
-
-
 
     // PREPROCESSTRF (
     //     ch_contigs
