@@ -20,6 +20,7 @@ include { TRIMMOMATIC } from '../modules/local/trimmomatic.nf'
 // include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 
 // Do not forget to replace SRR with the real ones
+// Real ones are SRR25825523 for N and SRR25825522 for V
 
 srr = [
     [
