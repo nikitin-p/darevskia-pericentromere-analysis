@@ -11,7 +11,6 @@ process PREPROCESSTRF {
     tuple val(meta), path(contigs_dir)
 
     output:
-    // tuple val(meta), path("*_seq.fasta"), emit: fixed_contigs
     tuple val(meta), path("contigs_*_top10pc.fasta"), emit: top10pc_contigs
     tuple val(meta), path("contigs_*_merged_all.fasta"), emit: all_contigs
     tuple val(meta), path("contigs_*_tab.tsv"), emit: all_contigs_tab

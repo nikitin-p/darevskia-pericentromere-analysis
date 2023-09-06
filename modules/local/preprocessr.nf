@@ -9,7 +9,6 @@ process PREPROCESSR {
 
     input:
     tuple val(meta), path(trf_dat)
-    // each path(trf_dat)
 
     output:
     path "*.tsv", emit: repeats_tsv
