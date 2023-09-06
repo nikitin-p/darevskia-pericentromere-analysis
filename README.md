@@ -11,7 +11,7 @@ nextflow run darevskia-pericentromere-analysis/main.nf -profile <singularity/doc
         [--enable_tarean] # Enable contigs assembling with TAREAN
 ```
 
-By default pipeline begins from assembled contigs as TAREAN assembly and Magic-BLAST contamination analysis requires many comuptional resources.
+By default pipeline begins from assembled contigs as TAREAN assembly and Magic-BLAST contamination analysis require a plenty of comuptional resources.
 
 The pipeline was working fine with Nextflow v21.10.6.
 
