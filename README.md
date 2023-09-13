@@ -21,13 +21,13 @@ nextflow run darevskia-pericentromere-analysis/main.nf \
 
 <b>Options</b>
 
-    * `--from_fastq` Begin pipeline from reads. Reads in fastq format will be downloaded automatically from SRA. By deafult it provides reads trimming and FastQC analysis.
+* `--from_fastq` Begin pipeline from reads. Reads in fastq format will be downloaded automatically from SRA. By deafult it provides reads trimming and FastQC analysis.
 
-        * `--enable_magicblast` Run Magic-BLAST contamination assessment. Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
+    * `--enable_magicblast` Run Magic-BLAST contamination assessment. Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
 
-            * `--dbdir` Allocate Magic-BLAST databases.
+        * `--dbdir` Allocate Magic-BLAST databases.
 
-        * `--enable_tarean` Enable contigs assembling with TAREAN.Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
+    * `--enable_tarean` Enable contigs assembling with TAREAN.Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
 
 ### Pipeline flowchart
 
