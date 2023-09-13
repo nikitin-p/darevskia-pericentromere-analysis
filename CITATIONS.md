@@ -27,7 +27,7 @@ Bowtie2 v2.4.4
 
 ## R packages
 
-- [R](https://www.R-project.org/)
+- [R](https://www.R-project.org/) v3.6.3
 
   > R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.
 
