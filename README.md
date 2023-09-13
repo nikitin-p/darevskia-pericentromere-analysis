@@ -39,6 +39,12 @@ Originally, contigs were assembled with TAREAN locally and during re-writing pip
 
 Also, we developed an R script which is looking for most distant tandem repeat monomers from the whole family of the other subgenome using Levenshtein distance. We suppose it is not the best way to compare sequences of different lengths, so it can be improved in the way of comparing tandem repeat k-mers. However we use the whole monomer approach for reproducibility, as we originally got FISH probes with this method.
 
+We suggest the pipeline can be used to find species-specific probes for any hybrid organism.
+
+## Background
+
+In this research we study three _Darevskia_ species: _D. raddei nairensis_, _D. valentini_ and their hybrid parthenogenetic descendant _D. unisexualis_. We microdissected the pericentromeric chromosomal regions of the two parental species, did their targeted high-throughput sequencing and developed a computational method to predict species-specific pericentromeric fluorescent DNA probes to discriminate parental subgenomes within the hybrid karyotype.
+
 ## Pipeline output
 
 ## Credits
