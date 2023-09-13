@@ -11,9 +11,7 @@ workflows. Nat Biotechnol. 2017 Apr 11;35(4):316-319. doi:
 
 ## Pipeline tools
 
-- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-
-v0.11.9 
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) v0.11.9 
 
 Trimmomatic v0.39 
 
