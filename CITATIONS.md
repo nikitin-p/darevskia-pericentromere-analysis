@@ -1,6 +1,6 @@
 # darevskia-pericentromere-analysis: Citations
 
-## [Nextflow](https://pubmed.ncbi.nlm.nih.gov/28398311/)
+## [Nextflow](https://pubmed.ncbi.nlm.nih.gov/28398311/) 
 
 v21.10.6
 
@@ -32,9 +32,13 @@ Bowtie2 v2.4.4
   > R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.
 
 tidyr v1.2.0
+
 dplyr v1.0.9
+
 stringr v1.4.0
+
 utils v3.6.3
+
 ggplot2 v3.3.6
 
 
