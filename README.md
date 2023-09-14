@@ -40,6 +40,7 @@ We provide contigs that we assembled before the development of this pipeline wit
 
 For the contamination assessment, we used the following Magic-BLAST databases version 5: `ref_euk_rep_genomes`, `16S_ribosomal_RNA`, `ref_prok_rep_genomes`, `ref_viruses_rep_genomes`, `ref_viroids_rep_genomes`. They can be downloaded from https://ftp.ncbi.nlm.nih.gov/blast/db/v5 using, for example, `lftp` client (see [man lftp](https://linux.die.net/man/1/lftp)). The directory with the Magic-BLAST databases must have the following structure:
 
+```
 magicblast_dir
 ├── ref_viroids_rep_genomes
 │   └── ref_viroids_rep_genomes.tar.gz 
@@ -48,6 +49,7 @@ magicblast_dir
 │   ├── ref_prok_rep_genomes.01.tar.gz 
 │   ├── ...
 ...
+```
 
 ## Output
 
