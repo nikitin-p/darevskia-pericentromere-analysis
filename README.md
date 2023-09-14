@@ -1,10 +1,16 @@
 # darevskia-pericentromere-analysis
 
+The pipeline was developed using Nextflow DSL2 by [Pavel Nikitin](https://github.com/nikitin-p) and [Sviatoslav Sidorov](https://github.com/sidorov-si).
+
 ## Introduction
 
-**darevskia-pericentromere-analysis** is a bioinformatics pipeline that can be used to analyse pericentromeric sequences of _Darevskia_ lizards. By default it requires no input and starts from assembled contigs in contigs directory. It performs tandem repeat monomers search and creates FISH probe candidates for subgenomes staining as an output.
+Here we describe the pipeline used for the analysis of the pericentromeric sequences of _Darevskia raddei nairensis_ and _D. valentini_, parental species of a hybrid parthenogenetic lizard _D. unisexualis_. In targeted sequencing data obtained from the pericentromeres of the parental species, we search for tandem repeat monomers and predict species-specific pericentromeric DNA FISH probes to differentially stain the subgenomes in the hybrid karyotype.
 
-However, you can run pipeline from reads, assemble them and run contamination assessment, however it requires a plenty of computional resources. Reads will be downloaded automatically from SRA.
+## Requirements
+
+* `Nextflow v21.10.6` (we developed the pipeline with this version of Nextflow; we did not test it with later versions).
+
+* `Singularity` or `Docker`. We developed the pipeline using `Singularity v3.8.7` and `Docker v23.0.1` but did not test it with other versions of these containerisation systems.
 
 ## Usage
 
@@ -12,52 +18,55 @@ You can run the pipeline using:
 
 ```bash
 nextflow run darevskia-pericentromere-analysis/main.nf \
-    -profile <singularity/docker> \
-        [--from_fastq] \
-            [--enable_magicblast] \
-                [--dbdir] \
-            [--enable_tarean]
+    -profile <docker/singularity/.../institute> \
+    [--from_fastq [--enable_magicblast --dbdir <dir>] [--enable_tarean]]
 ```
 
-<b>Options</b>
+### Options
 
-* `--from_fastq` Begin pipeline from reads. Reads in fastq format will be downloaded automatically from SRA. By deafult it provides reads trimming and FastQC analysis.
+* `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
 
-    * `--enable_magicblast` Run Magic-BLAST contamination assessment. Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
+    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days. This option can be specified only with the `--from_fastq` option and requires the `--dbdir` option.
 
-        * `--dbdir` Allocate Magic-BLAST databases.
+        * `--dbdir <magicblast_dir>` Directory with Magic-BLAST databases (see the **Input** section for details). This option can be specified only with the `--enable_magicblast` option.
 
-    * `--enable_tarean` Enable contigs assembling with TAREAN.Warning! This step requires a plenty of computional resources. This option can be specified only with `--from_fastq` option.
+    * `--enable_tarean` Assemble contigs with TAREAN. **Warning!** This step is resource-heavy. This option can be specified only with the `--from_fastq` option.
 
-### Pipeline flowchart
+## Input
+
+The pipeline requires no input data. By default, it will start from the pre-assembled contigs. Otherwise, if the `--from_fastq` option is specified, the pipeline will start from raw reads that it will download.
+
+We provide contigs that we assembled before the development of this pipeline with TAREAN and used for our analysis. In our pipeline, we also include the contig assembly step using TAREAN. However, it is switched off by default because it does not exactly reproduce the contigs that we assembled and used.
+
+For the contamination assessment, we used the following Magic-BLAST databases version 5: `ref_euk_rep_genomes`, `16S_ribosomal_RNA`, `ref_prok_rep_genomes`, `ref_viruses_rep_genomes`, `ref_viroids_rep_genomes`. They can be downloaded from https://ftp.ncbi.nlm.nih.gov/blast/db/v5 using, for example, `lftp` client (see [man lftp](https://linux.die.net/man/1/lftp)). The directory with the Magic-BLAST databases must have the following structure:
+
+magicblast_dir
+├── ref_viroids_rep_genomes
+│   └── ref_viroids_rep_genomes.tar.gz 
+├── ref_prok_rep_genomes
+│   ├── ref_prok_rep_genomes.00.tar.gz
+│   ├── ref_prok_rep_genomes.01.tar.gz 
+│   ├── ...
+...
+
+## Output
+
+...
+
+## Repository structure
+
+...
+
+## Pipeline flowchart
 
 ![flowchart](https://github.com/nikitin-p/darevskia-pericentromere-analysis/blob/master/pipeline.png)
-
-## Pipeline discussion
-
-Originally, contigs were assembled with TAREAN locally and during re-writing pipeline in Nextflow DSL2, we noticed that there were backward changes in TAREAN commit we used. However, contigs assembled in pipeline are do not differ much from what we had, we decided to provide original pre-assembled contigs for reproducibility.
-
-Also, we developed an R script which is looking for most distant tandem repeat monomers from the whole family of the other subgenome using Levenshtein distance. We suppose it is not the best way to compare sequences of different lengths, so it can be improved in the way of comparing tandem repeat k-mers. However we use the whole monomer approach for reproducibility, as we originally got FISH probes with this method.
-
-We suggest the pipeline can be used to find species-specific probes for any hybrid organism.
-
-## Background
-
-In this research we study three _Darevskia_ species: _D. raddei nairensis_, _D. valentini_ and their hybrid parthenogenetic descendant _D. unisexualis_. We microdissected the pericentromeric chromosomal regions of the two parental species, did their targeted high-throughput sequencing and developed a computational method to predict species-specific pericentromeric fluorescent DNA probes to discriminate parental subgenomes within the hybrid karyotype.
-
-## Pipeline output
-
-## Credits
-
-The pipeline was written in Nextflow DSL2 by:
-
-- [Sviatoslav Sidorov](https://github.com/sidorov-si)
-- [Pavel Nikitin](https://github.com/nikitin-p)
-
-## Requirements
-
-The pipeline was working fine with Nextflow v21.10.6.
 
 ## Citations
 
 An extensive list of references for the tools used by the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
+
+## To-do
+
+1. Clarify if the user needs to unpack the Magic-BLAST database *.tar.gz files.
+2. Write up the Output section.
+3. Write up the Repository structure section.
