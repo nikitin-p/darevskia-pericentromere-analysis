@@ -43,25 +43,301 @@ For the contamination assessment, we used the following Magic-BLAST databases ve
 ```
 magicblast_dir
 ├── ref_viroids_rep_genomes
-│   └── ref_viroids_rep_genomes.tar.gz 
-├── ref_prok_rep_genomes
-│   ├── ref_prok_rep_genomes.00.tar.gz
-│   ├── ref_prok_rep_genomes.01.tar.gz 
+│   ├── ref_viroids_rep_genomes.ndb
 │   ├── ...
+│   ├── ref_viroids_rep_genomes.nto
+│   ├── taxdb.btd
+│   └── taxdb.bti
+├── ref_prok_rep_genomes
+│   ├── ref_prok_rep_genomes.01.nhr
+│   ├── ...
+│   ├── ref_prok_rep_genomes.01.nsq
+│   ├── ref_prok_rep_genomes.02.nhr
+│   ├── ...
+│   ├── ref_prok_rep_genomes.02.nsq
+│   ├── ...
+│   ├── taxdb.btd
+│   └── taxdb.bti
 ...
 ```
-
-## Output
-
-...
-
-## Repository structure
-
-...
 
 ## Pipeline flowchart
 
 ![flowchart](https://github.com/nikitin-p/darevskia-pericentromere-analysis/blob/master/pipeline.png)
+
+## Output
+
+```
+.
+├── bowtie2clsatalign
+│   ├── clsat36_mapped_on_N.sam
+│   ├── clsat36_mapped_on_V.sam
+│   └── versions.yml
+├── embossneedle
+│   ├── alignment_for_probes.needle
+│   ├── CL107Contig1_V_revcomp.fasta
+│   └── versions.yml
+├── extractcontig
+│   ├── CL107Contig1_V.fasta
+│   ├── CL1Contig21_N.fasta
+│   └── versions.yml
+├── fastqc
+│   ├── N_1_fastqc.html
+│   ├── N_1_fastqc.zip
+│   ├── N_2_fastqc.html
+│   ├── N_2_fastqc.zip
+│   ├── V_1_fastqc.html
+│   ├── V_1_fastqc.zip
+│   ├── V_2_fastqc.html
+│   ├── V_2_fastqc.zip
+│   └── versions.yml
+├── interlacefasta
+│   ├── N_trimmed.fasta
+│   ├── V_trimmed.fasta
+│   └── versions.yml
+├── magicblast
+│   ├── N_16S_ribosomal_RNA_output.txt
+│   ├── N_ref_prok_rep_genomes_output.txt
+│   ├── N_ref_viroids_rep_genomes_output.txt
+│   ├── N_ref_viruses_rep_genomes_output.txt
+│   ├── V_16S_ribosomal_RNA_output.txt
+│   ├── V_ref_viruses_rep_genomes_output.txt
+│   ├── V_ref_prok_rep_genomes_output.txt
+│   ├── V_ref_viroids_rep_genomes_output.txt
+│   └── versions.yml
+├── monomerprobe
+│   ├── N_tr_units_by_distance_geq10.tsv
+│   ├── N_tr_units_by_distance.tsv
+│   ├── versions.yml
+│   ├── V_tr_units_by_distance_geq10.tsv
+│   └── V_tr_units_by_distance.tsv
+├── parsemagicblast
+│   ├── N_16S_ribosomal_RNA_histogram.txt
+│   ├── N_ref_prok_rep_genomes_histogram.txt
+│   ├── N_ref_viroids_rep_genomes_histogram.txt
+│   ├── N_ref_viruses_rep_genomes_histogram.txt
+│   ├── V_16S_ribosomal_RNA_histogram.txt
+│   ├── versions.yml
+│   ├── V_ref_prok_rep_genomes_histogram.txt
+│   ├── V_ref_viroids_rep_genomes_histogram.txt
+│   └── V_ref_viruses_rep_genomes_histogram.txt
+├── parsesam
+│   ├── probe_mapping_on_N.tsv
+│   ├── probe_mapping_on_V.tsv
+│   └── versions.yml
+├── preprocessr
+│   ├── N_all_tab_bycol.tsv
+│   ├── N_top10pc_tab_bycol.tsv
+│   ├── V_all_tab_bycol.tsv
+│   ├── versions.yml
+│   └── V_top10pc_tab_bycol.tsv
+├── preprocesstrf
+│   ├── contigs_N_all_seq.fasta
+│   ├── contigs_N_merged_all.fasta
+│   ├── contigs_N_tab.tsv
+│   ├── contigs_N_top10pc_bt2.fasta
+│   ├── contigs_N_top10pc.fasta
+│   ├── contigs_N_top10pc_seq.fasta
+│   ├── contigs_V_all_seq.fasta
+│   ├── contigs_V_merged_all.fasta
+│   ├── contigs_V_tab.tsv
+│   ├── contigs_V_top10pc_bt2.fasta
+│   ├── contigs_V_top10pc.fasta
+│   ├── contigs_V_top10pc_seq.fasta
+│   └── versions.yml
+├── quast
+│   ├── contigs_N
+│   │   ├── basic_stats
+│   │   │   ├── contigs_GC_content_plot.pdf
+│   │   │   ├── cumulative_plot.pdf
+│   │   │   ├── GC_content_plot.pdf
+│   │   │   └── Nx_plot.pdf
+│   │   ├── icarus.html
+│   │   ├── icarus_viewers
+│   │   │   └── contig_size_viewer.html
+│   │   ├── quast.log
+│   │   ├── report.html
+│   │   ├── report.pdf
+│   │   ├── report.tex
+│   │   ├── report.tsv
+│   │   ├── report.txt
+│   │   ├── transposed_report.tex
+│   │   ├── transposed_report.tsv
+│   │   └── transposed_report.txt
+│   ├── contigs_V
+│   │   ├── basic_stats
+│   │   │   ├── contigs_GC_content_plot.pdf
+│   │   │   ├── cumulative_plot.pdf
+│   │   │   ├── GC_content_plot.pdf
+│   │   │   └── Nx_plot.pdf
+│   │   ├── icarus.html
+│   │   ├── icarus_viewers
+│   │   │   └── contig_size_viewer.html
+│   │   ├── quast.log
+│   │   ├── report.html
+│   │   ├── report.pdf
+│   │   ├── report.tex
+│   │   ├── report.tsv
+│   │   ├── report.txt
+│   │   ├── transposed_report.tex
+│   │   ├── transposed_report.tsv
+│   │   └── transposed_report.txt
+│   └── versions.yml
+├── reads
+│   ├── N_1.fastq.gz
+│   ├── N_2.fastq.gz
+│   ├── V_1.fastq.gz
+│   ├── V_2.fastq.gz
+│   └── versions.yml
+├── repeatexplorer
+│   ├── output_N
+│   │   └── contigs.fasta
+│   └── output_V
+│       └── contigs.fasta
+├── rplots
+│   ├── contig_gc_content.pdf
+│   ├── contigs_length.pdf
+│   ├── plot_GC_length_distr.html
+│   ├── units_gc_content.pdf
+│   ├── units_length.pdf
+│   └── versions.yml
+├── rscipts
+│   ├── N_tr_probes_by_distance_geq10.tsv
+│   ├── V_tr_probes_by_distance_geq10.tsv
+│   └── versions.yml
+├── trf
+│   ├── contigs_N_all_seq.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_N_merged_all.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_N_merged_all.fasta.2.7.7.80.10.50.500.dat
+│   ├── contigs_N_top10pc.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_N_top10pc.fasta.2.7.7.80.10.50.500.dat
+│   ├── contigs_N_top10pc_seq.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_V_all_seq.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_V_merged_all.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_V_merged_all.fasta.2.7.7.80.10.50.500.dat
+│   ├── contigs_V_top10pc.fasta.2.5.7.80.10.50.2000.dat
+│   ├── contigs_V_top10pc.fasta.2.7.7.80.10.50.500.dat
+│   ├── contigs_V_top10pc_seq.fasta.2.5.7.80.10.50.2000.dat
+│   ├── N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat
+│   ├── V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat
+│   └── versions.yml
+└── trimmomatic
+    ├── N_trimmed_f_p.fastq
+    ├── N_trimmed_f_p.fastq.gz
+    ├── N_trimmed_f_u.fastq
+    ├── N_trimmed_f_u.fastq.gz
+    ├── N_trimmed_r_p.fastq
+    ├── N_trimmed_r_p.fastq.gz
+    ├── N_trimmed_r_u.fastq
+    ├── N_trimmed_r_u.fastq.gz
+    ├── N_trimmed_trimlog.txt
+    ├── V_trimmed_trimlog.txt
+    ├── V_trimmed_f_p.fastq
+    ├── V_trimmed_f_p.fastq.gz
+    ├── V_trimmed_f_u.fastq
+    ├── V_trimmed_f_u.fastq.gz
+    ├── V_trimmed_r_p.fastq
+    ├── V_trimmed_r_p.fastq.gz
+    ├── V_trimmed_r_u.fastq
+    ├── V_trimmed_r_u.fastq.gz
+    └── versions.yml
+```
+
+## Repository structure
+
+```
+.
+├── bin
+│   ├── generate_probes_from_kmers.R
+│   ├── generate_probes_from_monomers.R
+│   └── render_rmd.R
+├── CITATIONS.md
+├── clsat36
+│   └── clsat36.fasta
+├── conf
+│   ├── base.config
+│   ├── igenomes.config
+│   └── modules.config
+├── contigs
+│   ├── contigs_N.fasta
+│   └── contigs_V.fasta
+├── contigs_for_probes
+│   ├── cl107contig1_V.fasta
+│   └── cl1contig21_N.fasta
+├── LICENSE
+├── main.nf
+├── modules
+│   ├── local
+│   │   ├── bowtie2clsatalign.nf
+│   │   ├── crossalign.nf
+│   │   ├── custom_functions.nf
+│   │   ├── downloaddbs.nf
+│   │   ├── downloadreads.nf
+│   │   ├── embossneedle.nf
+│   │   ├── extractcontig.nf
+│   │   ├── fasterqdump.nf
+│   │   ├── interlacefasta.nf
+│   │   ├── kmerprobe.nf
+│   │   ├── magicblast.nf
+│   │   ├── monomerprobe.nf
+│   │   ├── parsemagicblast.nf
+│   │   ├── parsesam.nf
+│   │   ├── preprocessr.nf
+│   │   ├── preprocesstrf.nf
+│   │   ├── quast.nf
+│   │   ├── repeatexplorer.nf
+│   │   ├── rplots.nf
+│   │   ├── trf.nf
+│   │   └── trimmomatic.nf
+│   └── nf-core
+│       └── modules
+│           ├── bowtie2
+│           │   └── build
+│           │       ├── main.nf
+│           │       └── meta.yml
+│           ├── bwa
+│           │   ├── index
+│           │   │   ├── main.nf
+│           │   │   └── meta.yml
+│           │   └── mem
+│           │       ├── main.nf
+│           │       └── meta.yml
+│           └── fastqc
+│               ├── main.nf
+│               └── meta.yml
+├── modules.json
+├── nextflow.config
+├── nf-core
+│   └── modules
+│       ├── bowtie2
+│       │   └── align
+│       │       ├── main.nf
+│       │       └── meta.yml
+│       └── nf-core
+│           └── bwa
+│               ├── index
+│               │   ├── main.nf
+│               │   └── meta.yml
+│               └── mem
+│                   ├── main.nf
+│                   └── meta.yml
+├── pipeline.png
+├── primer
+│   └── primer.fasta
+├── probes
+│   ├── probes_N.fasta
+│   └── probes_V.fasta
+├── README.md
+├── rmd
+│   ├── contigs_N_tab.tsv
+│   ├── contigs_V_tab.tsv
+│   ├── N_all_tab_bycol.tsv
+│   ├── plot_GC_length_distr.Rmd
+│   └── V_all_tab_bycol.tsv
+├── temp.nf
+└── workflows
+    └── darevskia.nf
+```
 
 ## Citations
 
