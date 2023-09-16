@@ -9,12 +9,9 @@ process TRF {
 
     input:
     tuple val(meta), path(contigs_fasta)
-    // each path(contigs_fasta)
 
     output:
     tuple val(meta), path("*.dat"), emit: trf_dat
-    // val meta, emit: ch_meta
-    // path "*.dat",        emit: trf_dat
     path "versions.yml", emit: versions
 
     script:
