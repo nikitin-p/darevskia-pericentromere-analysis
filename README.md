@@ -73,7 +73,7 @@ The output is placed in the **results** folder. If run without parameters (i.e.,
 * **rplots** - Plots of the GC-content and sequence length distributions, in `PDF`, and the corresponding knitted R notebook, in `HTML`.
 * **parsesam** - Tables of predicted DNA FISH probes annotated as "mapped" or "unmapped" to the contigs of the opposite species.
 * **bowtie2build** - Bowtie2 index files for the full sets of contigs.
-* **bowtie2crossalign** - ...
+* **bowtie2crossalign** - Alignment of manually selected candidate probes to the contigs of the opposite species, in the `SAM` format.
 * **bowtie2clsatalign** - Alignment of the CLsat36 sequence to contigs, in the `SAM` format.
 * **extractcontig** - Contigs, in the `FASTA` format, to which the CLsat36 sequence aligned. The predicted DNA FISH probes originate from these contigs.
 
