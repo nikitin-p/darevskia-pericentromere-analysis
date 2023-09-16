@@ -63,119 +63,45 @@ magicblast_dir
 
 ## Output
 
-After execution of the whole pipeline (i.e. with all parameters), all the output files will be located in `results` folder, which consists of the folowwing subfolders:
-* `reads` - compressed (gz) reads in `FASTQ` format
-* `fastqc` - FASTQC raw reads quality assessment in `HTML` and `ZIP` format
-* `trimmomatic` - trimmed forward/reverse paired/unpaired reads in `FASTQ` format
-* `magicblast` - Magic-BLAST raw output in `TXT` format
-* `parsemagicblast` - processed Magic-BLAST output in `TXT` format
-* `interlacefasta` - interlaced reads for TAREAN assembly in `FASTA` format
-* `repeatexplorer` - contigs assembled with TAREAN in two separate folders in `FASTA` format
-* `quast` - assembly quality assesment with QUAST in two separate folders in `PDF`, `TEX`, `TSV` and `TXT` formats
-* `preprocesstrf` - all contigs and top 10% highly-covered contigs in `FASTA` format and in `TSV` format with metadata
-* `trf` - Tandem Repeat Finder (TRF) output in `DAT` format
-* `preprocessr` - all tandem repeat monomers and tandem repeat monomers from top 10% highly-covered contigs in `TSV` format
-* `monomerprobe` - suggested FISH probes from top 10% highly-covered contigs in `TSV` format
-* `rplots` - GC-content and sequences length distributions in `PDF` format and knitted R notebook in `HTML` format
-* `bowtie2clsatalign` - CLsat36 alignment on contigs in `SAM` format
-* `parsesam` - processed contigs on which CLsat36 aligned in `TSV` format
-* `extractcontig` - contigs from which selected FISH probes originate from in `FASTA` format
+The output is placed in the **results** folder. If run without parameters (i.e., starting from the pre-assembed contigs), the pipeline will generate the following subfolders in the **results** folder:
+
+* **quast** - Quality assesment of contigs with QUAST, including `PDF` reports.
+* **preprocesstrf** - All contigs and the top 10% highly covered contigs in the `FASTA` format (for Tandem Repeat Finder) and, with stats, in the `TSV` format (for the analysis in R).
+* **trf** - Tandem Repeat Finder (TRF) output in its `DAT` format.
+* **preprocessr** - TRF output in a tabular format: all tandem repeat monomers and tandem repeat monomers from the top 10% highly covered contigs, annotated with the source contigs.
+* **monomerprobe** - Tables of pairwise edit distances between all tandem repeat monomers found in the top 10% highly covered contigs.
+* **rplots** - Plots of the GC-content and sequence length distributions, in `PDF`, and the corresponding knitted R notebook, in `HTML`.
+* **parsesam** - Tables of predicted DNA FISH probes annotated as "mapped" or "unmapped" to the contigs of the opposite species.
+* **bowtie2build** - Bowtie2 index files for the full sets of contigs.
+* **bowtie2crossalign** - ...
+* **bowtie2clsatalign** - Alignment of the CLsat36 sequence to contigs, in the `SAM` format.
+* **extractcontig** - Contigs, in the `FASTA` format, to which the CLsat36 sequence aligned. The predicted DNA FISH probes originate from these contigs.
+
+If `--from_fastq` is set, then, depending on additional options, the pipeline will generate the following additional subfolders:
+
+* **reads** - Gzipped raw reads, in the `FASTQ` format.
+* **fastqc** - FASTQC reports on the raw reads, in `HTML` and zipped.
+* **trimmomatic** - Trimmed forward/reverse paired/unpaired reads, in the gzipped `FASTQ` format.
+* **magicblast** - Contamination assessment report produced by Magic-BLAST as a table, in the `TXT` format.
+* **parsemagicblast** - Summarised top predicted contaminants from the Magic-BLAST report, in a space-delimited table, in the `TXT` format.
+* **interlacefasta** - Interlaced reads prepared as input for TAREAN, in the `FASTA` format.
+* **repeatexplorer** - Contigs assembled with TAREAN, in the `FASTA` format. Importantly, the output of the TAREAN module in the pipeline does not exactly match the pre-assembled contigs.
 
 ## Repository structure
 
-```
-.
-├── bin
-│   ├── generate_probes_from_kmers.R
-│   ├── generate_probes_from_monomers.R
-│   └── render_rmd.R
-├── CITATIONS.md
-├── clsat36
-│   └── clsat36.fasta
-├── conf
-│   ├── base.config
-│   ├── igenomes.config
-│   └── modules.config
-├── contigs
-│   ├── contigs_N.fasta
-│   └── contigs_V.fasta
-├── contigs_for_probes
-│   ├── cl107contig1_V.fasta
-│   └── cl1contig21_N.fasta
-├── LICENSE
-├── main.nf
-├── modules
-│   ├── local
-│   │   ├── bowtie2clsatalign.nf
-│   │   ├── crossalign.nf
-│   │   ├── custom_functions.nf
-│   │   ├── downloaddbs.nf
-│   │   ├── downloadreads.nf
-│   │   ├── embossneedle.nf
-│   │   ├── extractcontig.nf
-│   │   ├── fasterqdump.nf
-│   │   ├── interlacefasta.nf
-│   │   ├── kmerprobe.nf
-│   │   ├── magicblast.nf
-│   │   ├── monomerprobe.nf
-│   │   ├── parsemagicblast.nf
-│   │   ├── parsesam.nf
-│   │   ├── preprocessr.nf
-│   │   ├── preprocesstrf.nf
-│   │   ├── quast.nf
-│   │   ├── repeatexplorer.nf
-│   │   ├── rplots.nf
-│   │   ├── trf.nf
-│   │   └── trimmomatic.nf
-│   └── nf-core
-│       └── modules
-│           ├── bowtie2
-│           │   └── build
-│           │       ├── main.nf
-│           │       └── meta.yml
-│           ├── bwa
-│           │   ├── index
-│           │   │   ├── main.nf
-│           │   │   └── meta.yml
-│           │   └── mem
-│           │       ├── main.nf
-│           │       └── meta.yml
-│           └── fastqc
-│               ├── main.nf
-│               └── meta.yml
-├── modules.json
-├── nextflow.config
-├── nf-core
-│   └── modules
-│       ├── bowtie2
-│       │   └── align
-│       │       ├── main.nf
-│       │       └── meta.yml
-│       └── nf-core
-│           └── bwa
-│               ├── index
-│               │   ├── main.nf
-│               │   └── meta.yml
-│               └── mem
-│                   ├── main.nf
-│                   └── meta.yml
-├── pipeline.png
-├── primer
-│   └── primer.fasta
-├── probes
-│   ├── probes_N.fasta
-│   └── probes_V.fasta
-├── README.md
-├── rmd
-│   ├── contigs_N_tab.tsv
-│   ├── contigs_V_tab.tsv
-│   ├── N_all_tab_bycol.tsv
-│   ├── plot_GC_length_distr.Rmd
-│   └── V_all_tab_bycol.tsv
-├── temp.nf
-└── workflows
-    └── darevskia.nf
-```
+* **bin** - R scripts run in Nextflow modules.
+* **clsat36/clsat36.fasta** - CLsat36 sequence.
+* **conf** - Nextflow configs.
+* **contigs** - Pre-assembled contigs.
+* **contigs_for_probes** - Contigs with the CLsat monomers from which probes were manually selected.
+* **modules** - Nextflow modules implementing the steps of the pipeline.
+* **primer/primer.fasta** - DOP-PCR primer used in library preparations.
+* **probes** - FASTA files with validated species-specific DNA FISH probes for _D. raddei nairensis_ and _D. valentini_.
+* **rmd/plot_GC_length_distr.Rmd** - R Markdown notebook with the analysis of the GC content and length of contigs and tandem repeat monomers.
+* **workflows/darevskia.nf** - The workflow that implements the pipeline.
+* **CITATIONS.md** - References to the software tools and R packages used in the pipeline, with versions.
+* **main.nf** - A wrapper workflow that runs `workflows/darevskia.nf`.
+* **nextflow.config** - The main Nextflow config file that includes the config files from the `conf` folder.
 
 ## Citations
 
