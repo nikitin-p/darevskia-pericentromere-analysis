@@ -19,16 +19,16 @@ You can run the pipeline using:
 ```bash
 nextflow run darevskia-pericentromere-analysis/main.nf \
     -profile <docker/singularity/.../institute> \
-    [--from_fastq [--enable_magicblast --dbdir <dir>] [--enable_tarean]]
+    [--from_fastq [--enable_magicblast --db_dir <dir>] [--enable_tarean]]
 ```
 
 ### Options
 
 * `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
 
-    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days. This option can be specified only with the `--from_fastq` option and requires the `--dbdir` option.
+    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option.
 
-        * `--dbdir <magicblast_dir>` Directory with Magic-BLAST databases (see the **Input** section for details). This option can be specified only with the `--enable_magicblast` option.
+        * `--db_dir <magicblast_dir>` Directory with Magic-BLAST databases (see the **Input** section for details). This option can be specified only with the `--enable_magicblast` option.
 
     * `--enable_tarean` Assemble contigs with TAREAN. **Warning!** This step is resource-heavy. This option can be specified only with the `--from_fastq` option.
 
