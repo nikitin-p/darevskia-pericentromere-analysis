@@ -18,6 +18,7 @@ include { BOWTIE2_BUILD } from '../modules/nf-core/modules/bowtie2/build/main.nf
 include { BOWTIE2_CROSS_ALIGN } from '../modules/local/crossalign.nf'
 include { PARSESAM } from '../modules/local/parsesam.nf'
 include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
+include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 
 // Do not forget to replace SRR with the real ones
 // Real ones are SRR25825523 for N and SRR25825522 for V
@@ -217,6 +218,14 @@ workflow DAREVSKIA {
         BOWTIE2_BUILD.out.contigs_index
             .map {it -> [extract_species(it), it]},
         clsat36
+    )
+
+    EXTRACTCONTIG (
+        BOWTIE2_CLSAT_ALIGN.out.sam
+            .map {it -> [extract_species(it), it]}
+            .join(PREPROCESSTRF.out.all_contigs
+                .map {it -> [extract_species(it[1]), it[1]]}
+            )
     )
 
 }

@@ -61,10 +61,6 @@ magicblast_dir
 ...
 ```
 
-## Pipeline flowchart
-
-![flowchart](https://github.com/nikitin-p/darevskia-pericentromere-analysis/blob/master/pipeline.png)
-
 ## Output
 
 ```
