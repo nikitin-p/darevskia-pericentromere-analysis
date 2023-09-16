@@ -63,181 +63,23 @@ magicblast_dir
 
 ## Output
 
-```
-.
-├── bowtie2clsatalign
-│   ├── clsat36_mapped_on_N.sam
-│   ├── clsat36_mapped_on_V.sam
-│   └── versions.yml
-├── embossneedle
-│   ├── alignment_for_probes.needle
-│   ├── CL107Contig1_V_revcomp.fasta
-│   └── versions.yml
-├── extractcontig
-│   ├── CL107Contig1_V.fasta
-│   ├── CL1Contig21_N.fasta
-│   └── versions.yml
-├── fastqc
-│   ├── N_1_fastqc.html
-│   ├── N_1_fastqc.zip
-│   ├── N_2_fastqc.html
-│   ├── N_2_fastqc.zip
-│   ├── V_1_fastqc.html
-│   ├── V_1_fastqc.zip
-│   ├── V_2_fastqc.html
-│   ├── V_2_fastqc.zip
-│   └── versions.yml
-├── interlacefasta
-│   ├── N_trimmed.fasta
-│   ├── V_trimmed.fasta
-│   └── versions.yml
-├── magicblast
-│   ├── N_16S_ribosomal_RNA_output.txt
-│   ├── N_ref_prok_rep_genomes_output.txt
-│   ├── N_ref_viroids_rep_genomes_output.txt
-│   ├── N_ref_viruses_rep_genomes_output.txt
-│   ├── V_16S_ribosomal_RNA_output.txt
-│   ├── V_ref_viruses_rep_genomes_output.txt
-│   ├── V_ref_prok_rep_genomes_output.txt
-│   ├── V_ref_viroids_rep_genomes_output.txt
-│   └── versions.yml
-├── monomerprobe
-│   ├── N_tr_units_by_distance_geq10.tsv
-│   ├── N_tr_units_by_distance.tsv
-│   ├── versions.yml
-│   ├── V_tr_units_by_distance_geq10.tsv
-│   └── V_tr_units_by_distance.tsv
-├── parsemagicblast
-│   ├── N_16S_ribosomal_RNA_histogram.txt
-│   ├── N_ref_prok_rep_genomes_histogram.txt
-│   ├── N_ref_viroids_rep_genomes_histogram.txt
-│   ├── N_ref_viruses_rep_genomes_histogram.txt
-│   ├── V_16S_ribosomal_RNA_histogram.txt
-│   ├── versions.yml
-│   ├── V_ref_prok_rep_genomes_histogram.txt
-│   ├── V_ref_viroids_rep_genomes_histogram.txt
-│   └── V_ref_viruses_rep_genomes_histogram.txt
-├── parsesam
-│   ├── probe_mapping_on_N.tsv
-│   ├── probe_mapping_on_V.tsv
-│   └── versions.yml
-├── preprocessr
-│   ├── N_all_tab_bycol.tsv
-│   ├── N_top10pc_tab_bycol.tsv
-│   ├── V_all_tab_bycol.tsv
-│   ├── versions.yml
-│   └── V_top10pc_tab_bycol.tsv
-├── preprocesstrf
-│   ├── contigs_N_all_seq.fasta
-│   ├── contigs_N_merged_all.fasta
-│   ├── contigs_N_tab.tsv
-│   ├── contigs_N_top10pc_bt2.fasta
-│   ├── contigs_N_top10pc.fasta
-│   ├── contigs_N_top10pc_seq.fasta
-│   ├── contigs_V_all_seq.fasta
-│   ├── contigs_V_merged_all.fasta
-│   ├── contigs_V_tab.tsv
-│   ├── contigs_V_top10pc_bt2.fasta
-│   ├── contigs_V_top10pc.fasta
-│   ├── contigs_V_top10pc_seq.fasta
-│   └── versions.yml
-├── quast
-│   ├── contigs_N
-│   │   ├── basic_stats
-│   │   │   ├── contigs_GC_content_plot.pdf
-│   │   │   ├── cumulative_plot.pdf
-│   │   │   ├── GC_content_plot.pdf
-│   │   │   └── Nx_plot.pdf
-│   │   ├── icarus.html
-│   │   ├── icarus_viewers
-│   │   │   └── contig_size_viewer.html
-│   │   ├── quast.log
-│   │   ├── report.html
-│   │   ├── report.pdf
-│   │   ├── report.tex
-│   │   ├── report.tsv
-│   │   ├── report.txt
-│   │   ├── transposed_report.tex
-│   │   ├── transposed_report.tsv
-│   │   └── transposed_report.txt
-│   ├── contigs_V
-│   │   ├── basic_stats
-│   │   │   ├── contigs_GC_content_plot.pdf
-│   │   │   ├── cumulative_plot.pdf
-│   │   │   ├── GC_content_plot.pdf
-│   │   │   └── Nx_plot.pdf
-│   │   ├── icarus.html
-│   │   ├── icarus_viewers
-│   │   │   └── contig_size_viewer.html
-│   │   ├── quast.log
-│   │   ├── report.html
-│   │   ├── report.pdf
-│   │   ├── report.tex
-│   │   ├── report.tsv
-│   │   ├── report.txt
-│   │   ├── transposed_report.tex
-│   │   ├── transposed_report.tsv
-│   │   └── transposed_report.txt
-│   └── versions.yml
-├── reads
-│   ├── N_1.fastq.gz
-│   ├── N_2.fastq.gz
-│   ├── V_1.fastq.gz
-│   ├── V_2.fastq.gz
-│   └── versions.yml
-├── repeatexplorer
-│   ├── output_N
-│   │   └── contigs.fasta
-│   └── output_V
-│       └── contigs.fasta
-├── rplots
-│   ├── contig_gc_content.pdf
-│   ├── contigs_length.pdf
-│   ├── plot_GC_length_distr.html
-│   ├── units_gc_content.pdf
-│   ├── units_length.pdf
-│   └── versions.yml
-├── rscipts
-│   ├── N_tr_probes_by_distance_geq10.tsv
-│   ├── V_tr_probes_by_distance_geq10.tsv
-│   └── versions.yml
-├── trf
-│   ├── contigs_N_all_seq.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_N_merged_all.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_N_merged_all.fasta.2.7.7.80.10.50.500.dat
-│   ├── contigs_N_top10pc.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_N_top10pc.fasta.2.7.7.80.10.50.500.dat
-│   ├── contigs_N_top10pc_seq.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_V_all_seq.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_V_merged_all.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_V_merged_all.fasta.2.7.7.80.10.50.500.dat
-│   ├── contigs_V_top10pc.fasta.2.5.7.80.10.50.2000.dat
-│   ├── contigs_V_top10pc.fasta.2.7.7.80.10.50.500.dat
-│   ├── contigs_V_top10pc_seq.fasta.2.5.7.80.10.50.2000.dat
-│   ├── N_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat
-│   ├── V_contigs_top10pc.fasta.2.5.7.80.10.50.2000.dat
-│   └── versions.yml
-└── trimmomatic
-    ├── N_trimmed_f_p.fastq
-    ├── N_trimmed_f_p.fastq.gz
-    ├── N_trimmed_f_u.fastq
-    ├── N_trimmed_f_u.fastq.gz
-    ├── N_trimmed_r_p.fastq
-    ├── N_trimmed_r_p.fastq.gz
-    ├── N_trimmed_r_u.fastq
-    ├── N_trimmed_r_u.fastq.gz
-    ├── N_trimmed_trimlog.txt
-    ├── V_trimmed_trimlog.txt
-    ├── V_trimmed_f_p.fastq
-    ├── V_trimmed_f_p.fastq.gz
-    ├── V_trimmed_f_u.fastq
-    ├── V_trimmed_f_u.fastq.gz
-    ├── V_trimmed_r_p.fastq
-    ├── V_trimmed_r_p.fastq.gz
-    ├── V_trimmed_r_u.fastq
-    ├── V_trimmed_r_u.fastq.gz
-    └── versions.yml
-```
+After execution of the whole pipeline (i.e. with all parameters), all the output files will be located in `results` folder, which consists of the folowwing subfolders:
+* `reads` - compressed (gz) reads in `FASTQ` format
+* `fastqc` - FASTQC raw reads quality assessment in `HTML` and `ZIP` format
+* `trimmomatic` - trimmed forward/reverse paired/unpaired reads in `FASTQ` format
+* `magicblast` - Magic-BLAST raw output in `TXT` format
+* `parsemagicblast` - processed Magic-BLAST output in `TXT` format
+* `interlacefasta` - interlaced reads for TAREAN assembly in `FASTA` format
+* `repeatexplorer` - contigs assembled with TAREAN in two separate folders in `FASTA` format
+* `quast` - assembly quality assesment with QUAST in two separate folders in `PDF`, `TEX`, `TSV` and `TXT` formats
+* `preprocesstrf` - all contigs and top 10% highly-covered contigs in `FASTA` format and in `TSV` format with metadata
+* `trf` - Tandem Repeat Finder (TRF) output in `DAT` format
+* `preprocessr` - all tandem repeat monomers and tandem repeat monomers from top 10% highly-covered contigs in `TSV` format
+* `monomerprobe` - suggested FISH probes from top 10% highly-covered contigs in `TSV` format
+* `rplots` - GC-content and sequences length distributions in `PDF` format and knitted R notebook in `HTML` format
+* `bowtie2clsatalign` - CLsat36 alignment on contigs in `SAM` format
+* `parsesam` - processed contigs on which CLsat36 aligned in `TSV` format
+* `extractcontig` - contigs from which selected FISH probes originate from in `FASTA` format
 
 ## Repository structure
 
