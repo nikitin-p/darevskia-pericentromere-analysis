@@ -23,6 +23,7 @@ nextflow run darevskia-pericentromere-analysis/main.nf \
 ```
 
 ### Options
+Without options, the pipeline will start from pre-assembled contigs included in this repository.
 
 * `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
 
@@ -34,7 +35,7 @@ nextflow run darevskia-pericentromere-analysis/main.nf \
 
 ## Input
 
-The pipeline requires no input data. By default, it will start from the pre-assembled contigs. Otherwise, if the `--from_fastq` option is specified, the pipeline will start from raw reads that it will download.
+The pipeline requires no input data. By default, it will start from pre-assembled contigs. Otherwise, if the `--from_fastq` option is specified, the pipeline will start from raw reads that it will download.
 
 We provide contigs that we assembled before the development of this pipeline with TAREAN and used for our analysis. In our pipeline, we also include the contig assembly step using TAREAN. However, it is switched off by default because it does not exactly reproduce the contigs that we assembled and used.
 
