@@ -4,7 +4,7 @@ The pipeline was developed using Nextflow DSL2 by [Pavel Nikitin](https://github
 
 ## Introduction
 
-Here we describe the pipeline used for the analysis of the pericentromeric sequences of _Darevskia raddei nairensis_ and _D. valentini_, parental species of a hybrid parthenogenetic lizard _D. unisexualis_. In targeted sequencing data obtained from the pericentromeres of the parental species, we search for tandem repeat monomers and predict species-specific pericentromeric DNA FISH probes to differentially stain the subgenomes in the hybrid karyotype.
+Here we describe the pipeline used for the analysis of the pericentromeric sequences of _Darevskia raddei nairensis_ and _D. valentini_, parental species of a hybrid parthenogenetic lizard _D. unisexualis_. In targeted sequencing data obtained from the pericentromeres of the parental species, we search for tandem repeat monomers and, based on them, predict species-specific pericentromeric DNA FISH probes to differentially stain parental subgenomes in the hybrid karyotype.
 
 ## Requirements
 
@@ -110,5 +110,5 @@ An extensive list of references for the tools used by the pipeline can be found 
 ## To-do
 
 1. Clarify what to retain in modules.json.
-2. Run the whole pipeline.
+2. Run the whole pipeline (try all options and different versions of Singularity and Nextflow).
 3. Add the real SRR IDs when the paper is published.
