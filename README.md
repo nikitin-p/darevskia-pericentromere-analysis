@@ -23,7 +23,7 @@ nextflow run darevskia-pericentromere-analysis/main.nf \
 ```
 
 ### Options
-Without options, the pipeline will start from pre-assembled contigs included in this repository.
+Without optional arguments, the pipeline will start from pre-assembled contigs included in this repository.
 
 * `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
 
