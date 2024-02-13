@@ -1,0 +1,4949 @@
+RID: D5EJCWDT016	
+Job Title:Darevskia_raddei_nairensis_probe				
+Program: BLASTN 
+Query: Darevskia_raddei_nairensis_probe ID: lcl|Query_34139(dna) Length: 30
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Darevskia rostombekovi clone 3#16ros1 satellite CLsatI sequence   Darevskia ro... NA              237985     60.0   60.0  100%  6e-08 100.00 146        AY262959.1       
+Darevskia rostombekovi clone #6ros1 satellite CLsatI sequence     Darevskia ro... NA              237985     60.0   60.0  100%  6e-08 100.00 146        AY262957.1       
+Darevskia rostombekovi clone 1#71ros1 satellite CLsatI sequence   Darevskia ro... NA              237985     60.0   60.0  100%  6e-08 100.00 146        AY262950.1       
+Darevskia chlorogaster clone 3.11rchl1 satellite CLsatI sequence  Darevskia ch... NA              237991     60.0   60.0  100%  6e-08 100.00 146        AY262949.1       
+Darevskia rostombekovi clone 3#9'ros1 satellite CLsatI sequence   Darevskia ro... NA              237985     52.0   52.0  100%  1e-05 96.67  146        AY262964.1       
+Darevskia rostombekovi clone 3#14sros1 satellite CLsatI sequence  Darevskia ro... NA              237985     46.1   46.1  76%   9e-04 100.00 146        AY262961.1       
+Darevskia rostombekovi clone #4ros1 satellite CLsatI sequence     Darevskia ro... NA              237985     46.1   46.1  76%   9e-04 100.00 146        AY262958.1       
+Darevskia rostombekovi clone #7ros1 satellite CLsatI sequence     Darevskia ro... NA              237985     46.1   46.1  76%   9e-04 100.00 146        AY262956.1       
+Darevskia rostombekovi clone 3#12'ros1 satellite CLsatI sequence  Darevskia ro... NA              237985     44.1   44.1  100%  0.004 93.33  146        AY262963.1       
+Darevskia rostombekovi clone 1#85ros1 satellite CLsatI sequence   Darevskia ro... NA              237985     40.1   40.1  66%   0.055 100.00 146        AY262953.1       
+Darevskia mixta clone 1#51mix1 satellite CLsatI sequence          Darevskia mixta NA              122392     38.2   38.2  90%   0.22  92.59  146        AY262989.1       
+Darevskia rostombekovi clone 1#84ros1 satellite CLsatI sequence   Darevskia ro... NA              237985     38.2   38.2  76%   0.22  95.65  146        AY262952.1       
+Lacerta saxicola satellite sequence                               Darevskia br... NA              1592834    38.2   38.2  76%   0.22  95.65  152        Y17117.1         
+Darevskia chlorogaster clone 3.12rchl1 satellite CLsatI sequence  Darevskia ch... NA              237991     36.2   36.2  86%   0.86  96.15  145        AY262948.1       
+Darevskia chlorogaster clone 1#3.10chl1 satellite CLsatI sequence Darevskia ch... NA              237991     36.2   36.2  86%   0.86  96.15  145        AY262944.1       
+Darevskia chlorogaster clone 1#3.8chl1 satellite CLsatI sequence  Darevskia ch... NA              237991     36.2   36.2  86%   0.86  96.15  145        AY262943.1       
+Darevskia chlorogaster clone 1#3.7chl1 satellite CLsatI sequence  Darevskia ch... NA              237991     36.2   36.2  86%   0.86  96.15  145        AY262942.1       
+Darevskia chlorogaster clone 1#3.6chl1 satellite CLsatI sequence  Darevskia ch... NA              237991     36.2   36.2  86%   0.86  96.15  145        AY262941.1       
+Lacerta unisexualis satellite DNA                                 Darevskia un... NA              254669     36.2   36.2  60%   0.86  100.00 146        AJ252105.1       
+Lacerta nairensis satellite DNA                                   Darevskia na... NA              307440     36.2   36.2  60%   0.86  100.00 146        AJ252100.1       
+PREDICTED: Ahaetulla prasina sodium/potassium transporting...     Ahaetulla pr... NA              499056     34.2   34.2  56%   3.4   100.00 4796       XM_058196257.1   
+PREDICTED: Ahaetulla prasina sodium/potassium transporting...     Ahaetulla pr... NA              499056     34.2   34.2  56%   3.4   100.00 4785       XM_058196256.1   
+Furcifer pardalis isolate Fpa_1 chromosome 10                     Furcifer par... NA              187939     34.2   331   83%   3.4   100.00 36791312   CP126899.1       
+PREDICTED: Sphaerodactylus townsendi...                           Sphaerodacty... NA              933632     34.2   34.2  56%   3.4   100.00 3644       XM_048485282.1   
+PREDICTED: Sphaerodactylus townsendi...                           Sphaerodacty... NA              933632     34.2   34.2  56%   3.4   100.00 3810       XM_048485281.1   
+PREDICTED: Sphaerodactylus townsendi...                           Sphaerodacty... NA              933632     34.2   34.2  56%   3.4   100.00 3875       XM_048485280.1   
+PREDICTED: Sphaerodactylus townsendi...                           Sphaerodacty... NA              933632     34.2   34.2  56%   3.4   100.00 3741       XM_048485279.1   
+PREDICTED: Sphaerodactylus townsendi...                           Sphaerodacty... NA              933632     34.2   34.2  56%   3.4   100.00 4279       XM_048485278.1   
+PREDICTED: Zootoca vivipara recombination signal binding prote... Zootoca vivi... common lizard   8524       32.2   32.2  53%   13    100.00 10290      XM_035112129.1   
+PREDICTED: Zootoca vivipara recombination signal binding prote... Zootoca vivi... common lizard   8524       32.2   32.2  53%   13    100.00 7282       XM_035112128.1   
+PREDICTED: Zootoca vivipara recombination signal binding prote... Zootoca vivi... common lizard   8524       32.2   32.2  53%   13    100.00 11305      XM_035112127.1   
+PREDICTED: Podarcis muralis recombination signal binding prote... Podarcis mur... Common wall ... 64176      32.2   32.2  53%   13    100.00 7012       XM_028743127.1   
+PREDICTED: Podarcis muralis recombination signal binding prote... Podarcis mur... Common wall ... 64176      32.2   32.2  53%   13    100.00 6989       XM_028743125.1   
+PREDICTED: Podarcis muralis recombination signal binding prote... Podarcis mur... Common wall ... 64176      32.2   32.2  53%   13    100.00 7899       XM_028743124.1   
+PREDICTED: Podarcis muralis recombination signal binding prote... Podarcis mur... Common wall ... 64176      32.2   32.2  53%   13    100.00 7003       XM_028743123.1   
+PREDICTED: Podarcis muralis recombination signal binding prote... Podarcis mur... Common wall ... 64176      32.2   32.2  53%   13    100.00 7007       XM_028743122.1   
+PREDICTED: Pogona vitticeps dipeptidyl peptidase like 10...       Pogona vitti... central bear... 103695     32.2   32.2  53%   13    100.00 4323       XM_020779615.1   
+Podarcis lilfordi genome assembly, chromosome: 14                 Podarcis lil... Lilford's wa... 74358      32.2   646   96%   13    95.00  53023510   OX395139.1       
+Podarcis lilfordi genome assembly, chromosome: 9                  Podarcis lil... Lilford's wa... 74358      32.2   1042  90%   13    100.00 77034498   OX395134.1       
+Furcifer pardalis isolate Fpa_1 chromosome 9                      Furcifer par... NA              187939     32.2   704   86%   13    100.00 63061479   CP126898.1       
+Podarcis lilfordi genome assembly, chromosome: 13                 Podarcis lil... Lilford's wa... 74358      32.2   541   96%   13    100.00 53850232   OX395138.1       
+Podarcis cretensis genome assembly, chromosome: Z                 Podarcis cre... NA              1330250    32.2   559   93%   13    100.00 51454539   OX638163.1       
+Podarcis cretensis genome assembly, chromosome: 14                Podarcis cre... NA              1330250    32.2   617   83%   13    95.00  56358416   OX638162.1       
+Podarcis cretensis genome assembly, chromosome: 13                Podarcis cre... NA              1330250    32.2   403   86%   13    100.00 57670597   OX638161.1       
+Podarcis cretensis genome assembly, chromosome: 9                 Podarcis cre... NA              1330250    32.2   963   90%   13    100.00 81674400   OX638157.1       
+PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21),...   Eublepharis ... NA              481883     32.2   32.2  53%   13    100.00 5978       XM_054996149.1   
+PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21),...   Eublepharis ... NA              481883     32.2   32.2  53%   13    100.00 5517       XR_008598099.1   
+PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21),...   Eublepharis ... NA              481883     32.2   32.2  53%   13    100.00 6145       XM_054996148.1   
+PREDICTED: Hemicordylus capensis marker of proliferation Ki-67... Hemicordylus... graceful cra... 884348     32.2   32.2  53%   13    100.00 8879       XM_053310047.1   
+PREDICTED: Hemicordylus capensis marker of proliferation Ki-67... Hemicordylus... graceful cra... 884348     32.2   32.2  53%   13    100.00 9053       XM_053310046.1   
+Crotalus atrox SUMO specific peptidase 5 (senp5), FETUA-1...      Crotalus atrox  western diam... 8730       32.2   32.2  53%   13    100.00 220198     OP223733.1       
+Crotalus horridus SUMO specific peptidase 5 (senp5), FETUA-1...   Crotalus hor... timber rattl... 35024      32.2   32.2  53%   13    100.00 220210     OP223732.1       
+Crotalus adamanteus FETUA-1 (fetua-1), FETUA-2 (fetua-2),...      Crotalus ada... eastern diam... 8729       32.2   32.2  53%   13    100.00 112676     OP223731.1       
+Crotalus adamanteus FETUA-2 (fetua-2), FETUA-3 (fetua-3),...      Crotalus ada... eastern diam... 8729       32.2   32.2  53%   13    100.00 107033     OP223730.1       
+Vipera ursinii genome assembly, chromosome: 11                    Vipera ursinii  NA              103942     32.2   272   80%   13    100.00 21061636   OX365976.1       
+PREDICTED: Sphaerodactylus townsendi ribonucleic acid export 1... Sphaerodacty... NA              933632     32.2   32.2  53%   13    100.00 2542       XM_048497557.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  7737       XM_048486380.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  7782       XM_048486379.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  7830       XM_048486378.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  7875       XM_048486376.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  7968       XM_048486375.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8004       XM_048486374.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8097       XM_048486373.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8115       XM_048486372.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8139       XM_048486371.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8178       XM_048486370.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8214       XM_048486369.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8223       XM_048486368.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8232       XM_048486367.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8259       XM_048486365.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8307       XM_048486364.1   
+PREDICTED: Sphaerodactylus townsendi bridging integrator 1...     Sphaerodacty... NA              933632     32.2   32.2  66%   13    95.00  8352       XM_048486363.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  4895       XM_039358993.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  4869       XM_039358992.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  7257       XM_039358991.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  7212       XM_039358990.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  5393       XM_039358989.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  12776      XM_039358987.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  7172       XM_039358986.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  7038       XM_039358985.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  8384       XM_039358984.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  8435       XM_039358983.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  8437       XM_039358982.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  8460       XM_039358981.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  5988       XM_039358980.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  7598       XM_039358979.1   
+PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12),... Crotalus tigris Tiger rattle... 88082      32.2   32.2  66%   13    95.00  8461       XM_039358978.1   
+PREDICTED: Crotalus tigris interferon alpha/beta receptor 2-li... Crotalus tigris Tiger rattle... 88082      32.2   32.2  53%   13    100.00 2620       XM_039319151.1   
+Podarcis lilfordi genome assembly, chromosome: 8                  Podarcis lil... Lilford's wa... 74358      30.2   753   86%   53    100.00 84956682   OX395133.1       
+PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1),...  Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 2231       XM_058184197.1   
+PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1),...  Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 1981       XM_058184195.1   
+PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1),...  Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 2000       XM_058184194.1   
+PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1),...  Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 2186       XM_058184193.1   
+PREDICTED: Ahaetulla prasina family with sequence similarity 1... Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 4185       XM_058177205.1   
+PREDICTED: Ahaetulla prasina family with sequence similarity 1... Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 4478       XM_058177204.1   
+PREDICTED: Ahaetulla prasina family with sequence similarity 1... Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 4360       XM_058177203.1   
+PREDICTED: Ahaetulla prasina uncharacterized LOC131189195...      Ahaetulla pr... NA              499056     30.2   30.2  50%   53    100.00 11221      XM_058165170.1   
+Podarcis lilfordi genome assembly, chromosome: 12                 Podarcis lil... Lilford's wa... 74358      30.2   478   90%   53    100.00 59066452   OX395137.1       
+Podarcis lilfordi genome assembly, chromosome: 16                 Podarcis lil... Lilford's wa... 74358      30.2   351   100%  53    100.00 41280576   OX395143.1       
+Podarcis lilfordi genome assembly, chromosome: 17                 Podarcis lil... Lilford's wa... 74358      30.2   399   93%   53    100.00 41611985   OX395142.1       
+
+Alignments:
+
+>Darevskia rostombekovi clone 3#16ros1 satellite CLsatI sequence
+Sequence ID: AY262959.1 Length: 146
+Range 1: 20 to 49
+
+Score:60.0 bits(30), Expect:6e-08, 
+Identities:30/30(100%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||||||||||||||||||||
+Sbjct  20  GACGTACTTGGCTTTTGTAACGTTCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone #6ros1 satellite CLsatI sequence
+Sequence ID: AY262957.1 Length: 146
+Range 1: 20 to 49
+
+Score:60.0 bits(30), Expect:6e-08, 
+Identities:30/30(100%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||||||||||||||||||||
+Sbjct  20  GACGTACTTGGCTTTTGTAACGTTCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone 1#71ros1 satellite CLsatI sequence
+Sequence ID: AY262950.1 Length: 146
+Range 1: 20 to 49
+
+Score:60.0 bits(30), Expect:6e-08, 
+Identities:30/30(100%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||||||||||||||||||||
+Sbjct  20  GACGTACTTGGCTTTTGTAACGTTCAATTT  49
+
+
+
+
+>Darevskia chlorogaster clone 3.11rchl1 satellite CLsatI sequence
+Sequence ID: AY262949.1 Length: 146
+Range 1: 20 to 49
+
+Score:60.0 bits(30), Expect:6e-08, 
+Identities:30/30(100%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||||||||||||||||||||
+Sbjct  20  GACGTACTTGGCTTTTGTAACGTTCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone 3#9'ros1 satellite CLsatI sequence
+Sequence ID: AY262964.1 Length: 146
+Range 1: 20 to 49
+
+Score:52.0 bits(26), Expect:1e-05, 
+Identities:29/30(97%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||||||||||||| ||||||
+Sbjct  20  GACGTACTTGGCTTTTGTAACGTGCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone 3#14sros1 satellite CLsatI sequence
+Sequence ID: AY262961.1 Length: 146
+Range 1: 27 to 49
+
+Score:46.1 bits(23), Expect:9e-04, 
+Identities:23/23(100%),  Gaps:0/23(0%), Strand: Plus/Plus
+
+Query  8   TTGGCTTTTGTAACGTTCAATTT  30
+           |||||||||||||||||||||||
+Sbjct  27  TTGGCTTTTGTAACGTTCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone #4ros1 satellite CLsatI sequence
+Sequence ID: AY262958.1 Length: 146
+Range 1: 23 to 45
+
+Score:46.1 bits(23), Expect:9e-04, 
+Identities:23/23(100%),  Gaps:0/23(0%), Strand: Plus/Plus
+
+Query  4   GTACTTGGCTTTTGTAACGTTCA  26
+           |||||||||||||||||||||||
+Sbjct  23  GTACTTGGCTTTTGTAACGTTCA  45
+
+
+
+
+>Darevskia rostombekovi clone #7ros1 satellite CLsatI sequence
+Sequence ID: AY262956.1 Length: 146
+Range 1: 23 to 45
+
+Score:46.1 bits(23), Expect:9e-04, 
+Identities:23/23(100%),  Gaps:0/23(0%), Strand: Plus/Plus
+
+Query  4   GTACTTGGCTTTTGTAACGTTCA  26
+           |||||||||||||||||||||||
+Sbjct  23  GTACTTGGCTTTTGTAACGTTCA  45
+
+
+
+
+>Darevskia rostombekovi clone 3#12'ros1 satellite CLsatI sequence
+Sequence ID: AY262963.1 Length: 146
+Range 1: 20 to 49
+
+Score:44.1 bits(22), Expect:0.004, 
+Identities:28/30(93%),  Gaps:0/30(0%), Strand: Plus/Plus
+
+Query  1   GACGTACTTGGCTTTTGTAACGTTCAATTT  30
+           |||||||||||||||| |||||| ||||||
+Sbjct  20  GACGTACTTGGCTTTTCTAACGTGCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone 1#85ros1 satellite CLsatI sequence
+Sequence ID: AY262953.1 Length: 146
+Range 1: 24 to 43
+
+Score:40.1 bits(20), Expect:0.055, 
+Identities:20/20(100%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTT  24
+           ||||||||||||||||||||
+Sbjct  24  TACTTGGCTTTTGTAACGTT  43
+
+
+
+
+>Darevskia mixta clone 1#51mix1 satellite CLsatI sequence
+Sequence ID: AY262989.1 Length: 146
+Range 1: 23 to 49
+
+Score:38.2 bits(19), Expect:0.22, 
+Identities:25/27(93%),  Gaps:0/27(0%), Strand: Plus/Plus
+
+Query  4   GTACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||||  |||||||||||||
+Sbjct  23  GTACTTGGCTTTCCTAACGTTCAATTT  49
+
+
+
+
+>Darevskia rostombekovi clone 1#84ros1 satellite CLsatI sequence
+Sequence ID: AY262952.1 Length: 146
+Range 1: 23 to 45
+
+Score:38.2 bits(19), Expect:0.22, 
+Identities:22/23(96%),  Gaps:0/23(0%), Strand: Plus/Plus
+
+Query  4   GTACTTGGCTTTTGTAACGTTCA  26
+           ||||||||||||| |||||||||
+Sbjct  23  GTACTTGGCTTTTCTAACGTTCA  45
+
+
+
+
+>Lacerta saxicola satellite sequence
+Sequence ID: Y17117.1 Length: 152
+Range 1: 55 to 77
+
+Score:38.2 bits(19), Expect:0.22, 
+Identities:22/23(96%),  Gaps:0/23(0%), Strand: Plus/Plus
+
+Query  4   GTACTTGGCTTTTGTAACGTTCA  26
+           ||||||||||||| |||||||||
+Sbjct  55  GTACTTGGCTTTTCTAACGTTCA  77
+
+
+
+
+>Darevskia chlorogaster clone 3.12rchl1 satellite CLsatI sequence
+Sequence ID: AY262948.1 Length: 145
+Range 1: 24 to 48
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:25/26(96%),  Gaps:1/26(3%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTTCAATTT  30
+           |||||||||||| |||||||||||||
+Sbjct  24  TACTTGGCTTTT-TAACGTTCAATTT  48
+
+
+
+
+>Darevskia chlorogaster clone 1#3.10chl1 satellite CLsatI sequence
+Sequence ID: AY262944.1 Length: 145
+Range 1: 24 to 48
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:25/26(96%),  Gaps:1/26(3%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||| ||||||||||||||
+Sbjct  24  TACTTGGCTTT-GTAACGTTCAATTT  48
+
+
+
+
+>Darevskia chlorogaster clone 1#3.8chl1 satellite CLsatI sequence
+Sequence ID: AY262943.1 Length: 145
+Range 1: 24 to 48
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:25/26(96%),  Gaps:1/26(3%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||| ||||||||||||||
+Sbjct  24  TACTTGGCTTT-GTAACGTTCAATTT  48
+
+
+
+
+>Darevskia chlorogaster clone 1#3.7chl1 satellite CLsatI sequence
+Sequence ID: AY262942.1 Length: 145
+Range 1: 24 to 48
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:25/26(96%),  Gaps:1/26(3%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||| ||||||||||||||
+Sbjct  24  TACTTGGCTTT-GTAACGTTCAATTT  48
+
+
+
+
+>Darevskia chlorogaster clone 1#3.6chl1 satellite CLsatI sequence
+Sequence ID: AY262941.1 Length: 145
+>Darevskia chlorogaster clone 3.9rchl1 satellite CLsatI sequence
+Sequence ID: AY262947.1 Length: 145 
+Range 1: 24 to 48
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:25/26(96%),  Gaps:1/26(3%), Strand: Plus/Plus
+
+Query  5   TACTTGGCTTTTGTAACGTTCAATTT  30
+           ||||||||||| ||||||||||||||
+Sbjct  24  TACTTGGCTTT-GTAACGTTCAATTT  48
+
+
+
+
+>Lacerta unisexualis satellite DNA
+Sequence ID: AJ252105.1 Length: 146
+Range 1: 129 to 146
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:18/18(100%),  Gaps:0/18(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGT  18
+            ||||||||||||||||||
+Sbjct  129  GACGTACTTGGCTTTTGT  146
+
+
+
+
+>Lacerta nairensis satellite DNA
+Sequence ID: AJ252100.1 Length: 146
+Range 1: 129 to 146
+
+Score:36.2 bits(18), Expect:0.86, 
+Identities:18/18(100%),  Gaps:0/18(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGT  18
+            ||||||||||||||||||
+Sbjct  129  GACGTACTTGGCTTTTGT  146
+
+
+
+
+>PREDICTED: Ahaetulla prasina sodium/potassium transporting ATPase interacting 1 (NKAIN1), transcript variant X2, mRNA
+Sequence ID: XM_058196257.1 Length: 4796
+Range 1: 2816 to 2832
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1     GACGTACTTGGCTTTTG  17
+             |||||||||||||||||
+Sbjct  2832  GACGTACTTGGCTTTTG  2816
+
+
+
+
+>PREDICTED: Ahaetulla prasina sodium/potassium transporting ATPase interacting 1 (NKAIN1), transcript variant X1, mRNA
+Sequence ID: XM_058196256.1 Length: 4785
+Range 1: 2805 to 2821
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1     GACGTACTTGGCTTTTG  17
+             |||||||||||||||||
+Sbjct  2821  GACGTACTTGGCTTTTG  2805
+
+
+
+
+>Furcifer pardalis isolate Fpa_1 chromosome 10
+Sequence ID: CP126899.1 Length: 36791312
+Range 1: 27113091 to 27113107
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 |||||||||||||||||
+Sbjct  27113091  GTACTTGGCTTTTGTAA  27113107
+
+
+
+
+Range 2: 17752778 to 17752791
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTTC  25
+                 ||||||||||||||
+Sbjct  17752791  CTTTTGTAACGTTC  17752778
+
+
+
+
+Range 3: 20144542 to 20144555
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  20144542  CTTGGCTTTTGTAA  20144555
+
+
+
+
+Range 4: 28594395 to 28594408
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTGT  18
+                 ||||||||||||||
+Sbjct  28594408  TACTTGGCTTTTGT  28594395
+
+
+
+
+Range 5: 32316707 to 32316720
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  32316720  CTTGGCTTTTGTAA  32316707
+
+
+
+
+Range 6: 6162421 to 6162433
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  6162421  CTTGGCTTTTGTA  6162433
+
+
+
+
+Range 7: 7738881 to 7738893
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  7738881  ACTTGGCTTTTGT  7738893
+
+
+
+
+Range 8: 9493694 to 9493706
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9        TGGCTTTTGTAAC  21
+                |||||||||||||
+Sbjct  9493706  TGGCTTTTGTAAC  9493694
+
+
+
+
+Range 9: 15297123 to 15297135
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  10        GGCTTTTGTAACG  22
+                 |||||||||||||
+Sbjct  15297135  GGCTTTTGTAACG  15297123
+
+
+
+
+Range 10: 22120596 to 22120608
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  22120596  TGTAACGTTCAAT  22120608
+
+
+
+
+Range 11: 31907622 to 31907634
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  31907634  CTTGGCTTTTGTA  31907622
+
+
+
+
+Range 12: 34516171 to 34516183
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  34516183  ACTTGGCTTTTGT  34516171
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi beta-1,3-galactosyltransferase 1 (B3GALT1), transcript variant X5, mRNA
+Sequence ID: XM_048485282.1 Length: 3644
+Range 1: 776 to 792
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTTTG  17
+            |||||||||||||||||
+Sbjct  792  GACGTACTTGGCTTTTG  776
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi beta-1,3-galactosyltransferase 1 (B3GALT1), transcript variant X4, mRNA
+Sequence ID: XM_048485281.1 Length: 3810
+Range 1: 942 to 958
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTTTG  17
+            |||||||||||||||||
+Sbjct  958  GACGTACTTGGCTTTTG  942
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi beta-1,3-galactosyltransferase 1 (B3GALT1), transcript variant X3, mRNA
+Sequence ID: XM_048485280.1 Length: 3875
+Range 1: 1007 to 1023
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1     GACGTACTTGGCTTTTG  17
+             |||||||||||||||||
+Sbjct  1023  GACGTACTTGGCTTTTG  1007
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi beta-1,3-galactosyltransferase 1 (B3GALT1), transcript variant X2, mRNA
+Sequence ID: XM_048485279.1 Length: 3741
+Range 1: 873 to 889
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTTTG  17
+            |||||||||||||||||
+Sbjct  889  GACGTACTTGGCTTTTG  873
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi beta-1,3-galactosyltransferase 1 (B3GALT1), transcript variant X1, mRNA
+Sequence ID: XM_048485278.1 Length: 4279
+Range 1: 1411 to 1427
+
+Score:34.2 bits(17), Expect:3.4, 
+Identities:17/17(100%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1     GACGTACTTGGCTTTTG  17
+             |||||||||||||||||
+Sbjct  1427  GACGTACTTGGCTTTTG  1411
+
+
+
+
+>PREDICTED: Zootoca vivipara recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X3, mRNA
+Sequence ID: XM_035112129.1 Length: 10290
+Range 1: 7373 to 7388
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  7373  ACTTGGCTTTTGTAAC  7388
+
+
+
+
+>PREDICTED: Zootoca vivipara recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X2, mRNA
+Sequence ID: XM_035112128.1 Length: 7282
+Range 1: 4365 to 4380
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  4365  ACTTGGCTTTTGTAAC  4380
+
+
+
+
+>PREDICTED: Zootoca vivipara recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X1, mRNA
+Sequence ID: XM_035112127.1 Length: 11305
+Range 1: 8388 to 8403
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  8388  ACTTGGCTTTTGTAAC  8403
+
+
+
+
+>PREDICTED: Podarcis muralis recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X5, mRNA
+Sequence ID: XM_028743127.1 Length: 7012
+Range 1: 4430 to 4445
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  4430  ACTTGGCTTTTGTAAC  4445
+
+
+
+
+>PREDICTED: Podarcis muralis recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X4, mRNA
+Sequence ID: XM_028743125.1 Length: 6989
+Range 1: 4407 to 4422
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  4407  ACTTGGCTTTTGTAAC  4422
+
+
+
+
+>PREDICTED: Podarcis muralis recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X3, mRNA
+Sequence ID: XM_028743124.1 Length: 7899
+Range 1: 5317 to 5332
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  5317  ACTTGGCTTTTGTAAC  5332
+
+
+
+
+>PREDICTED: Podarcis muralis recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X2, mRNA
+Sequence ID: XM_028743123.1 Length: 7003
+Range 1: 4421 to 4436
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  4421  ACTTGGCTTTTGTAAC  4436
+
+
+
+
+>PREDICTED: Podarcis muralis recombination signal binding protein for immunoglobulin kappa J region (RBPJ), transcript variant X1, mRNA
+Sequence ID: XM_028743122.1 Length: 7007
+Range 1: 4425 to 4440
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6     ACTTGGCTTTTGTAAC  21
+             ||||||||||||||||
+Sbjct  4425  ACTTGGCTTTTGTAAC  4440
+
+
+
+
+>PREDICTED: Pogona vitticeps dipeptidyl peptidase like 10 (DPP10), mRNA
+Sequence ID: XM_020779615.1 Length: 4323
+Range 1: 1343 to 1358
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  12    CTTTTGTAACGTTCAA  27
+             ||||||||||||||||
+Sbjct  1343  CTTTTGTAACGTTCAA  1358
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 14
+Sequence ID: OX395139.1 Length: 53023510
+Range 1: 33365207 to 33365226
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAACGTTCA  26
+                 |||||||||||||| |||||
+Sbjct  33365226  CTTGGCTTTTGTAATGTTCA  33365207
+
+
+
+
+Range 2: 13815099 to 13815113
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTCAA  27
+                 |||||||||||||||
+Sbjct  13815099  TTTTGTAACGTTCAA  13815113
+
+
+
+
+Range 3: 15780528 to 15780541
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  15780528  CTTGGCTTTTGTAA  15780541
+
+
+
+
+Range 4: 24311069 to 24311086
+
+Score:28.2 bits(14), Expect:209, 
+Identities:17/18(94%),  Gaps:0/18(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTTGTAAC  21
+                 ||||||||||||| ||||
+Sbjct  24311086  GTACTTGGCTTTTTTAAC  24311069
+
+
+
+
+Range 5: 46492389 to 46492402
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  46492389  CTTGGCTTTTGTAA  46492402
+
+
+
+
+Range 6: 1482621 to 1482633
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  1482621  CTTGGCTTTTGTA  1482633
+
+
+
+
+Range 7: 8840211 to 8840223
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  8840211  TTGGCTTTTGTAA  8840223
+
+
+
+
+Range 8: 12214947 to 12214959
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  12214959  ACTTGGCTTTTGT  12214947
+
+
+
+
+Range 9: 13906769 to 13906781
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  13906769  TTTGTAACGTTCA  13906781
+
+
+
+
+Range 10: 14965778 to 14965790
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  14965790  ACTTGGCTTTTGT  14965778
+
+
+
+
+Range 11: 16646100 to 16646116
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1         GACGTACTTGGCTTTTG  17
+                 ||||| |||||||||||
+Sbjct  16646116  GACGTTCTTGGCTTTTG  16646100
+
+
+
+
+Range 12: 22086949 to 22086965
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTCAATT  29
+                 ||||||||| |||||||
+Sbjct  22086949  TTTTGTAACTTTCAATT  22086965
+
+
+
+
+Range 13: 23235716 to 23235728
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  23235716  ACTTGGCTTTTGT  23235728
+
+
+
+
+Range 14: 27276356 to 27276368
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  27276368  CTTGGCTTTTGTA  27276356
+
+
+
+
+Range 15: 32695207 to 32695219
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  32695219  CTTGGCTTTTGTA  32695207
+
+
+
+
+Range 16: 33167357 to 33167369
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  33167369  TTGGCTTTTGTAA  33167357
+
+
+
+
+Range 17: 33213305 to 33213317
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  33213317  CTTGGCTTTTGTA  33213305
+
+
+
+
+Range 18: 33911381 to 33911393
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  33911393  ACTTGGCTTTTGT  33911381
+
+
+
+
+Range 19: 34094955 to 34094967
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  34094955  TTGGCTTTTGTAA  34094967
+
+
+
+
+Range 20: 39701549 to 39701561
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  39701549  TTGGCTTTTGTAA  39701561
+
+
+
+
+Range 21: 40411146 to 40411162
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 ||||||||| |||||||
+Sbjct  40411162  GTACTTGGCATTTGTAA  40411146
+
+
+
+
+Range 22: 40576398 to 40576410
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  40576410  TTGGCTTTTGTAA  40576398
+
+
+
+
+Range 23: 43184510 to 43184522
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  43184510  TTGGCTTTTGTAA  43184522
+
+
+
+
+Range 24: 49747085 to 49747097
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  49747085  TTTGTAACGTTCA  49747097
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 9
+Sequence ID: OX395134.1 Length: 77034498
+Range 1: 11413243 to 11413258
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGTAAC  21
+                 ||||||||||||||||
+Sbjct  11413243  ACTTGGCTTTTGTAAC  11413258
+
+
+
+
+Range 2: 5285797 to 5285811
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  4        GTACTTGGCTTTTGT  18
+                |||||||||||||||
+Sbjct  5285811  GTACTTGGCTTTTGT  5285797
+
+
+
+
+Range 3: 20016511 to 20016524
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  20016524  CTTGGCTTTTGTAA  20016511
+
+
+
+
+Range 4: 20770698 to 20770711
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTGT  18
+                 ||||||||||||||
+Sbjct  20770711  TACTTGGCTTTTGT  20770698
+
+
+
+
+Range 5: 23274382 to 23274395
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAAC  21
+                 ||||||||||||||
+Sbjct  23274382  TTGGCTTTTGTAAC  23274395
+
+
+
+
+Range 6: 75221226 to 75221239
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  14        TTTGTAACGTTCAA  27
+                 ||||||||||||||
+Sbjct  75221239  TTTGTAACGTTCAA  75221226
+
+
+
+
+Range 7: 4034074 to 4034086
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12       CTTTTGTAACGTT  24
+                |||||||||||||
+Sbjct  4034074  CTTTTGTAACGTT  4034086
+
+
+
+
+Range 8: 4099833 to 4099845
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4        GTACTTGGCTTTT  16
+                |||||||||||||
+Sbjct  4099845  GTACTTGGCTTTT  4099833
+
+
+
+
+Range 9: 4761151 to 4761167
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  14       TTTGTAACGTTCAATTT  30
+                ||||||||||| |||||
+Sbjct  4761167  TTTGTAACGTTTAATTT  4761151
+
+
+
+
+Range 10: 6723119 to 6723131
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9        TGGCTTTTGTAAC  21
+                |||||||||||||
+Sbjct  6723119  TGGCTTTTGTAAC  6723131
+
+
+
+
+Range 11: 8688229 to 8688241
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12       CTTTTGTAACGTT  24
+                |||||||||||||
+Sbjct  8688229  CTTTTGTAACGTT  8688241
+
+
+
+
+Range 12: 9663748 to 9663760
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  18       TAACGTTCAATTT  30
+                |||||||||||||
+Sbjct  9663760  TAACGTTCAATTT  9663748
+
+
+
+
+Range 13: 17141312 to 17141328
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAACGT  23
+                 |||||| ||||||||||
+Sbjct  17141328  CTTGGCCTTTGTAACGT  17141312
+
+
+
+
+Range 14: 18684708 to 18684720
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  18684720  CTTGGCTTTTGTA  18684708
+
+
+
+
+Range 15: 20279210 to 20279222
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  20279222  CTTGGCTTTTGTA  20279210
+
+
+
+
+Range 16: 25661287 to 25661299
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  25661299  CTTTTGTAACGTT  25661287
+
+
+
+
+Range 17: 26579192 to 26579204
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  26579192  GTACTTGGCTTTT  26579204
+
+
+
+
+Range 18: 27002293 to 27002305
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  27002293  TGGCTTTTGTAAC  27002305
+
+
+
+
+Range 19: 29763595 to 29763607
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  29763595  TGGCTTTTGTAAC  29763607
+
+
+
+
+Range 20: 31820832 to 31820844
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  31820844  TGGCTTTTGTAAC  31820832
+
+
+
+
+Range 21: 32928068 to 32928080
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  32928068  ACTTGGCTTTTGT  32928080
+
+
+
+
+Range 22: 34669322 to 34669334
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  34669322  TGGCTTTTGTAAC  34669334
+
+
+
+
+Range 23: 34965325 to 34965337
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  34965337  CTTGGCTTTTGTA  34965325
+
+
+
+
+Range 24: 35569461 to 35569473
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTC  25
+                 |||||||||||||
+Sbjct  35569461  TTTTGTAACGTTC  35569473
+
+
+
+
+Range 25: 37735835 to 37735847
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  37735847  GTACTTGGCTTTT  37735835
+
+
+
+
+Range 26: 40477923 to 40477935
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  40477923  GTACTTGGCTTTT  40477935
+
+
+
+
+Range 27: 42288946 to 42288962
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAACGT  23
+                 |||| ||||||||||||
+Sbjct  42288962  CTTGCCTTTTGTAACGT  42288946
+
+
+
+
+Range 28: 46408038 to 46408050
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  46408038  CTTGGCTTTTGTA  46408050
+
+
+
+
+Range 29: 46650094 to 46650106
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  46650094  CTTGGCTTTTGTA  46650106
+
+
+
+
+Range 30: 47286591 to 47286603
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  47286603  TTGGCTTTTGTAA  47286591
+
+
+
+
+Range 31: 47703279 to 47703291
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  47703279  GTACTTGGCTTTT  47703291
+
+
+
+
+Range 32: 49975117 to 49975129
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  49975129  ACTTGGCTTTTGT  49975117
+
+
+
+
+Range 33: 51252737 to 51252749
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  51252737  GCTTTTGTAACGT  51252749
+
+
+
+
+Range 34: 51573107 to 51573119
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  51573119  TTGGCTTTTGTAA  51573107
+
+
+
+
+Range 35: 59755637 to 59755649
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  15        TTGTAACGTTCAA  27
+                 |||||||||||||
+Sbjct  59755649  TTGTAACGTTCAA  59755637
+
+
+
+
+Range 36: 65931383 to 65931395
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  65931395  TGGCTTTTGTAAC  65931383
+
+
+
+
+Range 37: 70306568 to 70306580
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  70306580  TTGGCTTTTGTAA  70306568
+
+
+
+
+Range 38: 73250113 to 73250125
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  73250113  ACTTGGCTTTTGT  73250125
+
+
+
+
+Range 39: 75407682 to 75407694
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  75407694  TTGGCTTTTGTAA  75407682
+
+
+
+
+>Furcifer pardalis isolate Fpa_1 chromosome 9
+Sequence ID: CP126898.1 Length: 63061479
+Range 1: 21175184 to 21175199
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTA  19
+                 ||||||||||||||||
+Sbjct  21175184  GTACTTGGCTTTTGTA  21175199
+
+
+
+
+Range 2: 6030496 to 6030510
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTAAC  21
+                |||||||||||||||
+Sbjct  6030496  CTTGGCTTTTGTAAC  6030510
+
+
+
+
+Range 3: 27664421 to 27664434
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTCA  26
+                 ||||||||||||||
+Sbjct  27664421  TTTTGTAACGTTCA  27664434
+
+
+
+
+Range 4: 32651116 to 32651129
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGTA  19
+                 ||||||||||||||
+Sbjct  32651116  ACTTGGCTTTTGTA  32651129
+
+
+
+
+Range 5: 46223597 to 46223610
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  10        GGCTTTTGTAACGT  23
+                 ||||||||||||||
+Sbjct  46223597  GGCTTTTGTAACGT  46223610
+
+
+
+
+Range 6: 48332486 to 48332499
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  48332499  CTTGGCTTTTGTAA  48332486
+
+
+
+
+Range 7: 52985807 to 52985820
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTTG  17
+                 ||||||||||||||
+Sbjct  52985820  GTACTTGGCTTTTG  52985807
+
+
+
+
+Range 8: 55109861 to 55109874
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGTA  19
+                 ||||||||||||||
+Sbjct  55109874  ACTTGGCTTTTGTA  55109861
+
+
+
+
+Range 9: 877374 to 877386
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  5       TACTTGGCTTTTG  17
+               |||||||||||||
+Sbjct  877374  TACTTGGCTTTTG  877386
+
+
+
+
+Range 10: 4718209 to 4718221
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  4718221  TTGGCTTTTGTAA  4718209
+
+
+
+
+Range 11: 11837676 to 11837696
+
+Score:26.3 bits(13), Expect:825, 
+Identities:19/21(90%),  Gaps:0/21(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAACGTTCAA  27
+                 |||||||| || |||||||||
+Sbjct  11837676  CTTGGCTTATGCAACGTTCAA  11837696
+
+
+
+
+Range 12: 12255830 to 12255842
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  12255842  ACTTGGCTTTTGT  12255830
+
+
+
+
+Range 13: 19292371 to 19292383
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  19292371  TGTAACGTTCAAT  19292383
+
+
+
+
+Range 14: 20630806 to 20630818
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  20630806  ACTTGGCTTTTGT  20630818
+
+
+
+
+Range 15: 25139326 to 25139338
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  25139338  CTTGGCTTTTGTA  25139326
+
+
+
+
+Range 16: 32297362 to 32297374
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  32297374  TTGGCTTTTGTAA  32297362
+
+
+
+
+Range 17: 35373679 to 35373691
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  35373679  TTGGCTTTTGTAA  35373691
+
+
+
+
+Range 18: 36486146 to 36486158
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  36486146  ACTTGGCTTTTGT  36486158
+
+
+
+
+Range 19: 39418294 to 39418306
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  39418306  CTTTTGTAACGTT  39418294
+
+
+
+
+Range 20: 40485273 to 40485285
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  40485285  TGGCTTTTGTAAC  40485273
+
+
+
+
+Range 21: 41732542 to 41732554
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  41732554  CTTGGCTTTTGTA  41732542
+
+
+
+
+Range 22: 45326507 to 45326519
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  3         CGTACTTGGCTTT  15
+                 |||||||||||||
+Sbjct  45326507  CGTACTTGGCTTT  45326519
+
+
+
+
+Range 23: 47797607 to 47797619
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  47797619  GTACTTGGCTTTT  47797607
+
+
+
+
+Range 24: 53945600 to 53945612
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  53945612  GTACTTGGCTTTT  53945600
+
+
+
+
+Range 25: 60257965 to 60257977
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  60257965  TTGGCTTTTGTAA  60257977
+
+
+
+
+Range 26: 61509321 to 61509333
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  61509333  GCTTTTGTAACGT  61509321
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 13
+Sequence ID: OX395138.1 Length: 53850232
+Range 1: 12091577 to 12091592
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  2         ACGTACTTGGCTTTTG  17
+                 ||||||||||||||||
+Sbjct  12091577  ACGTACTTGGCTTTTG  12091592
+
+
+
+
+Range 2: 20741299 to 20741313
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGTAA  20
+                 |||||||||||||||
+Sbjct  20741299  ACTTGGCTTTTGTAA  20741313
+
+
+
+
+Range 3: 19173051 to 19173064
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGTA  19
+                 ||||||||||||||
+Sbjct  19173064  ACTTGGCTTTTGTA  19173051
+
+
+
+
+Range 4: 22540144 to 22540157
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  15        TTGTAACGTTCAAT  28
+                 ||||||||||||||
+Sbjct  22540144  TTGTAACGTTCAAT  22540157
+
+
+
+
+Range 5: 26290107 to 26290120
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  26290120  CTTGGCTTTTGTAA  26290107
+
+
+
+
+Range 6: 1564182 to 1564194
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9        TGGCTTTTGTAAC  21
+                |||||||||||||
+Sbjct  1564194  TGGCTTTTGTAAC  1564182
+
+
+
+
+Range 7: 1895290 to 1895302
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  1895302  TTGGCTTTTGTAA  1895290
+
+
+
+
+Range 8: 9034820 to 9034832
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  9034832  ACTTGGCTTTTGT  9034820
+
+
+
+
+Range 9: 9081233 to 9081245
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  9081233  ACTTGGCTTTTGT  9081245
+
+
+
+
+Range 10: 9150003 to 9150015
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  13       TTTTGTAACGTTC  25
+                |||||||||||||
+Sbjct  9150015  TTTTGTAACGTTC  9150003
+
+
+
+
+Range 11: 9963433 to 9963445
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9        TGGCTTTTGTAAC  21
+                |||||||||||||
+Sbjct  9963433  TGGCTTTTGTAAC  9963445
+
+
+
+
+Range 12: 16865153 to 16865165
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  16865153  ACTTGGCTTTTGT  16865165
+
+
+
+
+Range 13: 17568679 to 17568691
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  13        TTTTGTAACGTTC  25
+                 |||||||||||||
+Sbjct  17568691  TTTTGTAACGTTC  17568679
+
+
+
+
+Range 14: 21285156 to 21285168
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  21285156  TTTGTAACGTTCA  21285168
+
+
+
+
+Range 15: 24236236 to 24236256
+
+Score:26.3 bits(13), Expect:825, 
+Identities:19/21(90%),  Gaps:0/21(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAACGTTCAAT  28
+                 |||||||||  ||||||||||
+Sbjct  24236256  TTGGCTTTTAAAACGTTCAAT  24236236
+
+
+
+
+Range 16: 26203455 to 26203467
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  26203467  ACTTGGCTTTTGT  26203455
+
+
+
+
+Range 17: 30185287 to 30185299
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  30185299  TACTTGGCTTTTG  30185287
+
+
+
+
+Range 18: 39155224 to 39155236
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  39155224  CTTTTGTAACGTT  39155236
+
+
+
+
+Range 19: 43597322 to 43597334
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  18        TAACGTTCAATTT  30
+                 |||||||||||||
+Sbjct  43597322  TAACGTTCAATTT  43597334
+
+
+
+
+Range 20: 47264050 to 47264062
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  47264050  TTTGTAACGTTCA  47264062
+
+
+
+
+>Podarcis cretensis genome assembly, chromosome: Z
+Sequence ID: OX638163.1 Length: 51454539
+Range 1: 8064204 to 8064219
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  6        ACTTGGCTTTTGTAAC  21
+                ||||||||||||||||
+Sbjct  8064204  ACTTGGCTTTTGTAAC  8064219
+
+
+
+
+Range 2: 44010658 to 44010671
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAAC  21
+                 ||||||||||||||
+Sbjct  44010671  TTGGCTTTTGTAAC  44010658
+
+
+
+
+Range 3: 627594 to 627606
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  11      GCTTTTGTAACGT  23
+               |||||||||||||
+Sbjct  627606  GCTTTTGTAACGT  627594
+
+
+
+
+Range 4: 3387685 to 3387697
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  10       GGCTTTTGTAACG  22
+                |||||||||||||
+Sbjct  3387697  GGCTTTTGTAACG  3387685
+
+
+
+
+Range 5: 5912257 to 5912269
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  5912257  CTTGGCTTTTGTA  5912269
+
+
+
+
+Range 6: 11605211 to 11605223
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  11605211  CTTGGCTTTTGTA  11605223
+
+
+
+
+Range 7: 11801437 to 11801449
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  11801449  GTACTTGGCTTTT  11801437
+
+
+
+
+Range 8: 13837029 to 13837041
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  13837029  GTACTTGGCTTTT  13837041
+
+
+
+
+Range 9: 15780951 to 15780963
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  15780963  TACTTGGCTTTTG  15780951
+
+
+
+
+Range 10: 21354569 to 21354581
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  21354581  TTGGCTTTTGTAA  21354569
+
+
+
+
+Range 11: 21986643 to 21986655
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  21986655  TGGCTTTTGTAAC  21986643
+
+
+
+
+Range 12: 23922468 to 23922480
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  23922480  TTTGTAACGTTCA  23922468
+
+
+
+
+Range 13: 24003518 to 24003530
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  24003518  TTGGCTTTTGTAA  24003530
+
+
+
+
+Range 14: 24364192 to 24364204
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  24364204  CTTGGCTTTTGTA  24364192
+
+
+
+
+Range 15: 26807285 to 26807297
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  26807297  TTGGCTTTTGTAA  26807285
+
+
+
+
+Range 16: 28284711 to 28284727
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  5         TACTTGGCTTTTGTAAC  21
+                 ||||||||| |||||||
+Sbjct  28284711  TACTTGGCTGTTGTAAC  28284727
+
+
+
+
+Range 17: 29020117 to 29020129
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  1         GACGTACTTGGCT  13
+                 |||||||||||||
+Sbjct  29020117  GACGTACTTGGCT  29020129
+
+
+
+
+Range 18: 33962658 to 33962670
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  33962658  TGTAACGTTCAAT  33962670
+
+
+
+
+Range 19: 38936274 to 38936286
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  38936286  TGGCTTTTGTAAC  38936274
+
+
+
+
+Range 20: 47371440 to 47371452
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  47371440  GCTTTTGTAACGT  47371452
+
+
+
+
+Range 21: 49315620 to 49315632
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  49315632  GCTTTTGTAACGT  49315620
+
+
+
+
+>Podarcis cretensis genome assembly, chromosome: 14
+Sequence ID: OX638162.1 Length: 56358416
+Range 1: 22020875 to 22020894
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAACGTTCA  26
+                 ||||| ||||||||||||||
+Sbjct  22020875  CTTGGTTTTTGTAACGTTCA  22020894
+
+
+
+
+Range 2: 42016666 to 42016680
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  13        TTTTGTAACGTTCAA  27
+                 |||||||||||||||
+Sbjct  42016680  TTTTGTAACGTTCAA  42016666
+
+
+
+
+Range 3: 7163571 to 7163584
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7        CTTGGCTTTTGTAA  20
+                ||||||||||||||
+Sbjct  7163584  CTTGGCTTTTGTAA  7163571
+
+
+
+
+Range 4: 39983515 to 39983528
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  39983528  CTTGGCTTTTGTAA  39983515
+
+
+
+
+Range 5: 3851231 to 3851243
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  14       TTTGTAACGTTCA  26
+                |||||||||||||
+Sbjct  3851243  TTTGTAACGTTCA  3851231
+
+
+
+
+Range 6: 7818362 to 7818374
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  11       GCTTTTGTAACGT  23
+                |||||||||||||
+Sbjct  7818362  GCTTTTGTAACGT  7818374
+
+
+
+
+Range 7: 9114311 to 9114323
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  9114311  CTTGGCTTTTGTA  9114323
+
+
+
+
+Range 8: 13735556 to 13735568
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  13735556  TTGGCTTTTGTAA  13735568
+
+
+
+
+Range 9: 13930289 to 13930305
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 ||||||||| |||||||
+Sbjct  13930289  GTACTTGGCATTTGTAA  13930305
+
+
+
+
+Range 10: 14230224 to 14230236
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  14230236  TGTAACGTTCAAT  14230224
+
+
+
+
+Range 11: 14346483 to 14346495
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  14346483  CTTTTGTAACGTT  14346495
+
+
+
+
+Range 12: 14675860 to 14675872
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  14675872  TTGGCTTTTGTAA  14675860
+
+
+
+
+Range 13: 21363836 to 21363848
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  21363848  TGGCTTTTGTAAC  21363836
+
+
+
+
+Range 14: 22161430 to 22161442
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  22161430  CTTGGCTTTTGTA  22161442
+
+
+
+
+Range 15: 22213261 to 22213273
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  22213261  TTGGCTTTTGTAA  22213273
+
+
+
+
+Range 16: 22710222 to 22710234
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  22710222  CTTGGCTTTTGTA  22710234
+
+
+
+
+Range 17: 27366334 to 27366346
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  27366346  CTTGGCTTTTGTA  27366334
+
+
+
+
+Range 18: 28188758 to 28188770
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  28188758  CTTGGCTTTTGTA  28188770
+
+
+
+
+Range 19: 32223191 to 32223203
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  32223203  ACTTGGCTTTTGT  32223191
+
+
+
+
+Range 20: 37952692 to 37952704
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  37952692  TTGGCTTTTGTAA  37952704
+
+
+
+
+Range 21: 43740544 to 43740556
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  43740544  ACTTGGCTTTTGT  43740556
+
+
+
+
+Range 22: 45535907 to 45535919
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  45535919  TGGCTTTTGTAAC  45535907
+
+
+
+
+Range 23: 53143875 to 53143887
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  53143875  ACTTGGCTTTTGT  53143887
+
+
+
+
+>Podarcis cretensis genome assembly, chromosome: 13
+Sequence ID: OX638161.1 Length: 57670597
+Range 1: 14718068 to 14718083
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  2         ACGTACTTGGCTTTTG  17
+                 ||||||||||||||||
+Sbjct  14718068  ACGTACTTGGCTTTTG  14718083
+
+
+
+
+Range 2: 21871895 to 21871908
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGTA  19
+                 ||||||||||||||
+Sbjct  21871908  ACTTGGCTTTTGTA  21871895
+
+
+
+
+Range 3: 29169991 to 29170004
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  29170004  CTTGGCTTTTGTAA  29169991
+
+
+
+
+Range 4: 2494014 to 2494026
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  2494026  TTGGCTTTTGTAA  2494014
+
+
+
+
+Range 5: 4098702 to 4098714
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12       CTTTTGTAACGTT  24
+                |||||||||||||
+Sbjct  4098702  CTTTTGTAACGTT  4098714
+
+
+
+
+Range 6: 4193243 to 4193255
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12       CTTTTGTAACGTT  24
+                |||||||||||||
+Sbjct  4193243  CTTTTGTAACGTT  4193255
+
+
+
+
+Range 7: 11979411 to 11979423
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  11979411  TGGCTTTTGTAAC  11979423
+
+
+
+
+Range 8: 19531277 to 19531289
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  19531277  ACTTGGCTTTTGT  19531289
+
+
+
+
+Range 9: 20253670 to 20253682
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  13        TTTTGTAACGTTC  25
+                 |||||||||||||
+Sbjct  20253682  TTTTGTAACGTTC  20253670
+
+
+
+
+Range 10: 25338975 to 25338987
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  15        TTGTAACGTTCAA  27
+                 |||||||||||||
+Sbjct  25338975  TTGTAACGTTCAA  25338987
+
+
+
+
+Range 11: 26781551 to 26781563
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  2         ACGTACTTGGCTT  14
+                 |||||||||||||
+Sbjct  26781551  ACGTACTTGGCTT  26781563
+
+
+
+
+Range 12: 42078919 to 42078931
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  42078919  CTTTTGTAACGTT  42078931
+
+
+
+
+Range 13: 47414130 to 47414142
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  47414142  TACTTGGCTTTTG  47414130
+
+
+
+
+Range 14: 48271311 to 48271323
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  48271311  TGGCTTTTGTAAC  48271323
+
+
+
+
+Range 15: 57194122 to 57194134
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  57194122  TGGCTTTTGTAAC  57194134
+
+
+
+
+>Podarcis cretensis genome assembly, chromosome: 9
+Sequence ID: OX638157.1 Length: 81674400
+Range 1: 68275871 to 68275886
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGTAAC  21
+                 ||||||||||||||||
+Sbjct  68275886  ACTTGGCTTTTGTAAC  68275871
+
+
+
+
+Range 2: 27063174 to 27063188
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  15        TTGTAACGTTCAATT  29
+                 |||||||||||||||
+Sbjct  27063174  TTGTAACGTTCAATT  27063188
+
+
+
+
+Range 3: 75599010 to 75599024
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGT  18
+                 |||||||||||||||
+Sbjct  75599010  GTACTTGGCTTTTGT  75599024
+
+
+
+
+Range 4: 56119118 to 56119131
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAAC  21
+                 ||||||||||||||
+Sbjct  56119131  TTGGCTTTTGTAAC  56119118
+
+
+
+
+Range 5: 58726010 to 58726023
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  5         TACTTGGCTTTTGT  18
+                 ||||||||||||||
+Sbjct  58726010  TACTTGGCTTTTGT  58726023
+
+
+
+
+Range 6: 1826271 to 1826283
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  1826271  TTGGCTTTTGTAA  1826283
+
+
+
+
+Range 7: 4169369 to 4169381
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  4169381  ACTTGGCTTTTGT  4169369
+
+
+
+
+Range 8: 7317588 to 7317600
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  7317588  TTGGCTTTTGTAA  7317600
+
+
+
+
+Range 9: 18568392 to 18568404
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  15        TTGTAACGTTCAA  27
+                 |||||||||||||
+Sbjct  18568392  TTGTAACGTTCAA  18568404
+
+
+
+
+Range 10: 19543824 to 19543836
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  19543836  TGGCTTTTGTAAC  19543824
+
+
+
+
+Range 11: 26911376 to 26911388
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  26911376  TTGGCTTTTGTAA  26911388
+
+
+
+
+Range 12: 27242498 to 27242510
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  27242510  GCTTTTGTAACGT  27242498
+
+
+
+
+Range 13: 28619720 to 28619732
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  28619720  ACTTGGCTTTTGT  28619732
+
+
+
+
+Range 14: 28990352 to 28990368
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTAACGT  23
+                 |||| ||||||||||||
+Sbjct  28990368  CTTGACTTTTGTAACGT  28990352
+
+
+
+
+Range 15: 30994819 to 30994831
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  30994831  GTACTTGGCTTTT  30994819
+
+
+
+
+Range 16: 32317114 to 32317126
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  32317126  CTTGGCTTTTGTA  32317114
+
+
+
+
+Range 17: 36603871 to 36603887
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAACGT  23
+                 |||| ||||||||||||
+Sbjct  36603871  CTTGCCTTTTGTAACGT  36603887
+
+
+
+
+Range 18: 38468377 to 38468389
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  38468389  GTACTTGGCTTTT  38468377
+
+
+
+
+Range 19: 41254538 to 41254550
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  41254538  GTACTTGGCTTTT  41254550
+
+
+
+
+Range 20: 42017290 to 42017302
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  42017302  TTGGCTTTTGTAA  42017290
+
+
+
+
+Range 21: 44128072 to 44128084
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  44128072  CTTGGCTTTTGTA  44128084
+
+
+
+
+Range 22: 44429898 to 44429910
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  44429910  TGGCTTTTGTAAC  44429898
+
+
+
+
+Range 23: 47255149 to 47255161
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  47255161  CTTTTGTAACGTT  47255149
+
+
+
+
+Range 24: 49493672 to 49493684
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  49493684  TGGCTTTTGTAAC  49493672
+
+
+
+
+Range 25: 49689989 to 49690001
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  49689989  ACTTGGCTTTTGT  49690001
+
+
+
+
+Range 26: 52268723 to 52268735
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  52268735  TGGCTTTTGTAAC  52268723
+
+
+
+
+Range 27: 59237846 to 59237858
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  59237846  CTTGGCTTTTGTA  59237858
+
+
+
+
+Range 28: 59767934 to 59767946
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  59767934  TACTTGGCTTTTG  59767946
+
+
+
+
+Range 29: 60017597 to 60017609
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  11        GCTTTTGTAACGT  23
+                 |||||||||||||
+Sbjct  60017597  GCTTTTGTAACGT  60017609
+
+
+
+
+Range 30: 60871095 to 60871107
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  60871095  CTTGGCTTTTGTA  60871107
+
+
+
+
+Range 31: 62456252 to 62456268
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAACGT  23
+                 |||||| ||||||||||
+Sbjct  62456252  CTTGGCCTTTGTAACGT  62456268
+
+
+
+
+Range 32: 67643158 to 67643170
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  67643158  GTACTTGGCTTTT  67643170
+
+
+
+
+Range 33: 69541105 to 69541117
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  69541117  TTGGCTTTTGTAA  69541105
+
+
+
+
+Range 34: 73609442 to 73609454
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  73609442  GTACTTGGCTTTT  73609454
+
+
+
+
+Range 35: 76146572 to 76146588
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCAATTT  30
+                 ||||||||||| |||||
+Sbjct  76146572  TTTGTAACGTTTAATTT  76146588
+
+
+
+
+Range 36: 76854946 to 76854958
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  76854946  GTACTTGGCTTTT  76854958
+
+
+
+
+>PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21), transcript variant X3, mRNA
+Sequence ID: XM_054996149.1 Length: 5978
+Range 1: 4621 to 4636
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  3     CGTACTTGGCTTTTGT  18
+             ||||||||||||||||
+Sbjct  4621  CGTACTTGGCTTTTGT  4636
+
+
+
+
+>PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21), transcript variant X2, misc_RNA
+Sequence ID: XR_008598099.1 Length: 5517
+Range 1: 4160 to 4175
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  3     CGTACTTGGCTTTTGT  18
+             ||||||||||||||||
+Sbjct  4160  CGTACTTGGCTTTTGT  4175
+
+
+
+
+>PREDICTED: Eublepharis macularius F-box protein 21 (FBXO21), transcript variant X1, mRNA
+Sequence ID: XM_054996148.1 Length: 6145
+Range 1: 4788 to 4803
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  3     CGTACTTGGCTTTTGT  18
+             ||||||||||||||||
+Sbjct  4788  CGTACTTGGCTTTTGT  4803
+
+
+
+
+>PREDICTED: Hemicordylus capensis marker of proliferation Ki-67 (MKI67), transcript variant X2, mRNA
+Sequence ID: XM_053310047.1 Length: 8879
+Range 1: 8543 to 8558
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  9     TGGCTTTTGTAACGTT  24
+             ||||||||||||||||
+Sbjct  8543  TGGCTTTTGTAACGTT  8558
+
+
+
+
+>PREDICTED: Hemicordylus capensis marker of proliferation Ki-67 (MKI67), transcript variant X1, mRNA
+Sequence ID: XM_053310046.1 Length: 9053
+Range 1: 8717 to 8732
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  9     TGGCTTTTGTAACGTT  24
+             ||||||||||||||||
+Sbjct  8717  TGGCTTTTGTAACGTT  8732
+
+
+
+
+>Crotalus atrox SUMO specific peptidase 5 (senp5), FETUA-1 (fetua-1), FETUA-2 (fetua-2), FETUA-3 (fetua-3), FETUA-4 (fetua-4), FETUA-5 (fetua-5), and FETUB (fetub) genes, complete cds
+Sequence ID: OP223733.1 Length: 220198
+Range 1: 139315 to 139330
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  13      TTTTGTAACGTTCAAT  28
+               ||||||||||||||||
+Sbjct  139330  TTTTGTAACGTTCAAT  139315
+
+
+
+
+>Crotalus horridus SUMO specific peptidase 5 (senp5), FETUA-1 (fetua-1), FETUA-2 (fetua-2), FETUA-3 (fetua-3), FETUA-4 (fetua-4), FETUA-5 (fetua-5), and FETUB (fetub) genes, complete cds
+Sequence ID: OP223732.1 Length: 220210
+Range 1: 139411 to 139426
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  13      TTTTGTAACGTTCAAT  28
+               ||||||||||||||||
+Sbjct  139426  TTTTGTAACGTTCAAT  139411
+
+
+
+
+>Crotalus adamanteus FETUA-1 (fetua-1), FETUA-2 (fetua-2), FETUA-3 (fetua-3), and FETUA-4 (fetua-4) genes, complete cds; and FETUA-5 (fetua-5) gene, partial cds
+Sequence ID: OP223731.1 Length: 112676
+Range 1: 69974 to 69989
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  13     TTTTGTAACGTTCAAT  28
+              ||||||||||||||||
+Sbjct  69989  TTTTGTAACGTTCAAT  69974
+
+
+
+
+>Crotalus adamanteus FETUA-2 (fetua-2), FETUA-3 (fetua-3), FETUA-4 (fetua-4), and FETUA-5 (fetua-5) genes, complete cds; and FETUB (fetub) gene, partial cds
+Sequence ID: OP223730.1 Length: 107033
+Range 1: 42189 to 42204
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  13     TTTTGTAACGTTCAAT  28
+              ||||||||||||||||
+Sbjct  42204  TTTTGTAACGTTCAAT  42189
+
+
+
+
+>Vipera ursinii genome assembly, chromosome: 11
+Sequence ID: OX365976.1 Length: 21061636
+Range 1: 19350081 to 19350096
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Minus
+
+Query  10        GGCTTTTGTAACGTTC  25
+                 ||||||||||||||||
+Sbjct  19350096  GGCTTTTGTAACGTTC  19350081
+
+
+
+
+Range 2: 7620920 to 7620933
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  4        GTACTTGGCTTTTG  17
+                ||||||||||||||
+Sbjct  7620933  GTACTTGGCTTTTG  7620920
+
+
+
+
+Range 3: 20535730 to 20535743
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  20535730  CTTGGCTTTTGTAA  20535743
+
+
+
+
+Range 4: 1949335 to 1949347
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  15       TTGTAACGTTCAA  27
+                |||||||||||||
+Sbjct  1949335  TTGTAACGTTCAA  1949347
+
+
+
+
+Range 5: 7335270 to 7335282
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  10       GGCTTTTGTAACG  22
+                |||||||||||||
+Sbjct  7335282  GGCTTTTGTAACG  7335270
+
+
+
+
+Range 6: 9948397 to 9948409
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  9948397  CTTGGCTTTTGTA  9948409
+
+
+
+
+Range 7: 12312939 to 12312951
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  12312939  CTTTTGTAACGTT  12312951
+
+
+
+
+Range 8: 13674117 to 13674133
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 |||||||||||| ||||
+Sbjct  13674117  GTACTTGGCTTTCGTAA  13674133
+
+
+
+
+Range 9: 16001812 to 16001824
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  16001824  CTTTTGTAACGTT  16001812
+
+
+
+
+Range 10: 17931054 to 17931066
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  17931054  TGGCTTTTGTAAC  17931066
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi ribonucleic acid export 1 (RAE1), transcript variant X2, mRNA
+Sequence ID: XM_048497557.1 Length: 2542
+Range 1: 2308 to 2323
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  10    GGCTTTTGTAACGTTC  25
+             ||||||||||||||||
+Sbjct  2308  GGCTTTTGTAACGTTC  2323
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X16, mRNA
+Sequence ID: XM_048486380.1 Length: 7737
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X15, mRNA
+Sequence ID: XM_048486379.1 Length: 7782
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X14, mRNA
+Sequence ID: XM_048486378.1 Length: 7830
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X13, mRNA
+Sequence ID: XM_048486376.1 Length: 7875
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X12, mRNA
+Sequence ID: XM_048486375.1 Length: 7968
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X11, mRNA
+Sequence ID: XM_048486374.1 Length: 8004
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X10, mRNA
+Sequence ID: XM_048486373.1 Length: 8097
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X9, mRNA
+Sequence ID: XM_048486372.1 Length: 8115
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X8, mRNA
+Sequence ID: XM_048486371.1 Length: 8139
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X7, mRNA
+Sequence ID: XM_048486370.1 Length: 8178
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X6, mRNA
+Sequence ID: XM_048486369.1 Length: 8214
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X5, mRNA
+Sequence ID: XM_048486368.1 Length: 8223
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X4, mRNA
+Sequence ID: XM_048486367.1 Length: 8232
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X3, mRNA
+Sequence ID: XM_048486365.1 Length: 8259
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X2, mRNA
+Sequence ID: XM_048486364.1 Length: 8307
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Sphaerodactylus townsendi bridging integrator 1 (BIN1), transcript variant X1, mRNA
+Sequence ID: XM_048486363.1 Length: 8352
+Range 1: 298 to 317
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  1    GACGTACTTGGCTTTTGTAA  20
+            |||||||||||||| |||||
+Sbjct  298  GACGTACTTGGCTTCTGTAA  317
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X15, mRNA
+Sequence ID: XM_039358993.1 Length: 4895
+Range 1: 639 to 658
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  639  TTGGCGTTTGTAACGTTCAA  658
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X14, mRNA
+Sequence ID: XM_039358992.1 Length: 4869
+Range 1: 639 to 658
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  639  TTGGCGTTTGTAACGTTCAA  658
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X13, mRNA
+Sequence ID: XM_039358991.1 Length: 7257
+Range 1: 641 to 660
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  641  TTGGCGTTTGTAACGTTCAA  660
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X12, mRNA
+Sequence ID: XM_039358990.1 Length: 7212
+Range 1: 641 to 660
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  641  TTGGCGTTTGTAACGTTCAA  660
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X11, mRNA
+Sequence ID: XM_039358989.1 Length: 5393
+Range 1: 641 to 660
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  641  TTGGCGTTTGTAACGTTCAA  660
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X10, mRNA
+Sequence ID: XM_039358987.1 Length: 12776
+Range 1: 641 to 660
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  641  TTGGCGTTTGTAACGTTCAA  660
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X9, mRNA
+Sequence ID: XM_039358986.1 Length: 7172
+Range 1: 641 to 660
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  641  TTGGCGTTTGTAACGTTCAA  660
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X8, mRNA
+Sequence ID: XM_039358985.1 Length: 7038
+Range 1: 642 to 661
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  642  TTGGCGTTTGTAACGTTCAA  661
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X7, mRNA
+Sequence ID: XM_039358984.1 Length: 8384
+Range 1: 643 to 662
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  643  TTGGCGTTTGTAACGTTCAA  662
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X6, mRNA
+Sequence ID: XM_039358983.1 Length: 8435
+Range 1: 643 to 662
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  643  TTGGCGTTTGTAACGTTCAA  662
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X5, mRNA
+Sequence ID: XM_039358982.1 Length: 8437
+Range 1: 642 to 661
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  642  TTGGCGTTTGTAACGTTCAA  661
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X4, mRNA
+Sequence ID: XM_039358981.1 Length: 8460
+Range 1: 644 to 663
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  644  TTGGCGTTTGTAACGTTCAA  663
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X3, mRNA
+Sequence ID: XM_039358980.1 Length: 5988
+Range 1: 642 to 661
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  642  TTGGCGTTTGTAACGTTCAA  661
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X2, mRNA
+Sequence ID: XM_039358979.1 Length: 7598
+Range 1: 642 to 661
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  642  TTGGCGTTTGTAACGTTCAA  661
+
+
+
+
+>PREDICTED: Crotalus tigris cyclin dependent kinase 12 (CDK12), transcript variant X1, mRNA
+Sequence ID: XM_039358978.1 Length: 8461
+Range 1: 642 to 661
+
+Score:32.2 bits(16), Expect:13, 
+Identities:19/20(95%),  Gaps:0/20(0%), Strand: Plus/Plus
+
+Query  8    TTGGCTTTTGTAACGTTCAA  27
+            ||||| ||||||||||||||
+Sbjct  642  TTGGCGTTTGTAACGTTCAA  661
+
+
+
+
+>PREDICTED: Crotalus tigris interferon alpha/beta receptor 2-like (LOC120297000), transcript variant X6, mRNA
+Sequence ID: XM_039319151.1 Length: 2620
+Range 1: 742 to 757
+
+Score:32.2 bits(16), Expect:13, 
+Identities:16/16(100%),  Gaps:0/16(0%), Strand: Plus/Plus
+
+Query  2    ACGTACTTGGCTTTTG  17
+            ||||||||||||||||
+Sbjct  742  ACGTACTTGGCTTTTG  757
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 8
+Sequence ID: OX395133.1 Length: 84956682
+Range 1: 16476084 to 16476098
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGTAA  20
+                 |||||||||||||||
+Sbjct  16476084  ACTTGGCTTTTGTAA  16476098
+
+
+
+
+Range 2: 46350731 to 46350745
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  15        TTGTAACGTTCAATT  29
+                 |||||||||||||||
+Sbjct  46350745  TTGTAACGTTCAATT  46350731
+
+
+
+
+Range 3: 19417248 to 19417261
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAAC  21
+                 ||||||||||||||
+Sbjct  19417261  TTGGCTTTTGTAAC  19417248
+
+
+
+
+Range 4: 47049116 to 47049129
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  10        GGCTTTTGTAACGT  23
+                 ||||||||||||||
+Sbjct  47049129  GGCTTTTGTAACGT  47049116
+
+
+
+
+Range 5: 63162841 to 63162854
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTTC  25
+                 ||||||||||||||
+Sbjct  63162854  CTTTTGTAACGTTC  63162841
+
+
+
+
+Range 6: 74765617 to 74765630
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAACG  22
+                 ||||||||||||||
+Sbjct  74765630  TGGCTTTTGTAACG  74765617
+
+
+
+
+Range 7: 82735899 to 82735912
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAA  20
+                 ||||||||||||||
+Sbjct  82735899  CTTGGCTTTTGTAA  82735912
+
+
+
+
+Range 8: 8476182 to 8476194
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  8476194  CTTGGCTTTTGTA  8476182
+
+
+
+
+Range 9: 10264914 to 10264926
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTC  25
+                 |||||||||||||
+Sbjct  10264914  TTTTGTAACGTTC  10264926
+
+
+
+
+Range 10: 16057097 to 16057109
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  14        TTTGTAACGTTCA  26
+                 |||||||||||||
+Sbjct  16057109  TTTGTAACGTTCA  16057097
+
+
+
+
+Range 11: 16483464 to 16483476
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  16483464  TTGGCTTTTGTAA  16483476
+
+
+
+
+Range 12: 18725866 to 18725878
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  18725866  CTTGGCTTTTGTA  18725878
+
+
+
+
+Range 13: 20234186 to 20234198
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  20234198  TACTTGGCTTTTG  20234186
+
+
+
+
+Range 14: 23248248 to 23248260
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7         CTTGGCTTTTGTA  19
+                 |||||||||||||
+Sbjct  23248260  CTTGGCTTTTGTA  23248248
+
+
+
+
+Range 15: 24354964 to 24354976
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  15        TTGTAACGTTCAA  27
+                 |||||||||||||
+Sbjct  24354976  TTGTAACGTTCAA  24354964
+
+
+
+
+Range 16: 38301163 to 38301175
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  38301175  TACTTGGCTTTTG  38301163
+
+
+
+
+Range 17: 38428769 to 38428781
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  38428781  TTGGCTTTTGTAA  38428769
+
+
+
+
+Range 18: 41790411 to 41790423
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  41790423  ACTTGGCTTTTGT  41790411
+
+
+
+
+Range 19: 43822780 to 43822792
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  43822792  TTGGCTTTTGTAA  43822780
+
+
+
+
+Range 20: 62471949 to 62471961
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  62471949  ACTTGGCTTTTGT  62471961
+
+
+
+
+Range 21: 62610866 to 62610878
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  62610866  TGGCTTTTGTAAC  62610878
+
+
+
+
+Range 22: 62941132 to 62941144
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  62941144  TTGGCTTTTGTAA  62941132
+
+
+
+
+Range 23: 66557296 to 66557308
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  66557296  ACTTGGCTTTTGT  66557308
+
+
+
+
+Range 24: 67234897 to 67234913
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCAATTT  30
+                 |||||||| ||||||||
+Sbjct  67234897  TTTGTAACCTTCAATTT  67234913
+
+
+
+
+Range 25: 71076843 to 71076859
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  5         TACTTGGCTTTTGTAAC  21
+                 ||||| |||||||||||
+Sbjct  71076843  TACTTAGCTTTTGTAAC  71076859
+
+
+
+
+Range 26: 74903027 to 74903039
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  17        GTAACGTTCAATT  29
+                 |||||||||||||
+Sbjct  74903027  GTAACGTTCAATT  74903039
+
+
+
+
+Range 27: 76345721 to 76345733
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  76345733  TGGCTTTTGTAAC  76345721
+
+
+
+
+Range 28: 82930823 to 82930839
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  14        TTTGTAACGTTCAATTT  30
+                 ||||||||||| |||||
+Sbjct  82930839  TTTGTAACGTTGAATTT  82930823
+
+
+
+
+>PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1), transcript variant X4, mRNA
+Sequence ID: XM_058184197.1 Length: 2231
+Range 1: 400 to 414
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  7    CTTGGCTTTTGTAAC  21
+            |||||||||||||||
+Sbjct  414  CTTGGCTTTTGTAAC  400
+
+
+
+
+>PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1), transcript variant X3, mRNA
+Sequence ID: XM_058184195.1 Length: 1981
+Range 1: 399 to 413
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  7    CTTGGCTTTTGTAAC  21
+            |||||||||||||||
+Sbjct  413  CTTGGCTTTTGTAAC  399
+
+
+
+
+>PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1), transcript variant X2, mRNA
+Sequence ID: XM_058184194.1 Length: 2000
+Range 1: 399 to 413
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  7    CTTGGCTTTTGTAAC  21
+            |||||||||||||||
+Sbjct  413  CTTGGCTTTTGTAAC  399
+
+
+
+
+>PREDICTED: Ahaetulla prasina RAD52 motif containing 1 (RDM1), transcript variant X1, mRNA
+Sequence ID: XM_058184193.1 Length: 2186
+Range 1: 401 to 415
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  7    CTTGGCTTTTGTAAC  21
+            |||||||||||||||
+Sbjct  415  CTTGGCTTTTGTAAC  401
+
+
+
+
+>PREDICTED: Ahaetulla prasina family with sequence similarity 110 member A (FAM110A), transcript variant X3, mRNA
+Sequence ID: XM_058177205.1 Length: 4185
+Range 1: 419 to 433
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTT  15
+            |||||||||||||||
+Sbjct  433  GACGTACTTGGCTTT  419
+
+
+
+
+>PREDICTED: Ahaetulla prasina family with sequence similarity 110 member A (FAM110A), transcript variant X2, mRNA
+Sequence ID: XM_058177204.1 Length: 4478
+Range 1: 712 to 726
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTT  15
+            |||||||||||||||
+Sbjct  726  GACGTACTTGGCTTT  712
+
+
+
+
+>PREDICTED: Ahaetulla prasina family with sequence similarity 110 member A (FAM110A), transcript variant X1, mRNA
+Sequence ID: XM_058177203.1 Length: 4360
+Range 1: 594 to 608
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  1    GACGTACTTGGCTTT  15
+            |||||||||||||||
+Sbjct  608  GACGTACTTGGCTTT  594
+
+
+
+
+>PREDICTED: Ahaetulla prasina uncharacterized LOC131189195 (LOC131189195), mRNA
+Sequence ID: XM_058165170.1 Length: 11221
+Range 1: 8096 to 8110
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Minus
+
+Query  6     ACTTGGCTTTTGTAA  20
+             |||||||||||||||
+Sbjct  8110  ACTTGGCTTTTGTAA  8096
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 12
+Sequence ID: OX395137.1 Length: 59066452
+Range 1: 49871072 to 49871086
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  2         ACGTACTTGGCTTTT  16
+                 |||||||||||||||
+Sbjct  49871072  ACGTACTTGGCTTTT  49871086
+
+
+
+
+Range 2: 7825960 to 7825973
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  8        TTGGCTTTTGTAAC  21
+                ||||||||||||||
+Sbjct  7825973  TTGGCTTTTGTAAC  7825960
+
+
+
+
+Range 3: 2503986 to 2503998
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  5        TACTTGGCTTTTG  17
+                |||||||||||||
+Sbjct  2503986  TACTTGGCTTTTG  2503998
+
+
+
+
+Range 4: 4063935 to 4063947
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9        TGGCTTTTGTAAC  21
+                |||||||||||||
+Sbjct  4063935  TGGCTTTTGTAAC  4063947
+
+
+
+
+Range 5: 4483613 to 4483625
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  7        CTTGGCTTTTGTA  19
+                |||||||||||||
+Sbjct  4483625  CTTGGCTTTTGTA  4483613
+
+
+
+
+Range 6: 9250898 to 9250910
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  9250898  ACTTGGCTTTTGT  9250910
+
+
+
+
+Range 7: 9387449 to 9387461
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8        TTGGCTTTTGTAA  20
+                |||||||||||||
+Sbjct  9387461  TTGGCTTTTGTAA  9387449
+
+
+
+
+Range 8: 10890237 to 10890253
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 |||||||||||| ||||
+Sbjct  10890253  GTACTTGGCTTTAGTAA  10890237
+
+
+
+
+Range 9: 14873731 to 14873743
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  13        TTTTGTAACGTTC  25
+                 |||||||||||||
+Sbjct  14873731  TTTTGTAACGTTC  14873743
+
+
+
+
+Range 10: 15284956 to 15284968
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  5         TACTTGGCTTTTG  17
+                 |||||||||||||
+Sbjct  15284956  TACTTGGCTTTTG  15284968
+
+
+
+
+Range 11: 15396041 to 15396053
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  15396041  GTACTTGGCTTTT  15396053
+
+
+
+
+Range 12: 18005535 to 18005547
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  18005535  TGTAACGTTCAAT  18005547
+
+
+
+
+Range 13: 20135768 to 20135780
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  20135768  TGTAACGTTCAAT  20135780
+
+
+
+
+Range 14: 21983699 to 21983711
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  21983699  CTTTTGTAACGTT  21983711
+
+
+
+
+Range 15: 30431954 to 30431966
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  6         ACTTGGCTTTTGT  18
+                 |||||||||||||
+Sbjct  30431954  ACTTGGCTTTTGT  30431966
+
+
+
+
+Range 16: 32631510 to 32631522
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  32631510  GTACTTGGCTTTT  32631522
+
+
+
+
+Range 17: 37428888 to 37428900
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  37428900  TTGGCTTTTGTAA  37428888
+
+
+
+
+Range 18: 45616318 to 45616330
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  45616330  TTGGCTTTTGTAA  45616318
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 16
+Sequence ID: OX395143.1 Length: 41280576
+Range 1: 2802676 to 2802690
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  6        ACTTGGCTTTTGTAA  20
+                |||||||||||||||
+Sbjct  2802676  ACTTGGCTTTTGTAA  2802690
+
+
+
+
+Range 2: 16429475 to 16429488
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  3         CGTACTTGGCTTTT  16
+                 ||||||||||||||
+Sbjct  16429488  CGTACTTGGCTTTT  16429475
+
+
+
+
+Range 3: 35513912 to 35513925
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTTG  17
+                 ||||||||||||||
+Sbjct  35513925  GTACTTGGCTTTTG  35513912
+
+
+
+
+Range 4: 36656649 to 36656662
+
+Score:28.2 bits(14), Expect:209, 
+Identities:14/14(100%),  Gaps:0/14(0%), Strand: Plus/Plus
+
+Query  14        TTTGTAACGTTCAA  27
+                 ||||||||||||||
+Sbjct  36656649  TTTGTAACGTTCAA  36656662
+
+
+
+
+Range 5: 212516 to 212528
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9       TGGCTTTTGTAAC  21
+               |||||||||||||
+Sbjct  212528  TGGCTTTTGTAAC  212516
+
+
+
+
+Range 6: 816326 to 816338
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9       TGGCTTTTGTAAC  21
+               |||||||||||||
+Sbjct  816338  TGGCTTTTGTAAC  816326
+
+
+
+
+Range 7: 9925179 to 9925191
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  15       TTGTAACGTTCAA  27
+                |||||||||||||
+Sbjct  9925179  TTGTAACGTTCAA  9925191
+
+
+
+
+Range 8: 10281755 to 10281767
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  18        TAACGTTCAATTT  30
+                 |||||||||||||
+Sbjct  10281767  TAACGTTCAATTT  10281755
+
+
+
+
+Range 9: 15450590 to 15450602
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  15450602  TTGGCTTTTGTAA  15450590
+
+
+
+
+Range 10: 24915014 to 24915026
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  1         GACGTACTTGGCT  13
+                 |||||||||||||
+Sbjct  24915014  GACGTACTTGGCT  24915026
+
+
+
+
+Range 11: 26384477 to 26384489
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  26384489  TGGCTTTTGTAAC  26384477
+
+
+
+
+Range 12: 32303173 to 32303185
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  12        CTTTTGTAACGTT  24
+                 |||||||||||||
+Sbjct  32303185  CTTTTGTAACGTT  32303173
+
+
+
+
+Range 13: 32851793 to 32851805
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  32851793  TGGCTTTTGTAAC  32851805
+
+
+
+
+>Podarcis lilfordi genome assembly, chromosome: 17
+Sequence ID: OX395142.1 Length: 41611985
+Range 1: 34728221 to 34728235
+
+Score:30.2 bits(15), Expect:53, 
+Identities:15/15(100%),  Gaps:0/15(0%), Strand: Plus/Plus
+
+Query  7         CTTGGCTTTTGTAAC  21
+                 |||||||||||||||
+Sbjct  34728221  CTTGGCTTTTGTAAC  34728235
+
+
+
+
+Range 2: 39644304 to 39644325
+
+Score:28.2 bits(14), Expect:209, 
+Identities:20/22(91%),  Gaps:0/22(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTAACGTTC  25
+                 |||||| ||||||| |||||||
+Sbjct  39644304  GTACTTTGCTTTTGGAACGTTC  39644325
+
+
+
+
+Range 3: 6175448 to 6175460
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  6        ACTTGGCTTTTGT  18
+                |||||||||||||
+Sbjct  6175460  ACTTGGCTTTTGT  6175448
+
+
+
+
+Range 4: 10441638 to 10441650
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  10441638  GTACTTGGCTTTT  10441650
+
+
+
+
+Range 5: 11937376 to 11937388
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  11937388  TGGCTTTTGTAAC  11937376
+
+
+
+
+Range 6: 15669040 to 15669052
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  15669040  TGGCTTTTGTAAC  15669052
+
+
+
+
+Range 7: 18697427 to 18697439
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  18697439  GTACTTGGCTTTT  18697427
+
+
+
+
+Range 8: 20607427 to 20607443
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Minus
+
+Query  1         GACGTACTTGGCTTTTG  17
+                 ||||||| |||||||||
+Sbjct  20607443  GACGTACCTGGCTTTTG  20607427
+
+
+
+
+Range 9: 22735824 to 22735836
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  8         TTGGCTTTTGTAA  20
+                 |||||||||||||
+Sbjct  22735836  TTGGCTTTTGTAA  22735824
+
+
+
+
+Range 10: 25601049 to 25601061
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  25601061  GTACTTGGCTTTT  25601049
+
+
+
+
+Range 11: 27754586 to 27754598
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  16        TGTAACGTTCAAT  28
+                 |||||||||||||
+Sbjct  27754598  TGTAACGTTCAAT  27754586
+
+
+
+
+Range 12: 30102636 to 30102652
+
+Score:26.3 bits(13), Expect:825, 
+Identities:16/17(94%),  Gaps:0/17(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTTGTAA  20
+                 ||||| |||||||||||
+Sbjct  30102636  GTACTAGGCTTTTGTAA  30102652
+
+
+
+
+Range 13: 33926802 to 33926814
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Plus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  33926802  GTACTTGGCTTTT  33926814
+
+
+
+
+Range 14: 35603891 to 35603903
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  9         TGGCTTTTGTAAC  21
+                 |||||||||||||
+Sbjct  35603903  TGGCTTTTGTAAC  35603891
+
+
+
+
+Range 15: 39016827 to 39016839
+
+Score:26.3 bits(13), Expect:825, 
+Identities:13/13(100%),  Gaps:0/13(0%), Strand: Plus/Minus
+
+Query  4         GTACTTGGCTTTT  16
+                 |||||||||||||
+Sbjct  39016839  GTACTTGGCTTTT  39016827
+
+
+
+
+		
+
+

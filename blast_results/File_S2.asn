@@ -1,0 +1,124 @@
+Blast4-request ::= {
+  body queue-search {
+    program "blastn",
+    service "plain",
+    queries bioseq-set {
+      seq-set {
+        seq {
+          id {
+            local str "Query_34139"
+          },
+          descr {
+            user {
+              type str "CFastaReader",
+              data {
+                {
+                  label str "DefLine",
+                  data str ">Darevskia_raddei_nairensis_probe"
+                }
+              }
+            },
+            molinfo {
+              biomol genomic
+            },
+            title "Darevskia_raddei_nairensis_probe"
+          },
+          inst {
+            repr raw,
+            mol dna,
+            length 30,
+            seq-data ncbi2na '86C7E9FFB06F43F0'H
+          }
+        }
+      }
+    },
+    subject database "nt",
+    algorithm-options {
+      {
+        name "EvalueThreshold",
+        value cutoff e-value { 1, 10, 3 }
+      },
+      {
+        name "UngappedMode",
+        value boolean FALSE
+      },
+      {
+        name "PercentIdentity",
+        value real { 0, 10, 0 }
+      },
+      {
+        name "HitlistSize",
+        value integer 100
+      },
+      {
+        name "EffectiveSearchSpace",
+        value big-integer 0
+      },
+      {
+        name "DbLength",
+        value big-integer 0
+      },
+      {
+        name "WindowSize",
+        value integer 0
+      },
+      {
+        name "DustFiltering",
+        value boolean FALSE
+      },
+      {
+        name "RepeatFiltering",
+        value boolean FALSE
+      },
+      {
+        name "MaskAtHash",
+        value boolean FALSE
+      },
+      {
+        name "MismatchPenalty",
+        value integer -3
+      },
+      {
+        name "MatchReward",
+        value integer 1
+      },
+      {
+        name "GapOpeningCost",
+        value integer 5
+      },
+      {
+        name "GapExtensionCost",
+        value integer 2
+      },
+      {
+        name "StrandOption",
+        value strand-type both-strands
+      },
+      {
+        name "WordSize",
+        value integer 7
+      }
+    },
+    program-options {
+      {
+        name "EntrezQuery",
+        value string "txid8504 [ORGN]"
+      }
+    },
+    format-options {
+      {
+        name "Web_JobTitle",
+        value string "Darevskia_raddei_nairensis_probe"
+      },
+      {
+        name "Web_OrganismName",
+        value string "Reptilia  (taxid:8504)"
+      },
+      {
+        name "Web_ShortQueryAdjust",
+        value boolean TRUE
+      }
+    }
+  }
+}
+
