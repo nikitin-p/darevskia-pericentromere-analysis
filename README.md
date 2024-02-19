@@ -106,10 +106,9 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 
 ## Citations
 
-An extensive list of references for the tools used by the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
+An extensive list of references for the tools used in the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
 
 ## To-do
 
-1. Clarify what to retain in modules.json.
-2. Run the whole pipeline (try all options and different versions of Singularity and Nextflow).
-3. Add the real SRR IDs when the paper is published.
+1. **[In progress]** Run the whole pipeline (try all options and different versions of Singularity and Nextflow).
+2. Add the real SRR IDs when the paper is published.
