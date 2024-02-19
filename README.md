@@ -37,7 +37,7 @@ Without optional arguments, the pipeline will start from pre-assembled contigs i
 
 The pipeline requires no input data. By default, it will start from pre-assembled contigs. Otherwise, if the `--from_fastq` option is specified, the pipeline will start from raw reads that it will download.
 
-We provide contigs that we assembled before the development of this pipeline with TAREAN and used for our analysis. In our pipeline, we also include the contig assembly step using TAREAN. However, it is switched off by default because it does not exactly reproduce the contigs that we assembled and used.
+We provide contigs that we assembled before the development of this pipeline with TAREAN and used for our analysis. In our pipeline, we also include the contig assembly step using TAREAN. However, it is switched off by default because, when run in this pipeline within a container, TAREAN does not exactly reproduce the contigs that we assembled and used.
 
 For the contamination assessment, we used the following Magic-BLAST databases version 5: `16S_ribosomal_RNA`, `ref_viroids_rep_genomes`, `ref_viruses_rep_genomes`, `ref_prok_rep_genomes`, `ref_euk_rep_genomes`. They can be downloaded from https://ftp.ncbi.nlm.nih.gov/blast/db/v5 using, for example, `lftp` client (see [man lftp](https://linux.die.net/man/1/lftp)). Please, unpack the downloaded parts of the databases. The directory with the Magic-BLAST databases must have the following structure:
 
