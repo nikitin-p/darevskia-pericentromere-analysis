@@ -27,11 +27,11 @@ Without optional arguments, the pipeline will start from pre-assembled contigs i
 
 * `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
 
-    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option.
+    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days, depending on available resources. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option.
 
         * `--db_dir <magicblast_dir>` Directory with Magic-BLAST databases (see the **Input** section for details). This option can be specified only with the `--enable_magicblast` option.
 
-    * `--enable_tarean` Assemble contigs with TAREAN. **Warning!** This step is resource-heavy. This option can be specified only with the `--from_fastq` option.
+    * `--enable_tarean` Assemble contigs with TAREAN. **Warning!** This step is resource-heavy and may require several days, depending on available resources. This option can be specified only with the `--from_fastq` option.
 
 ## Input
 
