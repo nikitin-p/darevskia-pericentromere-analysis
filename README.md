@@ -8,9 +8,9 @@ Here we describe the pipeline used for the analysis of the pericentromeric seque
 
 ## Requirements
 
-* `Nextflow v21.10.6` (we developed the pipeline with this version of Nextflow; we did not test it with later versions).
+* `Nextflow v21.10.6` (we developed the pipeline with this Nextflow version) or `Nextflow v23.04.1` (the only other version with which we tested the pipeline).
 
-* `Singularity` or `Docker`. We developed the pipeline using `Singularity v3.8.7` and `Docker v23.0.1` but did not test it with other versions of these containerisation systems.
+* `Singularity v3.8.7` or `Docker v23.0.1`. We developed the pipeline using these versions and additionally tested it with `Singularity v3.11.3`.
 
 ## Usage
 
