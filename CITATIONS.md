@@ -4,10 +4,11 @@
 
 v21.10.6
 
-> Di Tommaso P, Chatzou M, Floden EW, Barja PP, Palumbo E, 
-Notredame C. Nextflow enables reproducible computational 
-workflows. Nat Biotechnol. 2017 Apr 11;35(4):316-319. doi: 
-10.1038/nbt.3820. PubMed PMID: 28398311.
+> Di Tommaso P., Chatzou M., Floden E.W., Barja P.P., Palumbo E., Notredame C. (2017). Nextflow enables reproducible computational workflows. Nat Biotechnol 35:316-319. PMID: 28398311. DOI: 10.1038/nbt.3820.
+
+## [nf-core](https://nf-co.re/)
+
+> Ewels P., Peltzer A., Fillinger S., Patel H., Alneberg J., Wilm A., Garcia M.U., Di Tommaso P. & Nahnsen S. (2020). The nf-core framework for community-curated bioinformatics pipelines. Nat Biotechnol 38:276-278. PMID: 32055031. DOI: 10.1038/s41587-020-0439-x.
 
 ## Pipeline tools
 
