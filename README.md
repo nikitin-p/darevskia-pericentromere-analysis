@@ -27,7 +27,7 @@ Without optional arguments, the pipeline will start from pre-assembled contigs i
 
 * `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed, but contigs will not be assembled (unless the `--enable_tarean` option is also set): instead, the pre-assembled contigs will be used.
 
-    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days, depending on available resources. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option.
+    * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days, depending on available resources. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option. **Caveat!** May not work with `Nextflow 23.04.1` or, possibly, higher. See the `db_dir` channel creation in [workflows/darevskia.nf](https://github.com/nikitin-p/darevskia-pericentromere-analysis/blob/master/workflows/darevskia.nf).
 
         * `--db_dir <magicblast_dir>` Directory with Magic-BLAST databases (see the **Input** section for details). This option can be specified only with the `--enable_magicblast` option.
 
@@ -113,6 +113,6 @@ An extensive list of references for the tools used in the pipeline can be found 
 
 ## To-do
 
-1. **[In progress]** Run the whole pipeline (try all options and different versions of Singularity and Nextflow).
+1. Clean up the code.
 2. Add the real SRR IDs when the paper is published.
 3. Add the reference to the paper.
