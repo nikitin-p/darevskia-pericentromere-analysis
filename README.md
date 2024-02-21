@@ -58,7 +58,8 @@ magicblast_dir
 │   ├── ref_prok_rep_genomes.01.nsq
 │   ├── ...
 │   ├── taxdb.btd
-│   └── taxdb.bti
+│   ├── taxdb.bti
+|   └── taxonomy4blast.sqlite3
 ...
 ```
 
