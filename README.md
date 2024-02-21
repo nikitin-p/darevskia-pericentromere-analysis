@@ -107,7 +107,7 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 
 ## Citations
 
-If you are using the pipeline or building upon in, please cite our paper: ...
+If you use our pipeline or build upon in, please cite our paper: ...
 
 An extensive list of references for the tools used in the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
 
