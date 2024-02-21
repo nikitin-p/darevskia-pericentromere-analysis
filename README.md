@@ -25,7 +25,7 @@ nextflow run darevskia-pericentromere-analysis/main.nf \
 ### Options
 Without optional arguments, the pipeline will start from pre-assembled contigs included in this repository.
 
-* `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed.
+* `--from_fastq` Start the pipeline from raw reads. The reads in the `fastq` format will be downloaded automatically from SRA. By deafult, the FastQC analysis and read trimming will be performed, but contigs will not be assembled (unless the `--enable_tarean` option is also set): instead, the pre-assembled contigs will be used.
 
     * `--enable_magicblast` Assess contamination with Magic-BLAST. **Warning!** This step is resource-heavy and may require several days, depending on available resources. This option can be specified only with the `--from_fastq` option and requires the `--db_dir` option.
 
@@ -50,12 +50,12 @@ magicblast_dir
 │   ├── taxdb.btd
 │   └── taxdb.bti
 ├── ref_prok_rep_genomes
+│   ├── ref_prok_rep_genomes.00.nhr
+│   ├── ...
+│   ├── ref_prok_rep_genomes.00.nsq
 │   ├── ref_prok_rep_genomes.01.nhr
 │   ├── ...
 │   ├── ref_prok_rep_genomes.01.nsq
-│   ├── ref_prok_rep_genomes.02.nhr
-│   ├── ...
-│   ├── ref_prok_rep_genomes.02.nsq
 │   ├── ...
 │   ├── taxdb.btd
 │   └── taxdb.bti
