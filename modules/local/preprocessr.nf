@@ -12,7 +12,7 @@ process PREPROCESSR {
 
     output:
     path "*.tsv", emit: repeats_tsv
-    path "versions.yml"           , emit: versions
+    path "versions.yml", emit: versions
 
     script:
     def args = task.ext.args ?: ''

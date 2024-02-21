@@ -46,14 +46,14 @@ Channel
     .set{ ch_srr }
 
 Channel
-    .fromPath('./primer/primer.fasta')
+    .fromPath('./darevskia-pericentromere-analysis/primer/primer.fasta')
     .set{ primer }
 
 Channel
-    .fromPath('./clsat36/clsat36.fasta')
+    .fromPath('./darevskia-pericentromere-analysis/clsat36/clsat36.fasta')
     .set{ clsat36 }
 
-rmd_handler = file( "./rmd/plot_GC_length_distr.Rmd" )
+rmd_handler = file( "./darevskia-pericentromere-analysis/rmd/plot_GC_length_distr.Rmd" )
 
 params.from_fastq = false
 params.enable_tarean = false 
@@ -110,8 +110,15 @@ workflow DAREVSKIA {
         if ( params.enable_magicblast ) {
             if (params.db_dir) {
                 Channel
+                    // This fromPath(...) factory may not
+                    // list all directories within the params.db_dir directory,
+                    // but just the params.db_dir directory itself,
+                    // if run with Nextflow 23.04.1 (or, possibly, higher).
+                    // Needs addtional testing.
                     .fromPath(params.db_dir, type: 'dir' )
                     .set{ db_dir }
+
+                db_dir.view()
 
                 MAGICBLAST (
                     ch_reads,
@@ -122,7 +129,7 @@ workflow DAREVSKIA {
                     MAGICBLAST.out.mb_results
                 )
             } else {
-                exit 1, "ERROR: Specify a path to a folder with Magic-BLAST databases after --db_dir. See README."
+               exit 1, "ERROR: Specify a path to a folder with Magic-BLAST databases after --db_dir. See README."
             }
         }
         
@@ -147,13 +154,13 @@ workflow DAREVSKIA {
                 [
                     id: "N"
                 ],
-                "./contigs/contigs_N.fasta",
+                "./darevskia-pericentromere-analysis/contigs/contigs_N.fasta",
             ],
             [
                 [
                     id: "V"
                 ],
-                "./contigs/contigs_V.fasta"
+                "./darevskia-pericentromere-analysis/contigs/contigs_V.fasta"
             ]
         ]
 
@@ -187,13 +194,17 @@ workflow DAREVSKIA {
         rmd_handler,
         PREPROCESSTRF.out.all_contigs_tab.filter( ~/.*_N_.*/ ),
         PREPROCESSTRF.out.all_contigs_tab.filter( ~/.*_V_.*/ ),
-        PREPROCESSR.out.repeats_tsv.filter( ~/N_all.*/ ),
-        PREPROCESSR.out.repeats_tsv.filter( ~/V_all.*/ )
+        PREPROCESSR.out.repeats_tsv.filter( ~/.*N_all_.*/ ),
+        PREPROCESSR.out.repeats_tsv.filter( ~/.*V_all_.*/ )
     )
 
     BOWTIE2_BUILD (
         PREPROCESSTRF.out.all_contigs.map {it -> it[1]}
     )
+
+    BOWTIE2_BUILD.out.contigs_index
+        .map {it -> [extract_species(it), it]}
+        .set{ ch_contigs_index }
         
     Channel
         .fromPath('./darevskia-pericentromere-analysis/probes/probes_*.fasta')
@@ -211,12 +222,14 @@ workflow DAREVSKIA {
     )
 
     PARSESAM (
-        BOWTIE2_ALIGN.out.sam
+        //BOWTIE2_ALIGN.out.sam
+        BOWTIE2_CROSS_ALIGN.out.sam
     )
 
     BOWTIE2_CLSAT_ALIGN (
-        BOWTIE2_BUILD.out.contigs_index
-            .map {it -> [extract_species(it), it]},
+        // BOWTIE2_BUILD.out.contigs_index
+        //    .map {it -> [extract_species(it), it]},
+        ch_contigs_index,
         clsat36
     )
 

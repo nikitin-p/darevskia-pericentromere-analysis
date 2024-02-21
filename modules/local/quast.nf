@@ -7,7 +7,7 @@ process QUAST {
     container 'quay.io/biocontainers/quast:5.0.2--py37pl5321h09c1ff4_7'
 
     input:
-    tuple val(meta), path(contigs_dir)
+    tuple val(meta), path(contigs) // path(contigs_dir)
 
     output:
     tuple val(meta), path("contigs_*"), emit: contigs_qc
@@ -16,9 +16,9 @@ process QUAST {
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
-
+    // ${contigs_dir}/contigs.fasta
     """
-    quast ${contigs_dir}/contigs.fasta \\
+    quast ${contigs} \\
         -o contigs_${meta.id}
 
     cat <<-END_VERSIONS > versions.yml

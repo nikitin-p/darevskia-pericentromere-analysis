@@ -10,7 +10,8 @@ process REPEATEXPLORER {
     tuple val(meta), path(interlaced_fasta)
 
     output:
-    tuple val(meta), path("output_*"), emit: repeat_contigs
+    tuple val(meta), path("contigs_*.fasta"), emit: repeat_contigs
+    tuple val(meta), path("output_*"), emit: repeat_output
     path("log_*.txt"), emit: tarean_log
     path "versions.yml", emit: versions
 
@@ -27,6 +28,8 @@ process REPEATEXPLORER {
         -v output_${meta.id} \\
         -tax METAZOA3.0 \\
         -opt ILLUMINA
+
+    cp output_${meta.id}/contigs.fasta contigs_${meta.id}.fasta
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

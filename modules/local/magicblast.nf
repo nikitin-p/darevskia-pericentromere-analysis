@@ -19,7 +19,8 @@ process MAGICBLAST {
 
     script:
     def args = task.ext.args ?: ''
-    def prefix   = "${trimSuffix(reads[0].simpleName, '_R1')}_${db.simpleName}"
+    def prefix   = "${trimSuffix(reads[0].simpleName, '_1')}_${db.simpleName}"
+    //def prefix   = "${trimSuffix(reads[0].simpleName, '_R1')}_${db.simpleName}"
     
     """
     magicblast \\

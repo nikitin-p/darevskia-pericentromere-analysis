@@ -8,20 +8,22 @@ process PREPROCESSTRF {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
-    tuple val(meta), path(contigs_dir)
+    tuple val(meta), path(contigs)
 
     output:
     tuple val(meta), path("contigs_*_top10pc.fasta"), emit: top10pc_contigs
     tuple val(meta), path("contigs_*_merged_all.fasta"), emit: all_contigs
-    tuple val(meta), path("contigs_*_tab.tsv"), emit: all_contigs_tab
+    path "contigs_*_tab.tsv", emit: all_contigs_tab
     path "versions.yml", emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
+    
+    //  # awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged_all.fasta
 
     """
-    awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged_all.fasta
+    awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs} > contigs_${meta.id}_merged_all.fasta
 
     cat contigs_${meta.id}_merged_all.fasta | \\
         tr '(' '|' | \\
@@ -32,7 +34,7 @@ process PREPROCESSTRF {
         tr '|' '\t' > \\
         contigs_${meta.id}_tab.tsv
 
-    grep '^>' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_headers.txt
+    grep '^>' ${contigs} > contigs_${meta.id}_headers.txt
 
     cat contigs_${meta.id}_headers.txt | \\
         tr '(' '|' | \\

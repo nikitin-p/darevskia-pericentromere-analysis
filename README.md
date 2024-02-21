@@ -14,7 +14,13 @@ Here we describe the pipeline used for the analysis of the pericentromeric seque
 
 ## Usage
 
-You can run the pipeline using:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/nikitin-p/darevskia-pericentromere-analysis.git
+```
+
+2. Run the pipeline as follows:
 
 ```bash
 nextflow run darevskia-pericentromere-analysis/main.nf \
