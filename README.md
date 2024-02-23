@@ -106,6 +106,7 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 * **modules** - Nextflow modules implementing the steps of the pipeline.
 * **primer/primer.fasta** - DOP-PCR primer used in library preparations.
 * **probes** - FASTA files with validated species-specific DNA FISH probes for _D. raddei nairensis_ and _D. valentini_.
+* **result_plots** - Plots produced by the pipeline for Fig. 1b-c and Fig. S3A-B.
 * **rmd/plot_GC_length_distr.Rmd** - R Markdown notebook with the analysis of the GC content and length of contigs and tandem repeat monomers.
 * **workflows/darevskia.nf** - The workflow that implements the pipeline.
 * **CITATIONS.md** - References to the software tools and R packages used in the pipeline, with versions.
