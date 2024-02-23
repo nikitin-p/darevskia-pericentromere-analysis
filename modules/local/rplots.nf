@@ -12,12 +12,12 @@ process RPLOTS {
     path units_v
 
     output:
-    path "contig_gc_content.pdf",     emit: contigsgc
-    path "units_gc_content.pdf",      emit: unitsgc
-    path "contigs_length.pdf",        emit: contigslength
-    path "units_length.pdf",          emit: unitslength
+    path "contig_gc_content.pdf"    , emit: contigsgc
+    path "units_gc_content.pdf"     , emit: unitsgc
+    path "contigs_length.pdf"       , emit: contigslength
+    path "units_length.pdf"         , emit: unitslength
     path "plot_GC_length_distr.html", emit: knitted_html
-    path "versions.yml"            ,  emit: versions
+    path "versions.yml"             , emit: versions
 
     script:
     """

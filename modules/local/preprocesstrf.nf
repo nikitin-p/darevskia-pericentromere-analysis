@@ -11,16 +11,14 @@ process PREPROCESSTRF {
     tuple val(meta), path(contigs)
 
     output:
-    tuple val(meta), path("contigs_*_top10pc.fasta"), emit: top10pc_contigs
+    tuple val(meta), path("contigs_*_top10pc.fasta")   , emit: top10pc_contigs
     tuple val(meta), path("contigs_*_merged_all.fasta"), emit: all_contigs
-    path "contigs_*_tab.tsv", emit: all_contigs_tab
-    path "versions.yml", emit: versions
+    path "contigs_*_tab.tsv"                           , emit: all_contigs_tab
+    path "versions.yml"                                , emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
-    
-    //  # awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs_dir}/contigs.fasta > contigs_${meta.id}_merged_all.fasta
 
     """
     awk '{if (\$0 ~ /^>/) {if (NR != 1) {printf "\\n"} print \$0} else {printf \$0}}' ${contigs} > contigs_${meta.id}_merged_all.fasta

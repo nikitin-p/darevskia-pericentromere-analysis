@@ -222,13 +222,10 @@ workflow DAREVSKIA {
     )
 
     PARSESAM (
-        //BOWTIE2_ALIGN.out.sam
         BOWTIE2_CROSS_ALIGN.out.sam
     )
 
     BOWTIE2_CLSAT_ALIGN (
-        // BOWTIE2_BUILD.out.contigs_index
-        //    .map {it -> [extract_species(it), it]},
         ch_contigs_index,
         clsat36
     )

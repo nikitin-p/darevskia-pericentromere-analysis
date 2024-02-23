@@ -14,13 +14,12 @@ process MAGICBLAST {
     each path(db)
 
     output:
-    path("*_output.txt"), emit: mb_results
-    path "versions.yml"           , emit: versions
+    path "*_output.txt", emit: mb_results
+    path "versions.yml", emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def prefix   = "${trimSuffix(reads[0].simpleName, '_1')}_${db.simpleName}"
-    //def prefix   = "${trimSuffix(reads[0].simpleName, '_R1')}_${db.simpleName}"
     
     """
     magicblast \\

@@ -11,13 +11,14 @@ process REPEATEXPLORER {
 
     output:
     tuple val(meta), path("contigs_*.fasta"), emit: repeat_contigs
-    tuple val(meta), path("output_*"), emit: repeat_output
-    path("log_*.txt"), emit: tarean_log
-    path "versions.yml", emit: versions
+    tuple val(meta), path("output_*")       , emit: repeat_output
+    path "log_*.txt"                        , emit: tarean_log
+    path "versions.yml"                     , emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
+    
     """
     export PATH=/opt/conda/bin:/home/toor/repex_tarean:\$PATH
     export PYTHONHASHSEED=0

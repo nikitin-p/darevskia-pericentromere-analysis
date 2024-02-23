@@ -11,7 +11,7 @@ process PARSESAM {
     tuple val(meta), path(sam)
 
     output:
-    path "*.tsv", emit: probe_mapping
+    path "*.tsv"       , emit: probe_mapping
     path "versions.yml", emit: versions
 
     script:

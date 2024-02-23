@@ -16,12 +16,13 @@ process TRIMMOMATIC {
     tuple val(meta), path("*_trimmed_f_p.fastq.gz"), emit: trimmed_reads_f_p
     tuple val(meta), path("*_trimmed_r_p.fastq.gz"), emit: trimmed_reads_r_p
     tuple val(meta), path("*_trimmed_*_u.fastq.gz"), emit: trimmed_reads_u
-    path "*_trimlog.txt" , emit: trimlog
-    path "versions.yml"           , emit: versions
+    path "*_trimlog.txt"                           , emit: trimlog
+    path "versions.yml"                            , emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}_trimmed"
+    
     """
     trimmomatic \\
         PE \\

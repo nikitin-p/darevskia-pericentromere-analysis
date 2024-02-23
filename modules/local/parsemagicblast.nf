@@ -10,16 +10,16 @@ process PARSEMAGICBLAST {
         'quay.io/biocontainers/magicblast:1.6.0--h95f258a_0' }"
 
     input:
-    path(magicblast_output)
+    path magicblast_output
 
     output:
-    path("*_histogram.txt"), emit: mb_histogram
-    path "versions.yml"           , emit: versions
+    path "*_histogram.txt", emit: mb_histogram
+    path "versions.yml"   , emit: versions
 
     script:
     def args = task.ext.args ?: ''
     def input_name  = "${trimSuffix(magicblast_output.simpleName, '_output')}"
-
+    
     """
     READCOUNT=`<${magicblast_output} \\
         tail -n +4 | \\

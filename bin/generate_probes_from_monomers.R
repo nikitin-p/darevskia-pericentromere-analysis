@@ -1,6 +1,5 @@
 #!/usr/bin/env Rscript
 
-# library("readxl")
 library(tidyverse)
 library(utils)
 stringsAsFactors = F
@@ -86,7 +85,6 @@ write.table(tr.units.n.arranged,
             quote = F,
             sep = "\t",
             row.names = F)
-
 
 # For D. valentini:
 

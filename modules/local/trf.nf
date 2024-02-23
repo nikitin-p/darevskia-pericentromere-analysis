@@ -12,7 +12,7 @@ process TRF {
 
     output:
     tuple val(meta), path("*.dat"), emit: trf_dat
-    path "versions.yml", emit: versions
+    path "versions.yml"           , emit: versions
 
     script:
     def args = task.ext.args ?: ''

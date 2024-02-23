@@ -11,7 +11,7 @@ process BOWTIE2_CLSAT_ALIGN {
     each path(clsat36)
     
     output:
-    path "*.sam", emit: sam
+    path "*.sam"        , emit: sam
     path  "versions.yml", emit: versions
 
     script:

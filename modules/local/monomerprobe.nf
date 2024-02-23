@@ -9,7 +9,7 @@ process MONOMERPROBE {
 
     output:
     path "*_tr_units_by_distance_geq10.tsv", emit: units
-    path "versions.yml", emit: versions
+    path "versions.yml"                    , emit: versions
 
     script:
     """

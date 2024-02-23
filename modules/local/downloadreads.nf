@@ -12,7 +12,7 @@ process DOWNLOADREADS {
 
     output:
     tuple val(meta), path("*_1.fastq.gz"), path("*_2.fastq.gz"), emit: fastq
-    path "versions.yml", emit: versions
+    path "versions.yml"                                        , emit: versions
 
     script:
     """

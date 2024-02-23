@@ -11,11 +11,10 @@ process EXTRACTCONTIG {
     tuple val(species_name), path(sam), path(contigs)
 
     output:
-    path "*.fasta", emit: fasta
+    path "*.fasta"     , emit: fasta
     path "versions.yml", emit: versions
 
     script:
-
     """
     contig_name=\$(tail -1 ${sam} | cut -f3)
 

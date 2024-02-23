@@ -13,8 +13,8 @@ process BOWTIE2_CROSS_ALIGN {
     val   sort_bam
 
     output:
-    tuple val(meta), path("*.sam")    , emit: sam
-    path  "versions.yml"              , emit: versions
+    tuple val(meta), path("*.sam"), emit: sam
+    path  "versions.yml"          , emit: versions
 
     when:
     task.ext.when == null || task.ext.when

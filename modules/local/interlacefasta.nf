@@ -15,7 +15,7 @@ process INTERLACEFASTA {
 
     output:
     tuple val(meta), path("*.fasta"), emit: interlaced_reads
-    path "versions.yml"           , emit: versions
+    path "versions.yml"             , emit: versions
 
     script:
     def args = task.ext.args ?: ''
