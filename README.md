@@ -120,5 +120,5 @@ An extensive list of references for the tools used in the pipeline can be found 
 ## To-do
 
 1. Clean up the code.
-2. Add the real SRR IDs when the paper is published.
-3. Add the reference to the paper.
+2. Add the real SRR IDs.
+3. Add the reference to the paper when the paper is published.
