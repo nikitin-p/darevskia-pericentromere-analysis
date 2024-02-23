@@ -98,6 +98,7 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 ## Repository structure
 
 * **bin** - R scripts run in Nextflow modules.
+* **blast_results** - BLAST matches of the _D. raddei nairensis_ probe CLsat30radn (File_S1.txt) and the corresponding BLAST run parameters (File_S2.asn).
 * **clsat36/clsat36.fasta** - CLsat36 sequence.
 * **conf** - Nextflow configs.
 * **contigs** - Pre-assembled contigs.
