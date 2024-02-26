@@ -20,10 +20,10 @@ include { PARSESAM } from '../modules/local/parsesam.nf'
 include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 
-// Do not forget to replace SRR with the real ones
-// Real ones are SRR25825523 for N and SRR25825522 for V
+// Replace test SRR numbers below with the real ones and uncomment the definition of the srr structure.
+// Real SRR numbers are SRR25825523 for D. raddei nairensis and SRR25825522 for D. valentini.
 
-srr = [
+/*srr = [
     [
     [
         id: "N"
@@ -38,7 +38,7 @@ srr = [
     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_1.fastq.gz",
     "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/071/SRR20851171/SRR20851171_2.fastq.gz"
     ]
-]
+]*/
 
 Channel
     .from( srr )
