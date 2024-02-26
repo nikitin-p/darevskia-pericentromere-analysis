@@ -117,9 +117,7 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 
 If you use our pipeline, please cite our paper: 
 
-```
-Nikitin, P., Sidorov, S., Liehr, T.,Klimina, K., Al‐Rikabi, A., Korchagin, V., Kolomiets, O.,Arakelyan, M., & Spangenberg, V. (2024). Variants of a major DNA satellite discriminate parental subgenomes in a hybrid parthenogenetic lizard Darevskia unisexualis (Darevsky, 1966). Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 1-12. https://doi.org/10.1002/jez.b.2324412
-```
+> Nikitin, P., Sidorov, S., Liehr, T.,Klimina, K., Al‐Rikabi, A., Korchagin, V., Kolomiets, O.,Arakelyan, M., & Spangenberg, V. (2024). Variants of a major DNA satellite discriminate parental subgenomes in a hybrid parthenogenetic lizard Darevskia unisexualis (Darevsky, 1966). Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 1-12. https://doi.org/10.1002/jez.b.2324412
 
 An extensive list of references for the tools used in the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
 
