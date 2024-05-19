@@ -20,9 +20,26 @@ include { PARSESAM } from '../modules/local/parsesam.nf'
 include { BOWTIE2_CLSAT_ALIGN } from '../modules/local/bowtie2clsatalign.nf'
 include { EXTRACTCONTIG } from '../modules/local/extractcontig.nf'
 
-// Replace test SRR numbers below with the real ones and uncomment the definition of the srr structure.
-// Real SRR numbers are SRR25825523 for D. raddei nairensis and SRR25825522 for D. valentini.
+// SRR IDs are SRR25825523 for D. raddei nairensis and SRR25825522 for D. valentini.
 
+srr = [
+    [
+    [
+        id: "N"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/023/SRR25825523/SRR25825523_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/023/SRR25825523/SRR25825523_2.fastq.gz"
+    ],
+    [
+    [
+        id: "V"
+    ],
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/022/SRR25825522/SRR25825522_1.fastq.gz",
+    "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/022/SRR25825522/SRR25825522_2.fastq.gz"
+    ]
+]
+
+// Test SRA IDs
 /*srr = [
     [
     [
