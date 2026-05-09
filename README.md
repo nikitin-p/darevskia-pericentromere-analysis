@@ -4,7 +4,7 @@ The pipeline was developed using Nextflow DSL2 by [Pavel Nikitin](https://github
 
 ## Introduction
 
-Here we describe the pipeline used for the analysis of the pericentromeric sequences of _Darevskia raddei nairensis_ and _D. valentini_, parental species of a hybrid parthenogenetic lizard _D. unisexualis_. In targeted sequencing data obtained from the pericentromeres of the parental species, we search for tandem repeat monomers and, based on them, predict species-specific pericentromeric DNA FISH probes to differentially stain parental subgenomes in the hybrid karyotype.
+Here we describe the pipeline that we used for the analysis of the pericentromeric sequences of _Darevskia raddei nairensis_ and _D. valentini_, parental species of a hybrid parthenogenetic lizard _D. unisexualis_, in our publication [Nikitin et al., 2024](https://onlinelibrary.wiley.com/doi/10.1002/jez.b.23244). In targeted sequencing data obtained from the pericentromeres of the parental species, we search for tandem repeat monomers and, based on them, predict species-specific pericentromeric DNA FISH probes to differentially stain parental subgenomes in the hybrid karyotype.
 
 ## Requirements
 
@@ -117,6 +117,6 @@ If `--from_fastq` is set, then, depending on additional options, the pipeline wi
 
 If you use our pipeline, please cite our paper: 
 
-> Nikitin, P., Sidorov, S., Liehr, T., Klimina, K., Al‐Rikabi, A., Korchagin, V., Kolomiets, O., Arakelyan, M., & Spangenberg, V. (2024). Variants of a major DNA satellite discriminate parental subgenomes in a hybrid parthenogenetic lizard Darevskia unisexualis (Darevsky, 1966). Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 1-12. https://doi.org/10.1002/jez.b.2324412
+> Nikitin, P., Sidorov, S., Liehr, T., Klimina, K., Al‐Rikabi, A., Korchagin, V., Kolomiets, O., Arakelyan, M., & Spangenberg, V. (2024). Variants of a major DNA satellite discriminate parental subgenomes in a hybrid parthenogenetic lizard Darevskia unisexualis (Darevsky, 1966). Journal of Experimental Zoology Part B: Molecular and Developmental Evolution, 1-12. https://onlinelibrary.wiley.com/doi/10.1002/jez.b.23244
 
 An extensive list of references for the tools used in the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
